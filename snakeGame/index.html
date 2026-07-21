@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Snake game</title>
+    <style>
+      body {margin: 0;} /* Это используется для сброса любых полей браузера по умолчанию */
+
+      .MostImportantBlock
+      {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* background-color: rgb(59, 48, 44); */
+      }
+    </style>
+    
+    <!-- Canvas -->
+    <link rel="stylesheet" type="text/css" href="./css/canvas/style_canvas.css">
+
+      <!-- ValueForSnake -->
+      <link rel="stylesheet" type="text/css" href="./css/canvas/valueForSnake/style_valueForSnake.css">
+      <!-- ============= -->
+
+      <!-- GameOver -->
+      <link rel="stylesheet" type="text/css" href="./css/canvas/gameOver/forWordOrMath/style_gameOverForWordOrMath.css">
+      <link rel="stylesheet" type="text/css" href="./css/canvas/gameOver/forOther/style_gameOverForOther.css">
+      <link rel="stylesheet" type="text/css" href="./css/canvas/gameOver/forMaze/style_gameOverForMaze.css">
+      <!-- ============= -->
+      
+    <!-- ====== -->
+
+    <!-- InitUser -->
+    <link rel="stylesheet" type="text/css" href="./css/initUser/initUser.css">
+    <!-- ======== -->
+
+    <!-- Warning -->
+    <link rel="stylesheet" type="text/css" href="./css/warning/warning.css">
+    <!-- ======== -->
+    
+    <!-- MainMenu -->
+    <link rel="stylesheet" type="text/css" href="./css/mainMenu/style_mainMenu.css">
+    <!-- ======== -->
+
+    <!-- Language -->
+    <link rel="stylesheet" type="text/css" href="./css/language/stylel_language.css">
+    <!-- ======== -->
+
+    <!-- SettingsJestik -->
+    <link rel="stylesheet" type="text/css" href="./css/settingJestik/settingJestik.css">
+    <!-- ======== -->
+
+    <!-- Modes -->
+    <link rel="stylesheet" type="text/css" href="./css/modes/style_modes.css">
+
+      <!-- SettingsModeWords -->
+      <link rel="stylesheet" type="text/css" href="./css/modes/settingsModeWords/style_settingsModeWords.css">
+      <!-- ================= -->
+
+      <!-- SettingsModeMath -->
+      <link rel="stylesheet" type="text/css" href="./css/modes/settingsModeMath/style_settingsModeMath.css">
+      <!-- ================ -->
+
+      <!-- LevelsForMaze -->
+      <link rel="stylesheet" type="text/css" href="./css/modes/levelsForMaze/style_levelsForMaze.css">
+
+        <!-- ContingResultsCurrentLevel -->
+        <link rel="stylesheet" type="text/css" href="./css/modes/levelsForMaze/countingResultsCurrenLvl/style_countingResultsCurrenLvl.css">
+        <!-- ===== -->
+        
+      <!-- ===== -->
+
+    <!-- ===== -->
+
+    <!-- DescriptionMode -->
+    <link rel="stylesheet" type="text/css" href="./css/descriptionMode/style_descriptionMode.css">
+    <!-- =============== -->
+
+    <!-- Topic -->
+    <link rel="stylesheet" type="text/css" href="./css/topic/style_topic.css">
+    <!-- ===== -->
+
+    <!-- DecorationField -->
+    <link rel="stylesheet" type="text/css" href="./css/decorationField/style_decorationField.css">
+    <!-- =============== -->
+
+    <!-- SettingsSnake -->
+    <link rel="stylesheet" type="text/css" href="./css/settingsSnake/style_settingsSnake.css">
+    <!-- ============= -->
+
+    <!-- SettingsFood -->
+    <link rel="stylesheet" type="text/css" href="./css/settingsFood/style_settingsFood.css">
+    <!-- ============ -->
+
+    <!-- RulesOfGame -->
+    <link rel="stylesheet" type="text/css" href="./css/rulesOfGame/rulesOfGame.css">
+    <!-- ============ -->
+
+    <!-- UnderMenu -->
+    <link rel="stylesheet" type="text/css" href="./css/underMenu/style_underMenu.css">
+    <!-- ========= -->
+
+    <!-- MainScroll -->
+    <link rel="stylesheet" type="text/css" href="./css/style_mainScroll.css">
+    <!-- ========== -->
+
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts/style_fonts.css">
+    <!-- ========== -->
+
+    <!-- Documentation for game! -->
+    <link rel="stylesheet" type="text/css" href="./css/documentationForGame/documentationForGame.css">
+    <!-- ========== -->
+
+    <!-- Yandex Games SDK -->
+    <script type="text/javascript" src="https://yandex.ru/games/sdk/v2"></script>
+    <!-- ================ -->
+    
+    <script type="text/javascript" src="./Js/jQuery/jQuery.js"></script>
+    <script type="text/javascript" src="./Js/jQuery/smootWheel.js"></script>
+  </head>
+  <body id="body" onload="init()">
+    <div class="MostImportantBlock">
+      <div class="blForOtherSides blForOtherSides-elm-0">
+        <div class="blForOtherSidesInternal blForOtherSides-elm-1">
+          <div id="blValueForSnake" class="blValueForSnake blValueForSnake-elm-0" style="display: none;">
+            <div class="blValueForSnakeInternal blValueForSnake-elm-1">
+              <div id="snakePosXY" class="snakePosXY blValueForSnake-elm-17">
+                <code id="posXY"></code>
+              </div>
+              <div id="blQuantityFood" class="blQuantityFood blValueForSnake-elm-2" style="display: none;">
+                <div class="blQuantityFoodInternal blValueForSnake-elm-3">
+                  <div id="imgScoreFood" class="imgScoreFood blValueForSnake-elm-4"></div>
+                  <code id="scoreN" class="scoreN blValueForSnake-elm-5">0</code>
+                </div>
+              </div>
+              <!-- Mode feedMe -->
+              <div id="blFeedMe" style="display: none;">
+                <div class="blImgFeedMe blValueForSnake-elm-6"></div>
+                <div class="blFeedMe blValueForSnake-elm-7">
+                  <div id="blIndicatorFeedMe" class="blIndicatorFeedMe blValueForSnake-elm-8"></div>
+                </div>
+              </div>
+              <!-- Mode words -->
+              <div id="blMaps" class="blMaps blValueForSnake-elm-9" style="display: none;">
+                <div class="blRewardApple blValueForSnake-elm-10">
+                  <div class="blRewardAppleInternal blValueForSnake-elm-11">
+                    <div class="blImgReward blValueForSnake-elm-12"></div>
+                    <div class="blRewardScore blValueForSnake-elm-13">
+                      <code id="rewardApple">0</code>
+                    </div>
+                  </div>
+                </div>
+                <div id="symbMaps" class="mainBlSymb blValueForSnake-elm-14">
+                  <div id="blSymb-1" class="blSymb symb-1 blValueForSnake-elm-15"><code id="symb-1"></code></div>
+                  <div id="blSymb-2" class="blSymb symb-2 blValueForSnake-elm-15"><code id="symb-2"></code></div>
+                  <div id="blSymb-3" class="blSymb symb-3 blValueForSnake-elm-15"><code id="symb-3"></code></div>
+                  <div id="blSymb-4" class="blSymb symb-4 blValueForSnake-elm-15"><code id="symb-4"></code></div>
+                  <div id="blSymb-5" class="blSymb symb-5 blValueForSnake-elm-15"><code id="symb-5"></code></div>
+                  <div id="blSymb-6" class="blSymb symb-6 blValueForSnake-elm-15"><code id="symb-6"></code></div>
+                  <div id="blSymb-7" class="blSymb symb-7 blValueForSnake-elm-15"><code id="symb-7"></code></div>
+                  <div id="blSymb-8" class="blSymb symb-8 blValueForSnake-elm-15"><code id="symb-8"></code></div>
+                  <div id="blSymb-9" class="blSymb symb-9 blValueForSnake-elm-15"><code id="symb-9"></code></div>
+                  <div id="blSymb-10" class="blSymb symb-10 blValueForSnake-elm-15"><code id="symb-10"></code></div>
+                  <div id="blSymb-11" class="blSymb symb-11 blValueForSnake-elm-15"><code id="symb-11"></code></div>
+                  <div id="blSymb-12" class="blSymb symb-12 blValueForSnake-elm-15"><code id="symb-12"></code></div>
+                  <div id="blSymb-13" class="blSymb symb-13 blValueForSnake-elm-15"><code id="symb-13"></code></div>
+                  <div id="blSymb-14" class="blSymb symb-14 blValueForSnake-elm-15"><code id="symb-14"></code></div>
+                  <div id="blSymb-15" class="blSymb symb-15 blValueForSnake-elm-15"><code id="symb-15"></code></div>
+                  <div id="blSymb-16" class="blSymb symb-16 blValueForSnake-elm-15"><code id="symb-16"></code></div>
+                  <div id="blSymb-17" class="blSymb symb-17 blValueForSnake-elm-15"><code id="symb-17"></code></div>
+                  <div id="blSymb-18" class="blSymb symb-18 blValueForSnake-elm-15"><code id="symb-18"></code></div>
+                  <div id="blSymb-19" class="blSymb symb-19 blValueForSnake-elm-15"><code id="symb-19"></code></div>
+                  <div id="blSymb-20" class="blSymb symb-20 blValueForSnake-elm-15"><code id="symb-20"></code></div>
+                  <div id="blSymb-21" class="blSymb symb-21 blValueForSnake-elm-15"><code id="symb-21"></code></div>
+                  <div id="blSymb-22" class="blSymb symb-22 blValueForSnake-elm-15"><code id="symb-22"></code></div>
+                  <div id="blSymb-23" class="blSymb symb-23 blValueForSnake-elm-15"><code id="symb-23"></code></div>
+                  <div id="blSymb-24" class="blSymb symb-24 blValueForSnake-elm-15"><code id="symb-24"></code></div>
+                  <div id="blSymb-25" class="blSymb symb-25 blValueForSnake-elm-15"><code id="symb-25"></code></div>
+                  <div id="blSymb-26" class="blSymb symb-26 blValueForSnake-elm-15"><code id="symb-26"></code></div>
+                  <div id="blSymb-27" class="blSymb symb-27 blValueForSnake-elm-15"><code id="symb-27"></code></div>
+                  <div id="blSymb-28" class="blSymb symb-28 blValueForSnake-elm-15"><code id="symb-28"></code></div>
+                  <div id="blSymb-29" class="blSymb symb-29 blValueForSnake-elm-15"><code id="symb-29"></code></div>
+                  <div id="blSymb-30" class="blSymb symb-30 blValueForSnake-elm-15"><code id="symb-30"></code></div>
+                  <div id="blSymb-31" class="blSymb symb-31 blValueForSnake-elm-15"><code id="symb-31"></code></div>
+                  <div id="blSymb-32" class="blSymb symb-32 blValueForSnake-elm-15"><code id="symb-32"></code></div>
+                  <div id="blSymb-33" class="blSymb symb-33 blValueForSnake-elm-15"><code id="symb-33"></code></div>
+                </div>
+              </div>
+              <!-- Counting down -->
+              <div id="blCountingDown" class="blCountingDown blValueForSnake-elm-16" style="display: none;">
+                <code id="countingDownN"></code>
+              </div>
+            </div>
+          </div>
+          <div class="lowerBlock lowerBlock-elm-0">
+            <div id="blMsgCollision" class="blMsgCollision lowerBlock-elm-1" style="display: none;">
+              <code id="collisionText"></code>
+            </div>
+            <div id="posMoveMouse" class="posMoveMouse lowerBlock-elm-2" style="display: none;">
+              <code id="psMouseX"></code>
+              <code id="psMouseY"></code>
+              <code id="directMouse"></code>
+            </div>
+          </div>
+          <div id="indicator" class="indicator indicator-elm-0" style="display: block;"></div>
+        </div>
+      </div>
+      <!-- Текущая ширина=63, а высота=38 -->
+      <canvas id="canvas" width="1008" height="608" style="display: none;"></canvas>
+      <!-- Block main menu. -->
+      <div id="blMainGUI" class="blMainMenu blMainGUI-elm-0" style="display: none;">
+        <div class="blMainMenuInternal blMainGUI-elm-1">
+          <div class="blLogo blMainGUI-elm-2">
+            <div class="blLogoInternal blMainGUI-elm-3">
+              <div class="t-logoMain blMainGUI-elm-4">
+                <span class="t-zen-dots-regular t-logo">SNAKE 2D</span>
+              </div>
+            </div>
+          </div>
+          <div class="blBtnPlayImgApple blMainGUI-elm-5" onclick="gui.beginGUI()"></div>
+          <div class="blDrawSnake blMainGUI-elm-6">
+            <img class="blMainGUI-elm-7" src="./GUI/mainMenu/ico/snake.svg" />
+          </div>
+        </div>
+      </div>
+      <!-- Block gameOver for mode word and math -->
+      <div id="blGameOverForModeWordMath" class="blGameOverForModeWordMath gameOverForWM-elm-0" style="display: none;">
+        <div class="blGameOverForModeWordMathInternal gameOverForWM-elm-1">
+          <div class="blGameOverResultForModeWordMath gameOverForWM-elm-2">
+            <div class="blGameOverResultForModeWordMathInternal gameOverForWM-elm-3">
+              <div class="blTitleGameOverModeWordMath gameOverForWM-elm-4">
+                <span class="t-inter-bold TitleGameOver">Игра окончена!</span>
+              </div>
+              <div class="blARecordModeWordMath gameOverForWM-elm-5">
+                <div class="blARecordModeWordMathInternal gameOverForWM-elm-6">
+                  <div class="imgARecordModeWordMath gameOverForWM-elm-7"></div>
+                  <div class="NARecordModeWordMath gameOverForWM-elm-8">
+                    <span id="NARecordModeWordMath-1" class="t-inter-bold">96944695</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blCurrentScoreModeWordMath gameOverForWM-elm-9">
+                <div class="blCurrentScoreModeWordMathInternal gameOverForWM-elm-10">
+                  <div class="imgCurrentScoreModeWordMath gameOverForWM-elm-11"></div>
+                  <div class="NCurrentScoreModeWordMath gameOverForWM-elm-12">
+                    <span id="NCurrentScoreModeWordMath-1" class="t-inter-bold">46944695</span>
+                  </div>
+                </div>
+              </div>
+              <div id="blGuessedHintWordsMath" style="display: none;">
+                <div class="blGuessedWordsMath gameOverForWM-elm-13">
+                  <div class="blGuessedWordsMathInternal gameOverForWM-elm-14">
+                    <div class="textGuessedWordsMath gameOverForWM-elm-15">
+                      <span class="t-roboto-bold">
+                        <span class="TGuessedWordsMath">Отгадано слов</span>: <span id="numGuessedWordsMath">19896</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="blHintWordsMath gameOverForWM-elm-16">
+                  <div class="blHintWordsMathInternal gameOverForWM-elm-17">
+                    <div class="textHintWordsMath gameOverForWM-elm-18">
+                      <span class="t-roboto-bold">
+                        <span class="THintWordsMath">Использована подсказка</span>: <span id="textHintWordsMath">64942245</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blGuessedExamplesMath" class="blGuessedExamplesMath gameOverForWM-elm-19" style="display: none;">
+                <div class="blGuessedExamplesMathInternal gameOverForWM-elm-20">
+                  <div class="textGuessedExamplesMath gameOverForWM-elm-21">
+                    <span class="t-roboto-bold">
+                      <span class="TGuessedExamplesMath">Решено примеров</span>: <span id="numGuessedExamplesMath">19896</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnsGameOverForWordMath gameOverForWM-elm-22">
+                <div class="blBtnsGameOverForWordMathInternal gameOverForWM-elm-23">
+                  <div class="btnGOResurrected gameOverForWM-elm-24-1" onclick="actvExtraLife()">
+                    <div class="btnGOResurrectedInternal gameOverForWM-elm-25">
+                      <div class="textGOResurrected gameOverForWM-elm-26-1">
+                        <span class="t-roboto-bold blink TGOResurrected">Воскреснуть</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blMiniTAdvertisementWarningModeWordMath gameOverForWM-elm-27">
+                    <span class="t-roboto-regular TMiniTAdvWarningM">после просмотра рекламы</span>
+                  </div>
+                  <div class="btnGOOneMoreTime gameOverForWM-elm-24-2" onclick="backModesForWM('on', false)">
+                    <div class="btnGOOneMoreTimeInternal gameOverForWM-elm-25">
+                      <div class="textGOOneMoreTime gameOverForWM-elm-26-2">
+                        <span class="t-roboto-bold TGOOneMoreTime">Ещё раз</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btnGOModes gameOverForWM-elm-24-3" onclick="backModesForWM('off', true)">
+                    <div class="btnGOModesInternal gameOverForWM-elm-25">
+                      <div class="textGOModes gameOverForWM-elm-26-3">
+                        <span class="t-roboto-bold TGOModes">Режимы</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blAnanimusUser blAnanimusUser-4 gameOverForWM-elm-28" style="width: 710px; height: 38px; left: 50%; top: 98%; transform: translate(-50%, -98%);">
+            <code class="TAnanimusUser-1">
+              Ваш прогресс не будет сохранен в игре, пожалуйста, войдите в систему, чтобы сохранить его!
+            </code>
+            <code onclick="gui.showHideInitUser('block')" class="TAnanimusUser-2 gameOverForWM-elm-29" style="position: absolute; left: 50%; top: 100%; transform: translate(-50%, -100%);">> Авторизоваться <</code>
+          </div>
+        </div>
+      </div>
+      <!-- Block gameOver for other -->
+      <div id="blGameOverForOther" class="blGameOverForOther gameOverForOther-elm-0" style="display: none;">
+        <div class="blGameOverForModeOtherInternal gameOverForOther-elm-1">
+          <div class="blGameOverResultForModeOther gameOverForOther-elm-2">
+            <div class="blGameOverResultForModeOtherInternal gameOverForOther-elm-3">
+              <div class="blTitleGameOverModeWordMath gameOverForOther-elm-4">
+                <span class="t-inter-bold TitleGameOver">Игра окончена!</span>
+              </div>
+              <div class="blARecordModeWordMath gameOverForOther-elm-5">
+                <div class="blARecordModeWordMathInternal gameOverForOther-elm-6">
+                  <div class="imgARecordModeWordMath gameOverForOther-elm-7"></div>
+                  <div class="NARecordModeWordMath gameOverForOther-elm-8">
+                    <span id="NARecordModeWordMath-2" class="t-inter-bold">96944695</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blCurrentScoreModeWordMath gameOverForOther-elm-9">
+                <div class="blCurrentScoreModeWordMathInternal gameOverForOther-elm-10">
+                  <div class="imgCurrentScoreModeWordMath gameOverForOther-elm-11"></div>
+                  <div class="NCurrentScoreModeWordMath gameOverForOther-elm-12">
+                    <span id="NCurrentScoreModeWordMath-2" class="t-inter-bold">46944695</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnsGameOverForOther gameOverForOther-elm-22">
+                <div class="blBtnsGameOverForOtherInternal gameOverForOther-elm-23">
+                  <div class="btnGOResurrected gameOverForOther-elm-24-1" onclick="actvExtraLife()">
+                    <div class="btnGOResurrectedInternal gameOverForOther-elm-25">
+                      <div class="textGOResurrected gameOverForOther-elm-26-1">
+                        <span class="t-roboto-bold blink TGOResurrected">Воскреснуть</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blMiniTAdvertisementWarningModeWordMath gameOverForOther-elm-27">
+                    <span class="t-roboto-regular TMiniTAdvWarningM">после просмотра рекламы</span>
+                  </div>
+                  <div class="btnGOOneMoreTime gameOverForOther-elm-24-2" onclick="backModesForWM('on', false)">
+                    <div class="btnGOOneMoreTimeInternal gameOverForOther-elm-25">
+                      <div class="textGOOneMoreTime gameOverForOther-elm-26-2">
+                        <span class="t-roboto-bold TGOOneMoreTime">Ещё раз</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btnGOModes gameOverForOther-elm-24-3" onclick="backModesForWM('off', true)">
+                    <div class="btnGOModesInternal gameOverForOther-elm-25">
+                      <div class="textGOModes gameOverForOther-elm-26-3">
+                        <span class="t-roboto-bold TGOModes">Режимы</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blAnanimusUser blAnanimusUser-5 gameOverForOther-elm-28" 
+           style="width: 710px; height: 38px; left: 50%; top: 95%; transform: translate(-50%, -95%);">
+            <code class="TAnanimusUser-1">
+              Ваш прогресс не будет сохранен в игре, пожалуйста, войдите в систему, чтобы сохранить его!
+            </code>
+            <code onclick="gui.showHideInitUser('block')" class="TAnanimusUser-2 gameOverForOther-elm-29" 
+             style="position: absolute; left: 50%; top: 100%; transform: translate(-50%, -100%);">> Авторизоваться <</code>
+          </div>
+        </div>
+      </div>
+      <!-- Block gameOver for maze -->
+      <div id="blGameOverForMaze" class="blGameOverForMaze gameOverForMaze-elm-0" style="display: none;">
+        <div class="blGameOverForMazeInternal gameOverForMaze-elm-1">
+          <div class="blGameOverResultForModeMaze gameOverForMaze-elm-2">
+            <div class="blGameOverResultForModeMazeInternal gameOverForMaze-elm-3">
+              <div class="blTitleGameOverModeWordMath gameOverForMaze-elm-4">
+                <span class="t-inter-bold TitleGameOver">Игра окончена!</span>
+              </div>
+              <div class="blElexirHealthForModeMaze gameOverForMaze-elm-5">
+                <div class="blElexirHealthForModeMazeInternal gameOverForMaze-elm-6">
+                  <div class="imgElexirHealth gameOverForMaze-elm-7"></div>
+                  <div class="NQuantityElexirHealth gameOverForMaze-elm-8">
+                    <span id="NQuantityElexirHealth" class="t-strong-regular">x0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnGameOverForMaze gameOverForMaze-elm-9">
+                <div class="blBtnGameOverForMazeInternal gameOverForMaze-elm-10">
+                  <div class="btnGOGetMore gameOverForMaze-elm-11">
+                    <div id="btnGOGetMoreInternal" class="btnGOGetMoreInternal gameOverForMaze-elm-12">
+                      <div class="textGOGetMore gameOverForMaze-elm-13">
+                        <span class="t-roboto-bold blink TGetMore">Получить ещё</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blMiniTAdvertisementWarningModeMaze gameOverForMaze-elm-14">
+                    <span class="t-roboto-regular TMiniTAdvWarningM">после просмотра рекламы</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnsForLvlForMaze gameOverForMaze-elm-15">
+                <div class="blBtnsForLvlForMazeInternal gameOverForMaze-elm-16">
+                  <div id="blBtnBackGOForMaze" class="blBtnBackGOForMaze gameOverForMaze-elm-17-1" 
+                    onclick="backLvlsForMaze('gameOver', 'on', false)"></div>
+                  <div id="blBtnResumeGOForMaze" class="blBtnResumeGOForMaze gameOverForMaze-elm-17-2" 
+                    style="display: none;"></div>
+                  <div id="blBtnShowLvlsGOForMaze" class="blBtnShowLvlsGOForMaze gameOverForMaze-elm-17-3" 
+                    onclick="backLvlsForMaze('gameOver', 'off', true)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block counting results current level for maze -->
+      <div id="blCountingResultsCurrenLvlForMaze" class="blContingResultsCurrenLvlForMaze countingRelustsForMaze-elm-0" style="display: none;">
+        <div class="blCountingResultsCurrenLvlForMazeInternal countingRelustsForMaze-elm-1">
+          <div class="blCountingResultsForModeMaze countingRelustsForMaze-elm-2">
+            <div class="blCountingResultsForModeMazeInternal countingRelustsForMaze-elm-3">
+              <div class="blStarsBehindLvl-1 countingRelustsForMaze-elm-4-1">
+                <div class="blStarsBehindLvlInterval-1 countingRelustsForMaze-elm-5-1">
+                  <div id="blImgStar-5" class="blImgStarOne countingRelustsForMaze-elm-6" 
+                   style="background-image: url('./GUI/modes/maze/starBorder.png');"></div>
+                </div>
+              </div>
+              <div class="blStarsBehindLvl-2 ountingRelustsForMaze-elm-7 countingRelustsForMaze-elm-4-2">
+                <div class="blStarsBehindLvlInterval-2 countingRelustsForMaze-elm-5-2">
+                  <div id="blImgStar-3" class="blImgStarOne countingRelustsForMaze-elm-6" 
+                   style="background-image: url('./GUI/modes/maze/starBorder.png');"></div>
+                  <div id="blImgStar-4" class="blImgStarTwo countingRelustsForMaze-elm-6" 
+                   style="background-image: url('./GUI/modes/maze/star.png');"></div>
+                </div>
+              </div>
+              <div class="blStarsBehindLvl-3 countingRelustsForMaze-elm-4-3">
+                <div class="blStarsBehindLvlInterval-3 countingRelustsForMaze-elm-5-3">
+                  <div id="blImgStar-1" class="blImgStarOne countingRelustsForMaze-elm-6" 
+                   style="background-image: url('./GUI/modes/maze/star.png');"></div>
+                  <div id="blImgStar-2" class="blImgStarTwo countingRelustsForMaze-elm-6" 
+                   style="background-image: url('./GUI/modes/maze/star.png');"></div>
+                </div>
+              </div>
+              <div class="blCurrentAndTotalTime countingRelustsForMaze-elm-7">
+                <div class="blCurrentAndTotalTimeInternal countingRelustsForMaze-elm-8">
+                  <div class="blTextYourTime countingRelustsForMaze-elm-9">
+                    <span class="t-inter-black TYourTime">Ваше время</span>
+                  </div>
+                  <div class="blTextCurrentTime countingRelustsForMaze-elm-10">
+                    <span id="textCurrentTime" class="t-inter-black">00:00:40.55</span>
+                  </div>
+                  <div class="blTextTotalTime countingRelustsForMaze-elm-11">
+                    <span id="textNecessaryTime" class="t-inter-black">00:00:30.42</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blRewardForPassingForModeMaze countingRelustsForMaze-elm-12">
+                <div class="blRewardForPassingForModeMazeInternal countingRelustsForMaze-elm-13">
+                  <div id="blGiftBehindTime" class="blImgAndNFoodRewardForPassing countingRelustsForMaze-elm-14" style="display: none;">
+                    <div id="imgGift" class="imgFoodRewardForPassing countingRelustsForMaze-elm-15" style="display: block;"></div>
+                    <div id="blReceivedGift" class="blReceivedGift countingRelustsForMaze-elm-16" style="display: none;">
+                      <div class="blReceivedGiftInternal countingRelustsForMaze-elm-17">
+                        <div class="imgReceivedGiftElexirHealth countingRelustsForMaze-elm-18"></div>
+                        <div class="NQuantityFoodRewardForPassing countingRelustsForMaze-elm-19">
+                          <span id="textGiftBehindTime" class="t-strong-regular">x9</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnsForLvlForMaze countingRelustsForMaze-elm-20">
+                <div class="blBtnsForLvlForMazeInternal countingRelustsForMaze-elm-21">
+                  <div class="blBtnBackRewardForMaze countingRelustsForMaze-elm-22-1" 
+                    onclick="backLvlsForMaze('countingResults', 'on', false)"></div>
+                  <div class="blBtnShowLvlsForMaze countingRelustsForMaze-elm-22-2" 
+                    onclick="backLvlsForMaze('countingResults', 'off', true)"></div>
+                  <div id="blBtnNextLvlForMaze" class="blBtnNextLvlForMaze countingRelustsForMaze-elm-22-3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blAnanimusUser blAnanimusUser-6 countingRelustsForMaze-elm-23" 
+            style="width: 710px; height: 38px; left: 50%; top: 95%; transform: translate(-50%, -95%);">
+            <code class="TAnanimusUser-1">
+              Ваш прогресс не будет сохранен в игре, пожалуйста, войдите в систему, чтобы сохранить его!
+            </code>
+            <code onclick="gui.showHideInitUser('block')" class="TAnanimusUser-2 countingRelustsForMaze-elm-24" 
+              style="position: absolute; left: 50%; top: 100%; transform: translate(-50%, -100%);">> Авторизоваться <</code>
+          </div>
+        </div>
+      </div>
+      <!-- Block Under Menu -->
+      <div id="blUnderMenu" class="blUnderMenu underMenu-elm-0" style="display: none;">
+        <div class="blUnderMenuInternal underMenu-elm-1">
+          <div class="blSelectionsUnderMenu underMenu-elm-2">
+            <div class="blSelectionsUnderMenuInternal underMenu-elm-3">
+              <!-- Selection-1 -->
+              <div id="link-сontinue" class="btnSelection btnSelection-1 underMenu-elm-4" 
+                data-guin="close" 
+                onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionContinue" class="blTBtnSelection underMenu-elm-6-1">
+                    <span id="TBtnSelectionContinue" class="t-roboto-black">Продолжить</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-2 -->
+              <div id="link-language" class="btnSelection btnSelection-2 underMenu-elm-4" 
+              data-guin="0" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionLanguage" class="blTBtnSelection underMenu-elm-6-2">
+                    <span id="TBtnSelectionLanguage" class="t-roboto-black">Язык</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-3 -->
+              <div id="link-мanagement" class="btnSelection btnSelection-3 underMenu-elm-4" 
+              data-guin="1" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionManagement" class="blTBtnSelection underMenu-elm-6-3">
+                    <span id="TBtnSelectionManagement" class="t-roboto-black">Управление</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-4 -->
+              <div id="link-modes" class="btnSelection btnSelection-4 underMenu-elm-4" 
+              data-guin="2" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionModes" class="blTBtnSelection underMenu-elm-6-4">
+                    <span id="TBtnSelectionModes" class="t-roboto-black">Режимы</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-5 -->
+              <div id="link-settingsMAndDF" class="btnSelection btnSelection-5 underMenu-elm-4" 
+              data-guin="546"
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionSettingsMAndDF" class="blTBtnSelection blTBtnSelection-5 underMenu-elm-6-9">
+                    <span id="TBtnSelectionSettingsMAndDF" class="t-roboto-black">Параметры режима</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-6 -->
+              <div id="link-topic" class="btnSelection btnSelection-6 underMenu-elm-4" 
+              data-guin="7" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionTopic" class="blTBtnSelection underMenu-elm-6-5">
+                    <span id="TBtnSelectionTopic" class="t-roboto-black">Тема</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-7 -->
+              <div id="link-rulesOfGame" class="btnSelection btnSelection-7 underMenu-elm-4" 
+              data-guin="10" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionRulesOfGame" class="blTBtnSelection blTBtnSelection-7 underMenu-elm-6-6">
+                    <span id="TBtnSelectionRulesOfGame" class="t-roboto-black">Правила игры</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-8 -->
+              <div id="link-settingsSnake" class="btnSelection btnSelection-8 underMenu-elm-4" 
+              data-guin="8" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionSettingsSnake" class="blTBtnSelection blTBtnSelection-8 underMenu-elm-6-7">
+                    <span id="TBtnSelectionSettingsSnake" class="t-roboto-black">Параметры змейки</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Selection-9 -->
+              <div id="link-settingsFood" class="btnSelection btnSelection-9 underMenu-elm-4" 
+              data-guin="9" 
+              onclick="gui.showSelectedGUI(this)">
+                <div class="btnSelectionInternal underMenu-elm-5">
+                  <div id="blTBtnSelectionSettingsFood" class="blTBtnSelection blTBtnSelection-9 underMenu-elm-6-8">
+                    <span id="TBtnSelectionSettingsFood" class="t-roboto-black">Параметры еды</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blShowKeyHDocument underMenu-elm-7">
+            <div class="blShowKeyHDocumentInternal underMenu-elm-8">
+              <div class="blBtnOpenKey underMenu-elm-9">
+                <div class="blBtnOpenKeyInternal underMenu-elm-10">
+                  <div class="BlKeyH underMenu-elm-11">
+                    <span class="t-roboto-medium">H</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blTOpenD underMenu-elm-12">
+                <span id="blTOpenDForSubmenu" class="t-roboto-medium">Помощь</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block language -->
+      <div id="blLanguage" class="blLanguage blLanguage-elm-0" style="display: none;">
+        <div class="blLanguageInternal blLanguage-elm-1">
+          <div class="selectedLanguare blLanguage-elm-2">
+            <div class="blSelectedLanguareRu blLanguage-elm-3" onclick="gui.setLanguageSys('ru')">
+              <div class="blSelectedLanguareRuInternal">
+                <span id="TSelectedLanguareRuInternal" class="t-roboto-black">Русский</span>
+              </div>
+            </div>
+            <div class="blSelectedLanguareEn blLanguage-elm-4" onclick="gui.setLanguageSys('en')">
+              <div class="blSelectedLanguareEnInternal">
+                <span id="TSelectedLanguareEnInternal" class="t-roboto-black">English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Settigns jestik -->
+      <div id="blSettingJestik" class="blSettingJestik settingJestik-elm-0" style="display: none;">
+        <div class="blSettingJestikInternal settingJestik-elm-1">
+          <div id="blPrevisChapter-settingJestik" class="blPrevisChapter settingJestik-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleSettingJestik settingJestik-elm-2">
+            <span id="TitleSettingJestik" class="t-roboto-black">Управление</span>
+          </div>
+          <div class="blMainSettingJestik settingJestik-elm-3">
+            <div class="blMainSettingJestikInternalMain settingJestik-elm-4">
+              <div class="blTitleSJ settingJestik-elm-6">
+                <span id="TitleSJ" class="t-roboto-bold">Выберите способ ввода</span>
+              </div>
+              <div class="blSpacePause settingJestik-elm-7">
+                <div class="blSpacePauseInternal settingJestik-elm-8">
+                  <div class="blTitleKeySpace settingJestik-elm-9">
+                    <span id="TitleKeySpace" class="t-roboto-medium">Пауза</span>
+                  </div>
+                  <div class="blKeySpace settingJestik-elm-10">
+                    <div class="blKeySpaceInternal settingJestik-elm-11">
+                      <div class="blTKeySpace settingJestik-elm-12">
+                        <span id="TKeySpace" class="t-roboto-medium">SPACE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blSelectedJestik settingJestik-elm-13">
+                <div class="blSelectedJestikInternal settingJestik-elm-14">
+                  <div class="blSelectedMouseJestik settingJestik-elm-15">
+                    <div class="blSelectedMouseJestikInternal settingJestik-elm-16">
+                      <div class="blInterfaceBtnLines settingJestik-elm-17">
+                        <div class="blInterfaceBtnLinesInternal settingJestik-elm-18">
+                          <div class="blLineEffectBtnSlcJM blKeyMouse settingJestik-elm-19"></div>
+                          <div id="blBtnMouse" class="blBtnSelectedJestikMouse settingJestik-elm-20" 
+                            onclick="gui.selectedJestik(1, 'mouse')"></div>
+                        </div>
+                      </div>
+                      <div class="blDirectAndMouse settingJestik-elm-21">
+                        <div class="blDirectAndMouseInternal settingJestik-elm-22">
+                          <div class="blArrowMove amUp settingJestik-elm-23"></div>
+                          <div class="blArrowMove amLeft settingJestik-elm-24"></div>
+                          <div class="blTextShowActv settingJestik-elm-27">
+                            <span id="TextShowActv" class="t-roboto-medium">Зажать</span>
+                          </div>
+                          <div class="blMouseImg settingJestik-elm-28">
+                            <div class="blMouseImgInternal settingJestik-elm-29">
+                              <div class="blMouseChL settingJestik-elm-30"></div>
+                              <div class="blLineShowActv settingJestik-elm-31">
+                                <div class="blLineShowActvInternal settingJestik-elm-32">
+                                  <div class="blLineWhiteShowActv settingJestik-elm-33"></div>
+                                  <div class="blLineBlackShowActv settingJestik-elm-34"></div>
+                                </div>
+                              </div>
+                              <div class="blCircleShowActv settingJestik-elm-35"></div>
+                              <div class="blMouseChR settingJestik-elm-36"></div>
+                              <div class="blMouseScroll settingJestik-elm-37"></div>
+                              <div class="blMouseChBody settingJestik-elm-38"></div>
+                            </div>
+                          </div>
+                          <div class="blArrowMove amRight settingJestik-elm-25"></div>
+                          <div class="blArrowMove amDown settingJestik-elm-26"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blSelectedWASDJestik settingJestik-elm-39">
+                    <div class="blSelectedWASDJestikInternal settingJestik-elm-40">
+                      <div class="blInterfaceBtnLines-2 settingJestik-elm-41">
+                        <div class="blInterfaceBtnLines-2-Internal settingJestik-elm-42">
+                          <div class="blLineEffectBtnSlcJKey blKeyWASD blKey-1 settingJestik-elm-43"></div>
+                          <div class="blLineEffectBtnSlcJKey blKeyWASD blKey-2 settingJestik-elm-44"></div>
+                          <div id="blBtnWASD" class="blBtnSelectedJestikMouse settingJestik-elm-45"
+                            onclick="gui.selectedJestik(0, 'wasd')"></div>
+                        </div>
+                      </div>
+                      <div class="blWASDKeyBord settingJestik-elm-46">
+                        <div class="blWASDKeyBordInternal settingJestik-elm-47">
+                          <div class="blKey blW settingJestik-elm-57">
+                            <div class="blTKey settingJestik-elm-58">
+                              <span class="t-roboto-medium">W</span>
+                            </div>
+                          </div>
+                          <div class="blKey blA settingJestik-elm-59">
+                            <div class="blTKey settingJestik-elm-60">
+                              <span class="t-roboto-medium">A</span>
+                            </div>
+                          </div>
+                          <div class="blKey blS settingJestik-elm-61">
+                            <div class="blTKey settingJestik-elm-62">
+                              <span class="t-roboto-medium">S</span>
+                            </div>
+                          </div>
+                          <div class="blKey blD settingJestik-elm-63">
+                            <div class="blTKey settingJestik-elm-64">
+                              <span class="t-roboto-medium">D</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blSelectedArrowsJestik settingJestik-elm-48">
+                    <div class="blSelectedArrowsJestikInternal settingJestik-elm-49">
+                      <div class="blInterfaceBtnLines-2 settingJestik-elm-50">
+                        <div class="blInterfaceBtnLines-2-Internal settingJestik-elm-51">
+                          <div class="blLineEffectBtnSlcJKey blKeyArrows blKey-1 settingJestik-elm-52"></div>
+                          <div class="blLineEffectBtnSlcJKey blKeyArrows blKey-2 settingJestik-elm-53"></div>
+                          <div id="blBtnLines" class="blBtnSelectedJestikMouse settingJestik-elm-54"
+                            onclick="gui.selectedJestik(2, 'arrows')"></div>
+                        </div>
+                      </div>
+                      <div class="blWASDKeyBord settingJestik-elm-55">
+                        <div class="blWASDKeyBordInternal settingJestik-elm-56">
+                          <div class="blKey blW settingJestik-elm-65">
+                            <div class="blTKeyAHTB settingJestik-elm-66">
+                              <div class="blLineHead blLineHeadUD blLineHeadUp settingJestik-elm-67"></div>
+                              <div class="blArrowHead blArrowHeadUp settingJestik-elm-68"></div>
+                            </div>
+                          </div>
+                          <div class="blKey blA settingJestik-elm-69">
+                            <div class="blTKeyAHLR settingJestik-elm-70">
+                              <div class="blLineHead blLineHeadLR blLineHeadLeft settingJestik-elm-71"></div>
+                              <div class="blArrowHead blArrowHeadLeft settingJestik-elm-72"></div>
+                            </div>
+                          </div>
+                          <div class="blKey blS settingJestik-elm-73">
+                            <div class="blTKeyAHTB settingJestik-elm-74">
+                              <div class="blLineHead blLineHeadUD blLineHeadDown settingJestik-elm-75"></div>
+                              <div class="blArrowHead blArrowHeadDown settingJestik-elm-76"></div>
+                            </div>
+                          </div>
+                          <div class="blKey blD settingJestik-elm-77">
+                            <div class="blTKeyAHLR settingJestik-elm-78">
+                              <div class="blLineHead blLineHeadLR blLineHeadRight settingJestik-elm-79"></div>
+                              <div class="blArrowHead blArrowHeadRight settingJestik-elm-80"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blNoteWarning" class="blNoteWarning settingJestik-elm-81" style="display: none;">
+                <div class="blNoteWarningInternal settingJestik-elm-82">
+                  <div id="blNoteWarning-1" class="blNoteWarning-1 settingJestik-elm-83">
+                    <span id="TNoteWarning-1" class="t-roboto-medium" style="color: rgb(209, 40, 40);">
+                      Attention: the cursor must be within the canvas!
+                    </span>
+                  </div>
+                  <div id="blNoteWarning-2" class="blNoteWarning-2 settingJestik-elm-84">
+                    <span class="t-roboto-medium" style="color: rgb(209, 208, 208);">
+                      P.S. <span id="TNoteWarning-2">For a comfortable game, move the cursor strictly in a straight line regardless of the direction.</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div id="blBtnSettingJestik" class="blBtnSettingJestik settingJestik-elm-85" onclick="gui.selectedSettingsJestik()">
+                <div class="blBtnSettingJestikInternal settingJestik-elm-86">
+                  <div class="blTBtnSettingJestik settingJestik-elm-87">
+                    <span class="t-roboto-black blink">
+                      <span id="TBtnSettingJestik">Подтвердить</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block warning -->
+      <div id="blWarning" class="blWarning warning-elm-0" style="display: none;">
+        <div class="blWarningInternal warning-elm-1">
+          <div class="blTitleWarning warning-elm-2">
+            <span id="blink2" class="t-roboto-black">
+              <span>! <span id="TitleWarning">Внимание</span> !</span>
+            </span>
+          </div>
+          <div class="blMainBlWarning warning-elm-3">
+            <div class="blMainBlWarningInternal warning-elm-4">
+              <div class="blMainWarning warning-elm-5">
+                <div class="blMainWarningInternal warning-elm-6">
+                  <div id="blWarningText" class="blWarningText mainScroll2 warning-elm-7">
+                    <code class="devSpan2 codeTWarning-1 warning-elm-8">= <span id="codeTWarning-1">Важно</span> =</code>
+                    <code id="codeTWarning-2" class="devSpan2 codeTWarning-2 warning-elm-9">
+                      Игра <b>не использует</b> никакие облачные сохранения для сохранения вашего прогресса!
+                    </code>
+                    <code id="codeTWarning-3" class="devSpan2 codeTWarning-3 warning-elm-10">
+                      В таблице "Лучшие игроки" будет отображен общий балл по всем девяти режимам!
+                    </code>
+                    <code id="codeTWarning-4" class="devSpan2 codeTWarning-4 warning-elm-11">
+                      В игре нет звуковых эффектов!
+                    </code>
+                    <code id="codeTWarning-5" class="devSpan2 codeTWarning-5 warning-elm-12">
+                      P.S. Мы рады, что вы играете в нашу игру!
+                    </code>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnSelectedWarning warning-elm-13" onclick="gui.selectedWarningForUser()">
+                <div class="blBtnSelectedWarningInternal warning-elm-14">
+                  <div class="blTBtnSelectedWarning warning-elm-15">
+                    <span class="t-roboto-black">
+                      <span id="TBtnSelectedWarning">Хорошо</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block modes -->
+      <div id="blModes" class="blModes modes-elm-0" style="display: none;">
+        <div class="blModesInternal modes-elm-1">
+          <div id="blPrevisChapter-modes" class="blPrevisChapter modes-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleModes modes-elm-2">
+            <span id="titleMode" class="t-roboto-black">Modes</span>
+          </div>
+          <div class="blSelectedMode modes-elm-3">
+            <div class="blSelectedModeInternalMain modes-elm-4">
+              <div id="blSelectedModeInternal" class="blSelectedModeInternal mainScroll modes-elm-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block description -->
+      <div id="blDescription" class="blDescription description-elm-0" style="display: none;">
+        <div class="blDescriptionInternal description-elm-1">
+          <div class="blDescripMode description-elm-2">
+            <div class="blDescripModeInternal description-elm-3">
+              <div class="blTDescriptMode description-elm-4">
+                <div class="blTDescriptModeInternal description-elm-5">
+                  <div id="blTDescripModeScroll" class="blTDescripModeScroll mainScroll description-elm-6">
+                    <span id="tDescriptMode" class="t-roboto-medium"></span>
+                  </div>
+                </div>
+              </div>
+              <div id="blBtnSelected" class="blBtnSelected description-elm-7">
+                <div class="blBtnSelectedInternal description-elm-8">
+                  <div class="blBtnTextSelected description-elm-9">
+                    <span class="t-roboto-medium blink">
+                      <span id="btnTextSelected">Выбрать</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="blTitleDescript" class="blTitleDescript description-elm-10">
+            <div id="blTitleDescriptInternal" class="blTitleDescriptInternal description-elm-11">
+              <div id="blTitleDescrip" class="t-TitleDescrip description-elm-12">
+                <span id="titleDescrip" class="t-roboto-medium"></span>
+              </div>
+            </div>
+          </div>
+          <div class="blBtnCloseDescript description-elm-13" onclick="gui.showHideDescriptForMode('none', false)"></div>
+        </div>
+      </div>
+      <!-- Block settings mode words -->
+      <div id="blSettingsModeWords" class="blSettingsModeWords settingsModeWords-elm-0" style="display: none;">
+        <div class="blSettingsModeWordsInternal settingsModeWords-elm-1">
+          <div id="blPrevisChapter-words" class="blPrevisChapter settingsModeWords-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleSettingsModeWord settingsModeWords-elm-2">
+            <span id="TitleSettingsModeWord" class="t-roboto-black">Параметры режима</span>
+          </div>
+          <div class="blMainSettingsModeWords settingsModeWords-elm-3">
+            <div class="blMainSettingsModeWordsInternal settingsModeWords-elm-4">
+              <div class="blTitleSelectedTopicWords settingsModeWords-elm-6">
+                <span id="TitleSelectedTopicWords" class="t-roboto-black">Выберите тему</span>
+              </div>
+              <div class="blMainListTopic settingsModeWords-elm-7">
+                <div class="blMainListTopicInternal settingsModeWords-elm-8">
+                  <div id="blTopic-" class="blRandomTopic settingsModeWords-elm-9" onclick="gui.getTopicNum(-1)">
+                    <div class="blRandomTopicInternal settingsModeWords-elm-10">
+                      <div class="blTextTopic settingsModeWords-elm-11">
+                        <span id="randomTextTopic" class="t-roboto-black">Любая</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- List topics Ru -->
+                  <div id="blListTopicRu" class="blListTopic mainScroll2 settingsModeWordsRu-elm-12"></div>
+                  <!-- List topics En -->
+                  <div id="blListTopicEn" class="blListTopic mainScroll2 settingsModeWordsEn-elm-12"></div>
+                  <div class="blLanguageTopic settingsModeWords-elm-13">
+                    <div class="blLanguageTopicInternal settingsModeWords-elm-14">
+                      <div id="blBtnRuTopic" class="blBtnRuTopic settingsModeWords-elm-15" onclick="gui.showHideListTopics('ru')">
+                        <div class="blBtnRuTopicInternal settingsModeWords-elm-16">
+                          <div class="blBtnTextRu settingsModeWords-elm-17">
+                            <span class="t-roboto-medium">ru</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="blBtnEnTopic" class="blBtnEnTopic settingsModeWords-elm-18" onclick="gui.showHideListTopics('en')">
+                        <div class="blBtnEnTopicInternal settingsModeWords-elm-19">
+                          <div class="blBtnTextEn settingsModeWords-elm-20">
+                            <span class="t-roboto-medium">en</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blBtnSelectedSettingsModeWords" class="blBtnSelectedSettingsModeWords settingsModeWords-elm-117"
+                onclick="gui.selectedSettingsModeWords()">
+                <div class="blBtnSelectedSettingsModeWordsInternal settingsModeWords-elm-118">
+                  <div class="blTBtnSelectedModeWords settingsModeWords-elm-119">
+                    <span class="t-roboto-black blink">
+                      <span id="TBtnSelectedModeWords">Продолжить</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block settings mode math -->
+      <div id="blSettingsModeMath" class="blSettingsModeMath settingsModeMath-elm-0" style="display: none;">
+        <div class="blSettingsModeMathInternal settingsModeMath-elm-1">
+          <div id="blPrevisChapter-mathematics" class="blPrevisChapter settingsModeMath-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleSettingsModeMath settingsModeMath-elm-2">
+            <span id="TitleSettingsModeMath" class="t-roboto-black">Параметры режима</span>
+          </div>
+          <div class="blMainSettingsModeMath settingsModeMath-elm-3">
+            <div class="blMainSettingsModeMathInternal settingsModeMath-elm-4">
+              <div class="blLengthOperand settingsModeMath-elm-6">
+                <div class="blLengthOperandInternal settingsModeMath-elm-7">
+                  <div id="blTitleLength" class="blTitleLength settingsModeMath-elm-8">
+                    <span id="TitleLength" class="t-roboto-medium">Длина операнда</span>
+                  </div>
+                  <!-- Первый операнд-блок -->
+                  <div class="blFirstSettingsOperand settingsModeMath-elm-9">
+                    <div class="blFirstSettingsOperandInternal settingsModeMath-elm-10">
+                      <div class="blTextTitle settingsModeMath-elm-11">
+                        <span id="TextTitleFirst" class="t-roboto-medium">Первый</span>
+                      </div>
+                      <div class="blInputsMax settingsModeMath-elm-12">
+                        <div class="blInputsMaxInternal settingsModeMath-elm-13">
+                          <div id="firstBlMax" class="blInputWhole settingsModeMath-elm-14"
+                          data-lenopr="lenopr" data-whole="firstNumMax" data-opr="one" data-chopr="max" 
+                          onclick="gui.selectedBlValue(this)">
+                            <div class="blInputWholeInternal settingsModeMath-elm-15">
+                              <div class="blNumWhole settingsModeMath-elm-16">
+                                <span id="firstNumMax" class="t-roboto-medium">2</span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="blPoint">
+                            <span class="t-roboto-bold">.</span>
+                          </div>
+                          <div class="blInputFractional">
+                            <div class="blInputFractionalInternal">
+                              <div class="blNumFractional">
+                                <span class="t-roboto-medium">0</span>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="blTextWhole settingsModeMath-elm-17">
+                        <span id="TextWholeFirst" class="t-roboto-medium">целое</span>
+                      </div>
+                      <!-- <div class="blTextFractional">
+                        <span class="t-roboto-medium">дробное</span>
+                      </div> -->
+                      <div class="blInputsMin settingsModeMath-elm-18">
+                        <div class="blInputsMinInternal settingsModeMath-elm-19">
+                          <div id="firstBlMin" class="blInputWhole settingsModeMath-elm-20" 
+                          data-lenopr="lenopr" data-whole="firstNumMin" data-opr="one" data-chopr="min" 
+                          onclick="gui.selectedBlValue(this)">
+                            <div class="blInputWholeInternal settingsModeMath-elm-21">
+                              <div class="blNumWhole settingsModeMath-elm-22">
+                                <span id="firstNumMin" class="t-roboto-medium">1</span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="blPoint">
+                            <span class="t-roboto-bold">.</span>
+                          </div>
+                          <div class="blInputFractional">
+                            <div class="blInputFractionalInternal">
+                              <div class="blNumFractional">
+                                <span class="t-roboto-medium">0</span>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blTextMinMax settingsModeMath-elm-37">
+                    <div class="blTextMinMaxInternal settingsModeMath-elm-38">
+                      <div class="blTMax settingsModeMath-elm-39">
+                        <span id="TMax" class="t-roboto-bold">max</span>
+                      </div>
+                      <div class="blTMin settingsModeMath-elm-40">
+                        <span id="TMin" class="t-roboto-bold">min</span>
+                      </div>
+                    </div>
+                  </div>
+                   <!-- Второй операнд-блок -->
+                  <div class="blSecondSettingsOperand settingsModeMath-elm-23">
+                    <div class="blSecondSettingsOperandInternal settingsModeMath-elm-24">
+                      <div class="blTextTitle settingsModeMath-elm-25">
+                        <span id="TextTitleSecond" class="t-roboto-medium">Второй</span>
+                      </div>
+                      <div class="blInputsMax settingsModeMath-elm-26">
+                        <div class="blInputsMaxInternal settingsModeMath-elm-27">
+                          <div id="secondBlMax" class="blInputWhole settingsModeMath-elm-28" 
+                          data-lenopr="lenopr" data-whole="secondNumMax" data-opr="two" data-chopr="max" 
+                          onclick="gui.selectedBlValue(this)">
+                            <div class="blInputWholeInternal settingsModeMath-elm-29">
+                              <div class="blNumWhole settingsModeMath-elm-30">
+                                <span id="secondNumMax" class="t-roboto-medium">2</span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="blPoint">
+                            <span class="t-roboto-bold">.</span>
+                          </div>
+                          <div class="blInputFractional">
+                            <div class="blInputFractionalInternal">
+                              <div class="blNumFractional">
+                                <span class="t-roboto-medium">0</span>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="blTextWhole settingsModeMath-elm-31">
+                        <span id="TextWholeSecond" class="t-roboto-medium">целое</span>
+                      </div>
+                      <!-- <div class="blTextFractional">
+                        <span class="t-roboto-medium">дробное</span>
+                      </div> -->
+                      <div class="blInputsMin settingsModeMath-elm-32">
+                        <div class="blInputsMinInternal settingsModeMath-elm-33">
+                          <div id="secondBlMin" class="blInputWhole settingsModeMath-elm-34" 
+                          data-lenopr="lenopr" data-lenopr="lenopr" data-whole="secondNumMin" data-opr="two" data-chopr="min" 
+                          onclick="gui.selectedBlValue(this)">
+                            <div class="blInputWholeInternal settingsModeMath-elm-35">
+                              <div class="blNumWhole settingsModeMath-elm-36">
+                                <span id="secondNumMin" class="t-roboto-medium">1</span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="blPoint">
+                            <span class="t-roboto-bold">.</span>
+                          </div>
+                          <div class="blInputFractional">
+                            <div class="blInputFractionalInternal">
+                              <div class="blNumFractional">
+                                <span class="t-roboto-medium">0</span>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blAdjustmentOperandov settingsModeMath-elm-41">
+                    <div id="btnMinusOperand" class="blBtnMinus settingsModeMath-elm-42" onclick="gui.setValueOperand('-')"></div>
+                    <div id="btnPlusOperand" class="blBtnPlus settingsModeMath-elm-43" onclick="gui.setValueOperand('+')"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="blOperationSign settingsModeMath-elm-44">
+                <div class="blOperationSignInternal settingsModeMath-elm-45">
+                  <div id="blTitleOperationSign" class="blTitleOperationSign settingsModeMath-elm-46">
+                    <span id="TitleOperationSign" class="t-roboto-medium">Знак операции</span>
+                  </div>
+                  <div class="blSigns settingsModeMath-elm-47">
+                    <div class="blSignsInternal settingsModeMath-elm-48">
+                      <!-- BlMinus -->
+                      <div id="blsignMinus" class="blSign blsignMinus settingsModeMath-elm-49" 
+                      data-actsign="actsign" data-nsign="0"
+                      onclick="gui.selectedBlValue(this)">
+                        <div class="blSignInternal settingsModeMath-elm-50">
+                          <div class="blTSign settingsModeMath-elm-51">
+                            <span class="t-roboto-bold">-</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- blDivision -->
+                      <!-- <div class="blSign blsignDivision">
+                        <div class="blSignInternal">
+                          <div class="blTSign">
+                            <span class="t-roboto-bold">÷</span>
+                          </div>
+                        </div>
+                      </div> -->
+                      <!-- blMultiply -->
+                      <div id="blsignMultiply" class="blSign blsignMultiply settingsModeMath-elm-52" 
+                      data-actsign="actsign" data-nsign="1"
+                      onclick="gui.selectedBlValue(this)">
+                        <div class="blSignInternal settingsModeMath-elm-53">
+                          <div class="blTSign settingsModeMath-elm-54">
+                            <span class="t-roboto-bold">*</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- blPlus -->
+                      <div id="blsignPlus" class="blSign blsignPlus settingsModeMath-elm-55" 
+                      data-actsign="actsign" data-nsign="2"
+                      onclick="gui.selectedBlValue(this)">
+                        <div class="blSignInternal settingsModeMath-elm-56">
+                          <div class="blTSign settingsModeMath-elm-57">
+                            <span class="t-roboto-bold">+</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="blRandomSigns" class="blRandomSigns settingsModeMath-elm-58" 
+                  data-actsign="actsign" data-nsign="-1"
+                  onclick="gui.selectedBlValue(this)">
+                    <div class="blRandomSignsInternal settingsModeMath-elm-59">
+                      <div class="blTRandomSigns settingsModeMath-elm-60">
+                        <span id="TRandomSigns" class="t-roboto-medium">Случайный</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blNote" class="blNote settingsModeMath-elm-61">
+                <span id="TNote" class="t-roboto-medium">Вы можете выбрать несколько!</span>
+              </div>
+              <!-- <div class="blAnswer" style="display: none;">
+                <div class="blAnswerInternal">
+                  <div class="blAnswerTitle">
+                    <span class="t-roboto-medium">Ответ</span>
+                  </div>
+                  <div class="blTPNA blTPositive">
+                    <div class="blTBtnInternal">
+                      <div class="blTBtn">
+                        <span class="t-roboto-medium">Положительный</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blTPNA blTNegative">
+                    <div class="blTBtnInternal">
+                      <div class="blTBtn">
+                        <span class="t-roboto-medium">Отрицательный</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blTPNA blTAny">
+                    <div class="blTBtnInternal">
+                      <div class="blTBtn">
+                        <span class="t-roboto-medium">Любой</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div id="blBtnByDefaultSettingsModeMath" class="blBtnByDefaultSettingsModeMath settingsModeMath-elm-62"
+              data-oprbydefault="oprbydefault"
+              onclick="gui.selectedBlValue(this)">
+                <div class="blBtnByDefaultSettingsModeMathInternal settingsModeMath-elm-63">
+                  <div id="blTBtnByDefaultModeMath" class="blTBtnByDefaultModeMath settingsModeMath-elm-64">
+                    <span id="TBtnByDefaultModeMath" class="t-roboto-medium">По умолчанию</span>
+                  </div>
+                </div>
+              </div>
+              <div id="blBtnSelectedSettingsModeMath" class="blBtnSelectedSettingsModeMath settingsModeMath-elm-65" 
+              onclick="gui.selectedSettingsModeMath()">
+                <div class="blBtnSelectedSettingsModeMathInternal settingsModeMath-elm-66">
+                  <div class="blTBtnSelectedModeMath settingsModeMath-elm-67">
+                    <span class="t-roboto-black blink">
+                      <span id="TBtnSelectedModeMath">Выбрать</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blShowKeyHDocument settingsModeMath-elm-68">
+            <div class="blShowKeyHDocumentInternal settingsModeMath-elm-69">
+              <div class="blBtnOpenKey settingsModeMath-elm-70">
+                <div class="blBtnOpenKeyInternal settingsModeMath-elm-71">
+                  <div class="BlKeyH settingsModeMath-elm-72">
+                    <span class="t-roboto-medium">H</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blTOpenD settingsModeMath-elm-73">
+                <span id="blTOpenDForModeMath" class="t-roboto-medium">Помощь</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Decoration field -->
+      <div id="blDecorationField" class="blDecorationField decorationField-elm-0" style="display: none;">
+        <div class="blDecorationFieldInternal decorationField-elm-1">
+          <div id="blPrevisChapter-decorationField" class="blPrevisChapter decorationField-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleDecorField decorationField-elm-2">
+            <span id="titleDecorField" class="t-roboto-black">Оформление поля</span>
+          </div>
+          <div class="blSelectedDecorField decorationField-elm-3">
+            <div class="blSelectedDecorFieldInternalMain decorationField-elm-4">
+              <div id="blImgDecorField" class="blImgDecorField decorationField-elm-6"></div>
+              <div id="blBtnPrevisDecorField" class="blBtnPNDF blBtnPrevisDecorField decorationField-elm-7" 
+                onclick="gui.btnPrevisNextField('previs')"></div>
+              <div id="blBtnNextDecorField" class="blBtnPNDF blBtnNextDecorField decorationField-elm-8" 
+                onclick="gui.btnPrevisNextField('next')"></div>
+              <div id="blBtnSelectedDecorField" class="blBtnSelectedDecorField decorationField-elm-9" 
+                onclick="gui.selectedDecorField()">
+                <div class="blBtnSelectedDecorFieldInternal decorationField-elm-10">
+                  <div class="blTBtnSelectedDecorField decorationField-elm-11">
+                    <span class="t-roboto-black blink">
+                      <span id="btnSelectedDecorField">Выбрать</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block topics -->
+      <div id="blTopics" class="blTopics topics-elm-0" style="display: none;">
+        <div class="blTopicsInternal topics-elm-1">
+          <div id="blPrevisChapter-topic" class="blPrevisChapter topics-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleTopics topics-elm-2">
+            <span id="TitleTopics" class="t-roboto-black">Тема</span>
+          </div>
+          <div class="blMainTopics topics-elm-3">
+            <div class="blMainTopicsInternal topics-elm-4">
+              <div id="blNotification" class="blNotification topics-elm-6" style="display: none;">
+                <div class="blNotificationInternal topics-elm-7">
+                  <div id="blTNotification" class="blTNotification topics-elm-8">
+                    <span id="TNotification" class="t-roboto-regular">Чтобы разблокировать, нажмите на замок</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blSelectedColor topics-elm-9">
+                <div class="blSelectedColorInternal topics-elm-10">
+                  <div class="blSelectedChapter topics-elm-11">
+                    <div class="blSelectedChapterInternal topics-elm-12">
+                      <div id="blBtn-obst" class="blBtnObstacles topics-elm-13" onclick="gui.selectedChapter('obst')">
+                        <div class="blBtnObstaclesInternal topics-elm-14">
+                          <div class="blTBtnObst topics-elm-15">
+                            <span id="TBtnObst" class="t-roboto-medium">Препятствия</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="blSelectedShowColor" class="blSelectedShowColor topics-elm-16">
+                        <div id="blPadlock" class="blPadlock topics-elm-17" onclick="gui.unlockSelectedColor()"></div>
+                      </div>
+                      <div id="blBtn-background" class="blBtnFont topics-elm-18" onclick="gui.selectedChapter('background')">
+                        <div class="blBtnFontInternal topics-elm-19">
+                          <div class="blTBtnFont topics-elm-20">
+                            <span id="TBtnFont" class="t-roboto-medium">Фон</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blListColors topics-elm-21">
+                    <div class="blListColorsInternal topics-elm-22">
+                      <div id="blNoteClr" class="blNoteClr topics-elm-23">
+                        <span id="TNoteClr" class="t-roboto-medium">Сначала выберите раздел!</span>
+                      </div>
+                      <div id="blMainListColors" class="blMainListColors mainScroll2 topics-elm-24" style="display: none;"></div>
+                      <div id="blMainListImgs" class="blMainListImgs mainScroll2 topics-elm-25" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blBtn-random" class="blBtnRandomTopics topics-elm-27" onclick="gui.selectedChapter('random')">
+                <div class="blBtnRandomTopicsInternal topics-elm-28">
+                  <div class="blTBtnRandomTopics topics-elm-29">
+                    <span id="TBtnRandomTopics" class="t-roboto-medium">Случайная</span>
+                  </div>
+                </div>
+              </div>
+              <div id="blBtnSelectedTopics" class="blBtnSelectedTopics topics-elm-30" onclick="gui.selectedTopic()">
+                <div class="blBtnSelectedTopicsInternal topics-elm-31">
+                  <div class="blTBtnSelectedTopics topics-elm-32">
+                    <span class="t-roboto-black blink">
+                      <span id="TBtnSelectedTopics">Продолжить</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blAnanimusUser blAnanimusUser-1 topics-elm-33" 
+           style="width: 710px; height: 38px; left: 50%; top: 95%; transform: translate(-50%, -95%);">
+            <code class="TAnanimusUser-1">
+              Ваш прогресс не будет сохранен в игре, пожалуйста, войдите в систему, чтобы сохранить его!
+            </code>
+            <code onclick="gui.showHideInitUser('block')" class="TAnanimusUser-2 topics-elm-34" 
+             style="position: absolute; left: 50%; top: 100%; transform: translate(-50%, -100%);">> Авторизоваться <</code>
+          </div>
+        </div>
+      </div>
+      <!-- Block Settings snake -->
+      <div id="blSettingsSnake" class="blSettingsSnake settingsSnake-elm-0" style="display: none;">
+        <div class="blSettingsSnakeInternal settingsSnake-elm-1">
+          <div id="blPrevisChapter-settingsSnake" class="blPrevisChapter settingsSnake-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleSettingsSnake settingsSnake-elm-2">
+            <span id="titleSettingsSnake" class="t-roboto-black">Параметры змейки</span>
+          </div>
+          <div class="blSettingsSnakeMain settingsSnake-elm-3">
+            <div class="blSettingsSnakeMainInternal settingsSnake-elm-4">
+              <div class="blSetSnakeSize settingsSnake-elm-6">
+                <div class="blSetSnakeSizeInternal settingsSnake-elm-7">
+                  <div class="blTitleSetSnakeSize settingsSnake-elm-8">
+                    <span id="titleSetSnakeSize" class="t-roboto-medium">Длина</span>
+                  </div>
+                  <div class="blShowSnakeSize settingsSnake-elm-9">
+                    <div class="blShowSnakeSizeInternal settingsSnake-elm-10">
+                      <div class="blSelectedAvatar settingsSnake-elm-11">
+                        <div id="avatarHead" class="selectedAvatar avatarHead settingsSnake-elm-12"></div>
+                        <div id="avatarBody" class="selectedAvatar avatarBody settingsSnake-elm-12"></div>
+                        <div id="avatarBody-1" class="selectedAvatar avatarBody1 settingsSnake-elm-12"></div>
+                        <div id="avatarBody-2" class="selectedAvatar avatarBody2 settingsSnake-elm-12"></div>
+                        <div id="avatarBody-3" class="selectedAvatar avatarBody3 settingsSnake-elm-12"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="btnMinusLength" class="blBtnMinus settingsSnake-elm-13" onclick="gui.reduceIncreaseLength('-')" style="display: none;"></div>
+                  <div id="btnPlusLength" class="blBtnPlus settingsSnake-elm-14" onclick="gui.reduceIncreaseLength('+')"></div>
+                </div>
+              </div>
+              <div class="blSetDesingSnake settingsSnake-elm-15">
+                <div class="blSetDesingSnakeInternal settingsSnake-elm-16">
+                  <div class="blTitleDesingSnake settingsSnake-elm-17">
+                    <span id="titleDesingSnake" class="t-roboto-medium">Дизайн</span>
+                  </div>
+                  <div class="blSetDesingSnakeScroll settingsSnake-elm-18">
+                    <div id="blSetDesingSnakeScrollMain" class="blSetDesingSnakeScrollMain mainScroll2 settingsSnake-elm-19"></div>
+                    <div id="blSendingSnake" class="blSending settingsSnake-elm-20">
+                      <code class="loadingSnake">....</code>
+                      <style>
+                        .loadingSnake
+                        {
+                          position: absolute;
+                          clip-path: inset(0 3ch 0 0);
+                          animation: lSnake 1s steps(4) infinite;
+                        }
+                  
+                        @keyframes lSnake {
+                          to {
+                            clip-path: inset(0 -1ch 0 0)
+                          }
+                        }
+                      </style>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blAnanimusUser blAnanimusUser-2 settingsSnake-elm-24" 
+               style="width: 200px; height: 125px; left: 100%; top: 35%; transform: translate(-100%, -35%);">
+                <code class="TAnanimusUser-1">
+                  Ваш прогресс не будет сохранен в игре, пожалуйста, войдите в систему, чтобы сохранить его!
+                </code>
+                <code onclick="gui.showHideInitUser('block')" class="TAnanimusUser-2 settingsSnake-elm-25" 
+                  style="position: absolute; width: 145px; left: 50%; top: 100%; transform: translate(-50%, -100%);">> Авторизоваться <</code>
+              </div>
+              <div class="blSetSnakeSpeed settingsSnake-elm-26">
+                <div class="blSetSnakeSpeedInternal settingsSnake-elm-27">
+                  <div class="blTitleSetSnakeSpeed settingsSnake-elm-28">
+                    <span id="titleSetSnakeSpeed" class="t-roboto-medium">Скорость</span>
+                  </div>
+                  <div class="blShowSnakeSpeed settingsSnake-elm-29">
+                    <div class="blShowSnakeSpeedInternal settingsSnake-elm-30">
+                      <div id="blSnakeSpeed" class="blSnakeSpeed settingsSnake-elm-31">
+                        <span id="TSnakeSpeed" class="t-roboto-medium">0.01/сек</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="btnMinusSpeed" class="blBtnMinus blBtnMinusSpeed settingsSnake-elm-32"></div>
+                  <div id="btnPlusSpeed" class="blBtnPlus blBtnPlusSpeed settingsSnake-elm-33"></div>
+                </div>
+              </div>
+              <div id="blNoteWarningSpeedSnake" class="blNoteWarningSpeedSnake settingsSnake-elm-34">
+                <span id="TNoteWarningSpeedSnake" class="t-roboto-medium">
+                  Внимание: чем выше скорость, тем медленнее будет ползти змейка!
+                </span>
+              </div>
+              <div class="blBtnSelectedSettingSnake settingsSnake-elm-35" onclick="gui.selectedSettingSnake()">
+                <div class="blBtnSelectedSettingSnakeInternal settingsSnake-elm-36">
+                  <div class="blTBtnSelectedSettingSnake settingsSnake-elm-37">
+                    <span class="t-roboto-black blink settingsSnake-elm-38">
+                      <span id="TBtnSelectedSettingSnake">Выбрать</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Settings food -->
+      <div id="blSettingsFood" class="blSettingsFood settingsFood-elm-0" style="display: none;">
+        <div class="blSettingsFoodInternal settingsFood-elm-1">
+          <div id="blPrevisChapter-settingsFood" class="blPrevisChapter settingsFood-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleSettingsFood settingsFood-elm-2">
+            <span id="titleSettingsFood" class="t-roboto-black">Параметры еды</span>
+          </div>
+          <div class="blSettingsFoodMain settingsFood-elm-3">
+            <div class="blSettingsFoodMainInternal settingsFood-elm-4">
+              <div class="blSetDesingFood settingsFood-elm-6">
+                <div class="blSetDesingFoodInternal settingsFood-elm-7">
+                  <div id="blTitleDesingFood" class="blTitleDesingFood settingsFood-elm-8">
+                    <span id="titleDesingFood" class="t-roboto-medium">Что змейка будет кушать?</span>
+                  </div>
+                  <div class="blSetDesingFoodScroll settingsFood-elm-9">
+                    <div id="blSetDesingFoodScrollMain" class="blSetDesingFoodScrollMain mainScroll2 settingsFood-elm-10"></div>
+                    <div id="blSendingFood" class="blSending settingsFood-elm--66">
+                      <code class="loadingFood">....</code>
+                      <style>
+                        .loadingFood
+                        {
+                          position: absolute;
+                          margin-left: 10px;
+                          margin-top: 10px;
+                          clip-path: inset(0 3ch 0 0);
+                          animation: lFood 1s steps(4) infinite;
+                        }
+                  
+                        @keyframes lFood {
+                          to {
+                            clip-path: inset(0 -1ch 0 0)
+                          }
+                        }
+                      </style>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blSetFoodQuantity" class="blSetFoodQuantity settingsFood-elm--67">
+                <div class="blSetFoodQuantityInternal settingsFood-elm--68">
+                  <div id="blTitleSetFoodQuantity" class="blTitleSetFoodQuantity settingsFood-elm--69">
+                    <span id="titleSetFoodQuantity" class="t-roboto-medium">Сколько создавать?</span>
+                  </div>
+                  <div class="blShowSnakeFood settingsFood-elm--70">
+                    <div class="blShowSnakeFoodInternal settingsFood-elm--71">
+                      <div class="blSetQuantityFood settingsFood-elm--72">
+                        <span id="textSetQuantityFood" class="t-roboto-black">5</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="btnMinusFood" class="blBtnMinus blBtnMinusFood settingsFood-elm--73" onclick="gui.reduceIncreaseQuantity('-')"></div>
+                  <div id="btnPlusFood" class="blBtnPlus blBtnPlusFood settingsFood-elm--74" onclick="gui.reduceIncreaseQuantity('+')"></div>
+                </div>
+              </div>
+              <div class="blBtnSelectedSettingFood settingsFood--elm-75" onclick="gui.selectedSettingFood()">
+                <div class="blBtnSelectedSettingFoodInternal settingsFood--elm-76">
+                  <div class="blTBtnSelectedSettingFood settingsFood--elm-77">
+                    <span class="t-roboto-black blink">
+                      <span id="TbtnSelectedSettingFood">Выбрать</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blAnanimusUser blAnanimusUser-3 settingsFood-elm--78" style="width: 710px; height: 38px; left: 50%; top: 95%; transform: translate(-50%, -95%);">
+            <code class="TAnanimusUser-1">
+              Ваш прогресс не будет сохранен в игре, пожалуйста, войдите в систему, чтобы сохранить его!
+            </code>
+            <code onclick="gui.showHideInitUser('block')" class="TAnanimusUser-2 settingsFood-elm--79" style="position: absolute; left: 50%; top: 100%; transform: translate(-50%, -100%);">> Авторизоваться <</code>
+          </div>
+        </div>
+      </div>
+      <!-- Block init user -->
+      <div id="blInitUser" class="blInitUser initUser-elm-0" style="display: none;">
+        <div class="blInitUserInternal initUser-elm-1">
+          <div class="blTitleInitUser initUser-elm-2">
+            <span id="TitleInitUser" class="t-roboto-black">Инициализация</span>
+          </div>
+          <div class="blMainBlInitUser initUser-elm-3">
+            <div class="blMainBlInitUserInternal initUser-elm-4">
+              <div class="blMainInitUser initUser-elm-5">
+                <div class="blMainInitUserInternal initUser-elm-6">
+                  <div id="blWInitUserText" class="blInitUserText mainScroll2 initUser-elm-7">
+                    <code class="devSpan2 codeTInitUser-1 initUser-elm-8">
+                      <span id="codeTInitUser-1">Добро пожаловать в игру</span> "SNAKE_2D".</code>
+                    <div id="codeTInitUser-2" class="devSpan2 codeTInitUser-2 initUser-elm-9">
+                      <code>
+                        <span id="codeTInitUser-2-1">В этом интерфейсе вам даны две возможности:</span>
+                      </code>
+                      <div class="hrLine initUser-elm-20"></div>
+                      <br />
+                      <br />
+                      <code>1) <span id="codeTInitUser-2-2">Играть, как гость;</span></code>
+                      <br />
+                      <code>2) <span id="codeTInitUser-2-3">Играть, как авторизованный игрок.</span></code>
+                    </div>
+                    <code id="codeTInitUser-3" class="devSpan2 codeTInitUser-3 initUser-elm-10">
+                      <span id="codeTInitUser-3-1">Теперь расскажем об возможностях по подробнее.</span>
+                    </code>
+                    <div id="codeTInitUser-4" class="devSpan2 codeTInitUser-4 initUser-elm-11">
+                      <code>
+                        - <span id="codeTInitUser-4-1">Примущества авторизованного игрока:</span>
+                      </code>
+                      <br />
+                      <code>1) 
+                        <span style="color: rgb(21, 218, 21);" id="codeTInitUser-4-2">
+                          Сохраняется прогресс в игре;
+                        </span>
+                      </code>
+                      <br />
+                      <code>2) 
+                        <span style="color: rgb(21, 218, 21);" id="codeTInitUser-4-3">
+                          Сохраняются разблокированные аватары (персонажа, препятствий и т.д.).
+                        </span>
+                      </code>
+                    </div>
+                    <div id="codeTInitUser-5" class="devSpan2 codeTInitUser-5 initUser-elm-12">
+                      <code>
+                        - <span id="codeTInitUser-5-1">Недостатки гостя:</span>
+                      </code>
+                      <br />
+                      <code>1) 
+                        <span style="color: rgb(255, 39, 39);" id="codeTInitUser-5-2">
+                          Несохраняется прогресс в игре;</span>
+                        </code>
+                      <br />
+                      <code>2) 
+                        <span style="color: rgb(255, 39, 39);" id="codeTInitUser-5-3">
+                          Несохраняются разблокированные аватары (персонажа, препятствий и т.д.).
+                        </span>
+                      </code>
+                    </div>
+                    <code id="codeTInitUser-6" class="devSpan2 codeTInitUser-6 initUser-elm-13">
+                      Теперь выберите, как хотите играть:
+                    </code>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnSelectedInitUser btnIU_1 initUser-elm-14" onclick="gui.selectedBtnIUPlayer()">
+                <div class="blBtnSelectedInitUserInternal initUser-elm-15">
+                  <div class="blTBtnSelectedInitUser initUser-elm-16">
+                    <span class="t-roboto-black blink">
+                      <span id="TBtnSelectedInitUser1">Игрок</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="blBtnSelectedInitUser btnIU_2 initUser-elm-17" onclick="gui.selectedBtnIUGuest()">
+                <div class="blBtnSelectedInitUserInternal initUser-elm-18">
+                  <div class="blTBtnSelectedInitUser initUser-elm-19">
+                    <span class="t-roboto-black">
+                      <span id="TBtnSelectedInitUser2">Гость</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block rules of game  -->
+      <div id="blRulesOfGame" class="blSettingsRulesOfGame rulesOfGame-elm-0" style="display: none;">
+        <div class="blSettingsRulesOfGameInternal rulesOfGame-elm-1">
+          <div id="blPrevisChapter-rulesOfGame" class="blPrevisChapter rulesOfGame-elm-5" onclick="gui.showPrevisChapter()"></div>
+          <div class="blTitleSettingsRulesOfGame rulesOfGame-elm-2">
+            <span id="TitleSettingsRulesOfGame" class="t-roboto-black">Правила игры</span>
+          </div>
+          <div class="blMainSettingsRulesOfGame rulesOfGame-elm-3">
+            <div class="blMainSettingsRulesOfGameInternal rulesOfGame-elm-4">
+              <div class="blMainRulesOfGame rulesOfGame-elm-6">
+                <div class="blMainRulesOfGameInternal rulesOfGame-elm-7">
+                  <div id="blRulesOfGameText" class="blRulesOfGameText mainScroll2 rulesOfGame-elm-8"></div>
+                </div>
+              </div>
+              <div class="blBtnSelectedRulesOfGame rulesOfGame-elm-9" onclick="gui.playGame()">
+                <div class="blBtnSelectedRulesOfGameInternal rulesOfGame-elm-10">
+                  <div id="blTBtnSelectedRulesOfGame" class="blTBtnSelectedRulesOfGame rulesOfGame-elm-11">
+                    <span class="t-roboto-black blink">
+                      <span id="TBtnSelectedRulesOfGame">Начать игру</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block levels for maze -->
+      <div id="blLevelsForMaze" class="blLevelsForMaze levelsForMaze-elm-0" style="display: none;">
+        <div class="blLevelsForMazeInternal levelsForMaze-elm-1">
+          <div id="blPrevisChapter-maze" class="blPrevisChapter levelsForMaze-elm-2" onclick="gui.showPrevisChapter()"></div>
+          <div class="blSelectedLevelsForMaze levelsForMaze-elm-3">
+            <div class="blSelectedLevelForMazeInternalMain levelsForMaze-elm-4">
+              <div class="blSelectedLevelForMazeInternal mainScroll levelsForMaze-elm-5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tooltips -->
+      <div id="tooltipCurrentTime" class="t-roboto-medium tooltipCurrentTime-elm-0-1">
+        <div id="TtooltipCurrentTime" class="tooltipCurrentTime-elm-1-1">Ваше время</div>
+      </div>
+      <div id="tooltipNecessaryTime" class="t-roboto-medium tooltipCurrentTime-elm-0-2">
+        <div id="TtooltipNecessaryTime" class="tooltipCurrentTime-elm-1-2">Требуемое время</div>
+      </div>
+      <div id="tooltipDesign" class="t-roboto-medium tooltipAdv-elm-0">
+        <div id="TtooltipAdv" class="tooltipAdv-elm-1">Доступно после рекламы</div>
+      </div>
+      <div id="tooltipSZW" class="t-roboto-medium tooltipSZW-elm-0">
+        <div id="TtooltipSZW" class="tooltipSZW-elm-1">words: 1234</div>
+      </div>
+      <!-- Documentation for the game -->
+      <div id="blMainDocument" class="blMainDocument document-elm-0" style="display: none;">
+        <div class="blMainDocumentInternal document-elm-1">
+          <div class="blBtnCloseDocument document-elm-5">
+            <div class="blBtnCloseDocumentInternal document-elm-6">
+              <div class="blBtnCloseKey document-elm-7">
+                <div class="blBtnCloseKeyInternal document-elm-8">
+                  <div class="BlKeyH document-elm-9">
+                    <span class="t-roboto-medium">H</span>
+                  </div>
+                </div>
+              </div>
+              <div class="blTCloseD document-elm-10">
+                <span id="blTCloseD" class="t-roboto-medium">close</span>
+              </div>
+            </div>
+          </div>
+          <div class="blTitleblMainDocument document-elm-2">
+            <span id="TitleblMainDocument" class="t-roboto-black">Документация</span>
+          </div>
+          <div class="blMainDocumentAllPage document-elm-3">
+            <div class="blMainDocumentAllPageInternal document-elm-4">
+              <div class="blMainListDocumentAllPage document-elm-11">
+                <div class="blMainListDocumentAllPageInternal document-elm-12">
+                  <div id="blListDocumentAllPage" class="blListDocumentAllPage mainScroll2 document-elm-13">
+                    <div class="devBl document-elm-16">
+                      <code id="noteListDocumentAllPage">Сначала выберите интересующий вас раздел!</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blShowHideListChapters document-elm-14">
+                <div id="blShowHideListChaptersInter" class="blShowHideListChaptersInter mainScroll2 document-elm-17"></div>
+              </div>
+              <div class="imgShowHideListChapters document-elm-15" onclick="gui.showHideListChapters()"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+      // Показать подсказку
+      $(function()
+      {
+        gui.tooltipFun("textCurrentTime", "tooltipCurrentTime");
+        gui.tooltipFun("textNecessaryTime", "tooltipNecessaryTime");
+
+        gui.tooltipFun("blSelectedShowColor", "tooltipDesign");
+      });
+
+      let canvas = document.getElementById("canvas");
+      let ctx = canvas.getContext("2d");
+    
+    </script>
+    <!-- My lib -->
+    <script type="text/javascript" src="./Js/mylib/shuffle.js"></script>
+    <!-- ====== -->
+    <!-- Data base -->
+    <script type="text/javascript" src="./Js/DataBase/magicNumbers.js"></script>
+      <!-- Modes -->
+      <script type="text/javascript" src="./Js/DataBase/modes/modeClassic.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modeInfinitely.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modeJumpFood.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modeFeedMe.js"></script>
+        <!-- Topic ru or en, for mode 'words' -->
+        <script type="text/javascript" src="./Js/DataBase/modes/topicsForWords/topicWordRu.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/topicsForWords/topicWordEn.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/topicsForWords/mainWord.js"></script>
+        <!-- ============== -->
+      <script type="text/javascript" src="./Js/DataBase/modes/modeWords.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modeMathematics.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modeReverseMove.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modeNarrowingOfZone.js"></script>
+        <!-- levels for maze -->
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_1.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_2.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_3.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_4.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_5.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_6.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_7.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_8.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_9.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_10.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_11.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_12.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_13.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_14.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_15.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_16.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_17.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_18.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_19.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/level_20.js"></script>
+        <script type="text/javascript" src="./Js/DataBase/modes/levels/mainLevel.js"></script>
+        <!-- ====== -->
+      <script type="text/javascript" src="./Js/DataBase/modes/modeMaze.js"></script>
+      <script type="text/javascript" src="./Js/DataBase/modes/modePortals.js"></script>
+      <!-- ========= -->
+    <script type="text/javascript" src="./Js/DataBase/canvas.js"></script>
+    <!-- ========= -->
+
+    <!-- Main -->
+      <!-- DecorField -->
+      <script type="text/javascript" src="./Js/main/decorField/classicField.js"></script>
+      <script type="text/javascript" src="./Js/main/decorField/infinitelyField.js"></script>
+      <script type="text/javascript" src="./Js/main/decorField/feedMeField.js"></script>
+      <script type="text/javascript" src="./Js/main/decorField/reverseMoveField.js"></script>
+      <script type="text/javascript" src="./Js/main/decorField/portalsField.js"></script>
+      <script type="text/javascript" src="./Js/main/decorField/commonFields.js"></script>
+      <script type="text/javascript" src="./Js/main/decorField/mainField.js"></script>
+      <!-- ========== -->
+      <!-- DocumentPage -->
+      <script type="text/javascript" src="./Js/main/documentPage/documentPageRu.js"></script>
+      <script type="text/javascript" src="./Js/main/documentPage/documentPageEn.js"></script>
+      <script type="text/javascript" src="./Js/main/documentPage/documentChapters.js"></script>
+      <!-- ========== -->
+      <!-- pagesRulesOfGame -->
+      <script type="text/javascript" src="./Js/main/pagesForRulesOfGame/pagesForRulesOfGameRu.js"></script>
+      <script type="text/javascript" src="./Js/main/pagesForRulesOfGame/pagesForRulesOfGameEn.js"></script>
+      <!-- ========== -->
+    <script type="text/javascript" src="./Js/main/block.js"></script>
+    <script type="text/javascript" src="./Js/main/food.js"></script>
+    <script type="text/javascript" src="./Js/main/snake.js"></script>
+    <script type="text/javascript" src="./Js/main/obstacles.js"></script>
+    <script type="text/javascript" src="./Js/DataBase/joystick.js"></script>
+    <script type="text/javascript" src="./Js/main/keyboard.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI.js"></script>
+    <script type="text/javascript" src="./Js/main/adaptationGUI/adaptationGUI.js"></script>
+    <!-- ===== -->
+    
+    <!-- Start -->
+    <script type="text/javascript" src="./Js/start.js"></script>
+    <!-- ===== -->
+
+    <!-- <script type="text/javascript" src="./sandbox.js"></script> -->
+
+    <script type="text/javascript">
+
+      // Увеличить/уменьшить скорость змейки
+      gui.reduceIncreaseSpeed('-');
+      gui.reduceIncreaseSpeed('+');
+
+
+      // Скрыть valueScore при первом запуске
+      ctxData.hideShowBlAllValueScore("none");
+
+      // ===== For maze =====
+      // 
+      // Открыть подарок
+      document.getElementById("imgGift").addEventListener("click", () => 
+      {
+        gui.openCloseGift("none");
+        ctxData.mode.current.o.getGift();
+      });
+      // 
+      // 
+      // Получить еще элексиров жизни
+      document.getElementById("btnGOGetMoreInternal").addEventListener("click", () => 
+      {
+        // console.log("Запускаю рекламный ролик для Maze.");
+
+        gui.advRewarded(() => 
+        {
+          if (ctxData.checkSelectedMode("maze"))
+          {
+            ctxData.mode.current.o.setValueForHealthSnake(ctxData.mode.current.o.elixirHealth.addN);
+            document.getElementById("NQuantityElexirHealth").innerHTML = "x"+food.score;
+
+            if (food.score > 0) ctxData.mode.current.o.showBtnResume("block");
+          }
+        });
+      });
+      // 
+      // Продолжить для maze
+      document.getElementById("blBtnResumeGOForMaze").addEventListener("click", () => 
+      {
+        gui.showHideGameOver("none", "on");
+        
+        let downtimePoint = ctxData.mode.current.o.gameplayTime.downtimePoint;
+        ctxData.mode.current.o.gameplayTime.downtimeTotal += Date.now() - downtimePoint;
+      });
+      // 
+      // Показать GameOver/CountingResults, или вернуться к уравням
+      function backLvlsForMaze(someBl, switchAnim, showLvl)
+      {
+        snake.reset();
+        obst.reset();
+        food.reset();
+        ctxData.mode.current.o.reset();
+
+        switch(someBl)
+        {
+          case "gameOver":
+            gui.showHideGameOver("none", switchAnim);
+            break;
+          case "countingResults":
+            gui.showHideCountingResults("none", switchAnim);
+            break;
+        }
+
+        if (showLvl)
+        {
+          gui.showHideCanvas("none");
+          gui.showHideLevelsForMaze("block");
+        }
+      }
+      // 
+      // Следующий уравень
+      document.getElementById("blBtnNextLvlForMaze").addEventListener("click", () => 
+      {
+        ctxData.mode.current.o.nextLevel();
+
+        snake.reset();
+        obst.reset();
+        food.reset();
+        ctxData.mode.current.o.reset();
+
+        gui.showHideCountingResults("none", "on");
+      });
+      // 
+      // ==========
+
+
+      // ===== For words and math, or other =====
+      // 
+      // Продолжить для words and math, or other
+      function actvExtraLife()
+      {
+        // console.log("Запускаю рекламный ролик для Возраждения не для maze.");
+
+        gui.advRewarded(() => 
+        {
+          gui.showHideGameOver("none", "on");
+          snake.extraLife = true;
+
+          if (ctxData.checkSelectedMode("feedMe") && snake.extraLife)
+          {
+            ctxData.mode.current.o.extraHalfOfLife();
+          }
+        });
+      }
+      // 
+      // Скрыть GameOver, или вернуться к режимам
+      function backModesForWM(switchAnim, showModes)
+      {
+        gui.showHideGameOver("none", switchAnim);
+
+        if (showModes) gui.showHideModes("block");
+        else
+        {
+          snake.stopMove(false);
+          ctxData.mode.current.o.reset();
+          snake.reset();
+          food.reset();
+
+          obst.createBorder(false);
+          obst.createAdditionalObstacles(false);
+          snake.mainSnake();
+          food.setNumFood();  // На заметку: еда должна быть создана после создания 
+                              // препятствий (т.е. во избежание наложения друг на друга)!
+        }
+      }
+      // 
+      // ==========
+
+
+      // Для блокировки выделения текста
+      document.ondragstart=noselect;
+      document.onselectstart=noselect;
+      document.oncontextmenu=noselect;
+      function noselect(){return false;}
+
+      // Отключаем клавишу Tab для браузера (это для режима 'words')
+      $(document).keydown(function (e) 
+      {
+        var keycode1 = (e.keyCode ? e.keyCode : e.which);
+        if (keycode1 == 0 || keycode1 == 9) 
+        {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      });
+
+      // Предупредить перед обновлением страницы
+      // window.onbeforeunload = function () { return ""; };
+
+      // Изменить масштаб в браузере
+      // document.body.style.zoom = "100%";
+    </script>
+  </body>
+</html>

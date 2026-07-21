@@ -1,0 +1,1310 @@
+.blAddCoinsForAd
+{
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: #303030;
+  display: none;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blСonfirmBuy
+{
+  position: absolute;
+  width: 320px;
+  height: 160px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: #303030;
+  display: none;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.headerCoinfirmBuy
+{
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background-color: #E0DC62;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blСonfirmQuestionT
+{
+  position: absolute;
+  color: #fff;
+  font-size: 130%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+}
+.blСonfirmAction
+{
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  /* border: 1px solid #fff; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+}
+.blConfirmCloseImg
+{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  background-image: url("../img/close.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blConfirmContinueImg
+{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  background-image: url("../img/selected.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.headerAddCoins
+{
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background-color: #E0DC62;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.headerAddCoinsTitle
+{
+  position: absolute;
+  font-size: 120%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blScrollProducts
+{
+  position: absolute;
+  /* border: 1px solid #fff; */
+  width: 315px;
+  height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+ 
+  /* div в центре другого div */
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -90%);
+}
+
+.btnBackSeeAd
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  /* border: 1px solid black; */
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 10;
+  display: none;
+
+  background-image: url("../img/back.png");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 99.5%;
+  top: 0%;
+  transform: translate(-99.5%, -0%);
+}
+
+.blAddCoinsFree
+{
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  /* border: 1px solid #fff; */
+  margin-left: 50px;
+}
+
+.BtnImgAdCoins
+{
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  /* border: 1px solid #fff; */
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 100%;
+  transform: translate(-0%, -100%);
+}
+.blImgAdCoins
+{
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/ad.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.2s;
+
+  animation: pulse 2s ease-in-out infinite;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+@keyframes pulse 
+{
+  from {
+    transform: scale(0.90);
+  }
+  50% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.90);
+  }
+}
+.blImgAdCoins:hover
+{
+  position: absolute;
+  animation: none;
+}
+
+
+.blTEquals
+{
+  position: absolute;
+  height: 60px;
+  /* border: 1px solid black; */
+
+  color: #FEDA2C;
+  -webkit-text-stroke: 1px black;
+  -moz-text-stroke: 1px black;
+  -ms-text-stroke: 1px black;
+
+  font-size: 280%;
+
+  /* div в центре другого div */
+  left: 47%;
+  top: 50%;
+  transform: translate(-47%, -50%);
+}
+
+
+.blResultForAd
+{
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  /* border: 1px solid #fff; */
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.imgCoinResultForAd
+{
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  /* border: 1px solid #fff; */
+
+  background-image: url("../img/coin_3.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.TCoinResultForAd
+{
+  position: absolute;
+  height: 55px;
+  /* border: 1px solid black; */
+  color: #FEDA2C;
+
+
+  font-size: 250%;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.blBuyCoinsForMoney_line
+{
+  position: absolute;
+  width: 295px;
+  height: 70px;
+  /* border: 1px solid #fff; */
+}
+.blBuyCoinsForMoney_line_2
+{
+  position: absolute;
+  width: 295px;
+  height: 70px;
+  /* border: 1px solid #fff; */
+}
+.blBuyCoinsForMoney
+{
+  position: absolute;
+  width: 90px;
+  height: 70px;
+  /* border: 1px solid #fff; */
+}
+.blBuyCoinsForMoney2
+{
+  position: absolute;
+  width: 140px;
+  height: 70px;
+  /* border: 1px solid #fff; */
+}
+.blResultBCM
+{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  /* border: 1px solid #fff; */
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+.imgCoinResultForAdBCM
+{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  /* border: 1px solid #fff; */
+
+  background-image: url("../img/coin_3.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.TCoinResultForAdBCM
+{
+  position: absolute;
+  height: 38px;
+  /* border: 1px solid #fff; */
+  color: #FEDA2C;
+  font-size: 170%;
+
+  margin: -3px 30px;
+}
+.blBtnPriceBCM
+{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 150%;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blBtnPriceBCMTitle
+{
+  position: absolute;
+  color: #fff;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buyCFM_7, .buyCFM_8, .buyCFM_9
+{
+  font-size: 140%;
+  margin: 0.5px 27px;
+}
+
+.blBuyCoinsForMoney_line-1 { margin: 100px 5px; }
+.blBuyCoinsForMoney_line-2 { margin: 190px 5px; }
+.blBuyCoinsForMoney_line-3 { margin: 280px 5px; }
+.blBuyCoinsForMoney_line-4 { margin: 400px 5px; }
+.blBuyCoinsForMoney_line-5 { margin: 500px 5px; }
+.blBuyCoinsForMoney_line-6 { margin: 600px 5px; }
+
+.blBuyCoinsForMoney_1
+{
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blBuyCoinsForMoney_2
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBuyCoinsForMoney_3
+{
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+
+.blBuyBagForMoney
+{
+  position: absolute;
+  width: 250px;
+  height: 225px;
+  /* border: 1px solid #fff; */
+
+  margin: 710px 30px;
+}
+.blheaderResultBBFM
+{
+  position: absolute;
+  width: 100%;
+  height: 34px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #fff;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blResultBBFM
+{
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  /* border: 1px solid #fff; */
+
+  /* div в центре другого div */
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+.imgCoinResultForAdBBFM
+{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  /* border: 1px solid #fff; */
+
+  background-image: url("../img/coin_3.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.TCoinResultForAdBBFM
+{
+  position: absolute;
+  /* border: 1px solid #fff; */
+  color: #FEDA2C;
+  font-size: 175%;
+
+  margin: -5px 30px;
+}
+
+.blResShowAirBBFM
+{
+  position: absolute;
+  width: 100%;
+  height: 178px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blShowAirBBFM
+{
+  position: absolute;
+  width: 100%;
+  height: 140px;
+  /* border: 1px solid red; */
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.blBtnPriceBBFM
+{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 150%;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blBtnPriceBBFMTitle
+{
+  position: absolute;
+  color: #fff;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@media only screen and (max-width: 1255px)
+{
+  .btnBackSeeAd
+  {
+    width: 60px;
+    height: 60px;
+  }
+
+  .blAddCoinsForAd
+  {
+    width: 315px;
+    height: 320px;
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 100%;
+  }
+
+
+  .blScrollProducts
+  {
+    width: 310px;
+    height: 280px;
+  }
+
+  .blAddCoinsFree
+  {
+    width: 165px;
+    height: 50px;
+
+    margin-left: 70px;
+  }
+  .BtnImgAdCoins
+  {
+    width: 60px;
+    height: 50px;
+  }
+  .blImgAdCoins
+  {
+    width: 60px;
+    height: 50px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .blTEquals
+  {
+    height: 60px;
+    font-size: 250%;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .blResultForAd
+  {
+    width: 60px;
+    height: 50px;
+  }
+  .imgCoinResultForAd
+  {
+    width: 30px;
+    height: 30px;
+  }
+  .TCoinResultForAd
+  {
+    height: 43px;
+    font-size: 200%;
+  }
+
+
+  .blBuyCoinsForMoney_line
+  {
+    width: 295px;
+    height: 70px;
+  }
+  .blBuyCoinsForMoney
+  {
+    width: 85px;
+    height: 65px;
+  }
+  .blBuyCoinsForMoney_line_2
+  {
+    width: 295px;
+    height: 70px;
+  }
+  .blBuyCoinsForMoney2
+  {
+    width: 135px;
+    height: 65px;
+  }
+  .blResultBCM
+  {
+    height: 30px;
+  }
+  .imgCoinResultForAdBCM
+  {
+    width: 23px;
+    height: 23px;
+  }
+  .TCoinResultForAdBCM
+  {
+    height: 38px;
+    font-size: 150%;
+    margin: -0.5px 26px;
+  }
+  .buyCFM_7, .buyCFM_8, .buyCFM_9
+  {
+    font-size: 140%;
+    margin: 0.5px 25px;
+  }
+  .blBtnPriceBCM
+  {
+    height: 27px;
+    border-radius: 4px;
+    font-size: 120%;
+  }
+
+
+  .blBuyCoinsForMoney_line-1 { margin: 100px 5px; }
+  .blBuyCoinsForMoney_line-2 { margin: 190px 5px; }
+  .blBuyCoinsForMoney_line-3 { margin: 280px 5px; }
+  .blBuyCoinsForMoney_line-4 { margin: 400px 5px; }
+  .blBuyCoinsForMoney_line-5 { margin: 490px 5px; }
+  .blBuyCoinsForMoney_line-6 { margin: 580px 5px; }
+
+
+  .blBuyBagForMoney
+  {
+    width: 240px;
+    height: 225px;
+    margin: 700px 32px;
+  }
+  .blheaderResultBBFM
+  {
+    height: 34px;
+  }
+  .blResultBBFM
+  {
+    width: 200px;
+    height: 30px;
+  }
+  .imgCoinResultForAdBBFM
+  {
+    width: 25px;
+    height: 25px;
+  }
+  .TCoinResultForAdBBFM
+  {
+    font-size: 155%;
+    margin: -2px 28px;
+  }
+  .blResShowAirBBFM
+  {
+    height: 178px;
+  }
+  .blShowAirBBFM
+  {
+    height: 140px;
+  }
+  .blBtnPriceBBFM
+  {
+    height: 30px;
+    font-size: 130%;
+  }
+
+
+  .blСonfirmBuy
+  {
+    width: 280px;
+    height: 140px;
+  }
+  .headerCoinfirmBuy
+  {
+    height: 17px;
+  }
+  .blСonfirmQuestionT
+  {
+    font-size: 120%;
+  }
+  .blСonfirmAction
+  {
+    width: 120px;
+    height: 37px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+  }
+  .blConfirmCloseImg, .blConfirmContinueImg
+  {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+
+
+@media only screen and (max-width: 350px)
+{
+  .btnBackSeeAd
+  {
+    width: 50px;
+    height: 50px;
+  }
+
+  .blAddCoinsForAd
+  {
+    width: 200px;
+    height: 320px;
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 95%;
+  }
+
+
+  .blScrollProducts
+  {
+    width: 200px;
+    height: 280px;
+  }
+
+  .blAddCoinsFree
+  {
+    width: 165px;
+    height: 50px;
+
+    margin-left: 20px;
+  }
+  .BtnImgAdCoins
+  {
+    width: 60px;
+    height: 50px;
+  }
+  .blImgAdCoins
+  {
+    width: 60px;
+    height: 50px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .blTEquals
+  {
+    height: 60px;
+    font-size: 250%;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .blResultForAd
+  {
+    width: 60px;
+    height: 50px;
+  }
+  .imgCoinResultForAd
+  {
+    width: 30px;
+    height: 30px;
+  }
+  .TCoinResultForAd
+  {
+    height: 43px;
+    font-size: 200%;
+  }
+
+
+  .blBuyCoinsForMoney_line
+  {
+    width: 85px;
+    height: 220px;
+  }
+  .blBuyCoinsForMoney
+  {
+    width: 80px;
+    height: 65px;
+  }
+  .blBuyCoinsForMoney_line_2
+  {
+    width: 135px;
+    height: 150px;
+  }
+  .blBuyCoinsForMoney2
+  {
+    width: 135px;
+    height: 65px;
+  }
+  .blResultBCM
+  {
+    height: 30px;
+  }
+  .imgCoinResultForAdBCM
+  {
+    width: 23px;
+    height: 23px;
+  }
+  .TCoinResultForAdBCM
+  {
+    height: 38px;
+    font-size: 150%;
+    margin: -0.5px 26px;
+  }
+  .buyCFM_7, .buyCFM_8, .buyCFM_9
+  {
+    font-size: 140%;
+    margin: 0.5px 25px;
+  }
+  .blBtnPriceBCM
+  {
+    height: 27px;
+    border-radius: 4px;
+    font-size: 110%;
+  }
+
+
+  .blBuyCoinsForMoney_line-1 { margin: 100px 5px;  }
+  .blBuyCoinsForMoney_line-2 { margin: 100px 105px; }
+  .blBuyCoinsForMoney_line-3 { margin: 335px 50px; }
+  .blBuyCoinsForMoney_line-4 { margin: 600px 20px;  }
+  .blBuyCoinsForMoney_line-5 { margin: 770px 20px;  }
+  .blBuyCoinsForMoney_line-6 { margin: 940px 20px;  }
+
+
+  .blBuyCoinsForMoney_1
+  {
+    /* div в центре другого div */
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -0%);
+  }
+  .blBuyCoinsForMoney_2
+  {
+    /* div в центре другого div */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .blBuyCoinsForMoney_3
+  {
+    /* div в центре другого div */
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+  }
+
+
+  .blBuyBagForMoney
+  {
+    width: 185px;
+    height: 225px;
+    margin: 1135px 5px;
+  }
+  .blheaderResultBBFM
+  {
+    height: 34px;
+  }
+  .blResultBBFM
+  {
+    width: 200px;
+    height: 30px;
+  }
+  .imgCoinResultForAdBBFM
+  {
+    width: 25px;
+    height: 25px;
+    margin: 0px 5px;
+  }
+  .TCoinResultForAdBBFM
+  {
+    font-size: 155%;
+    margin: -2px 35px;
+  }
+  .blResShowAirBBFM
+  {
+    height: 178px;
+  }
+  .blShowAirBBFM
+  {
+    height: 140px;
+  }
+  .blBtnPriceBBFM
+  {
+    height: 30px;
+    font-size: 120%;
+  }
+
+
+  .blСonfirmBuy
+  {
+    width: 220px;
+    height: 115px;
+  }
+  .headerCoinfirmBuy
+  {
+    height: 16px;
+  }
+  .blСonfirmQuestionT
+  {
+    font-size: 100%;
+  }
+  .blСonfirmAction
+  {
+    width: 110px;
+    height: 32px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+  }
+  .blConfirmCloseImg, .blConfirmContinueImg
+  {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+@media only screen and (max-width: 250px)
+{
+  .blСonfirmBuy
+  {
+    width: 195px;
+    height: 105px;
+  }
+  .headerCoinfirmBuy
+  {
+    height: 13px;
+  }
+  .blСonfirmQuestionT
+  {
+    font-size: 90%;
+  }
+  .blСonfirmAction
+  {
+    width: 95px;
+    height: 30px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+  }
+  .blConfirmCloseImg, .blConfirmContinueImg
+  {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+@media only screen and (max-height: 420px)
+{
+  .blAddCoinsForAd
+  {
+    height: 320px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 95%;
+  }
+
+  .blScrollProducts
+  {
+    height: 280px;
+  }
+}
+
+
+@media only screen and (max-height: 400px)
+{
+  .blAddCoinsForAd
+  {
+    height: 300px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 260px;
+  }
+}
+
+
+@media only screen and (max-height: 380px)
+{
+  .blAddCoinsForAd
+  {
+    height: 280px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 240px;
+  }
+}
+
+
+@media only screen and (max-height: 350px)
+{
+  .blAddCoinsForAd
+  {
+    height: 260px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 220px;
+  }
+}
+
+
+@media only screen and (max-height: 330px)
+{
+  .blAddCoinsForAd
+  {
+    height: 240px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 200px;
+  }
+}
+
+
+@media only screen and (max-height: 310px)
+{
+  .blAddCoinsForAd
+  {
+    height: 220px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -80%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 180px;
+  }
+}
+
+
+@media only screen and (max-height: 285px)
+{
+  .blAddCoinsForAd
+  {
+    height: 200px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 170px;
+  }
+}
+
+
+@media only screen and (max-height: 255px)
+{
+  .blAddCoinsForAd
+  {
+    height: 180px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 150px;
+  }
+}
+
+
+@media only screen and (max-height: 235px)
+{
+  .blAddCoinsForAd
+  {
+    height: 160px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 130px;
+  }
+}
+
+
+@media only screen and (max-height: 220px)
+{
+  .blAddCoinsForAd
+  {
+    height: 150px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 120px;
+  }
+}
+
+
+@media only screen and (max-height: 206px)
+{
+  .blAddCoinsForAd
+  {
+    height: 140px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .headerAddCoins
+  {
+    height: 20px;
+  }
+  .headerAddCoinsTitle
+  {
+    font-size: 94%;
+  }
+
+  .blScrollProducts
+  {
+    height: 110px;
+  }
+}

@@ -1,0 +1,221 @@
+/* Уровни для лабиринта */
+.blLevelsForMaze
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blLevelsForMazeInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blSelectedLevelsForMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectedLevelForMazeInternalMain
+{
+  position: relative;
+  width: 732px;
+  height: 420px;
+}
+.blSelectedLevelForMazeInternal
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 565px;
+  height: 380px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blLevelForMaze
+{
+  position: absolute;
+  border: 2px solid white;
+  width: 175px;
+  height: 120px;
+}
+.blLevelForMazeInternal
+{
+  position: relative;
+  width: 175px;
+  height: 120px;
+}
+.blNumLevel
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 37px;
+  height: 20px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 7%;
+  transform: translate(-50%, -7%);
+}
+.blBtnPlayLvlMaze
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 11px;
+  width: 50px;
+  height: 48px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  /* background-image: url("../../../GUI/modes/maze/padlock.png"); */
+  /* background-image: url("../../../GUI/mainMenu/ico/apple.png"); */
+  background-size: 25px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnPlayLvlMaze:active
+{
+  background-size: 21px;
+  transition: 0.1s;
+}
+.blNumberOfStarsLvl
+{
+  position: absolute;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid #C1C1C1;
+  border-right: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  background-color: #262525;
+  width: 135px;
+  height: 22px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 102.25%;
+  transform: translate(-50%, -102.25%);
+}
+.blNumberOfStarsLvl
+{
+  position: relative;
+  width: 135px;
+  height: 22px;
+}
+.blStars
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 95px;
+  height: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fullStarImg 
+{
+  background-image: url('../../../GUI/modes/maze/fullStarImg.svg');
+
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+.borderStarImg 
+{
+  background-image: url('../../../GUI/modes/maze/borderStarImg.svg');
+
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.imgStar-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 15px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.imgStar-2
+{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 25%;
+  top: 50%;
+  transform: translate(-25%, -50%);
+}
+.imgStar-3
+{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.imgStar-4
+{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 75%;
+  top: 50%;
+  transform: translate(-75%, -50%);
+}
+.imgStar-5
+{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+/* ========== */

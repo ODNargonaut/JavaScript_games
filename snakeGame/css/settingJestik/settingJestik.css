@@ -1,0 +1,817 @@
+/* Настройки джестика */
+.blSettingJestik
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blSettingJestikInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleSettingJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 33px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, -3%);
+}
+.blMainSettingJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 480px;
+  border-radius: 8px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -43%);
+}
+.blMainSettingJestikInternalMain
+{
+  position: relative;
+  width: 750px;
+  height: 480px;
+}
+
+.blTitleSJ
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 16px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 6%;
+  transform: translate(-50%, -6%);
+}
+
+.blSelectedJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 480px;
+  height: 250px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 38%;
+  transform: translate(-50%, -38%);
+}
+.blSelectedJestikInternal
+{
+  position: relative;
+  width: 480px;
+  height: 250px;
+}
+
+.blSpacePause
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 140px;
+  height: 58px;
+
+  /* div в центре другого div */
+  left: 10%;
+  top: 15%;
+  transform: translate(-10%, -15%);
+}
+.blSpacePauseInternal
+{
+  position: relative;
+  width: 140px;
+  height: 58px;
+}
+.blTitleKeySpace
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blKeySpace
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 140px;
+  height: 35px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blKeySpaceInternal
+{
+  position: relative;
+  width: 140px;
+  height: 35px;
+}
+.blTKeySpace
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  color: #000000;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blSelectedMouseJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 150px;
+  height: 250px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectedMouseJestikInternal
+{
+  position: relative;
+  width: 150px;
+  height: 250px;
+}
+
+.blDirectAndMouse
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 145px;
+  height: 195px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blDirectAndMouseInternal
+{
+  position: relative;
+  width: 145px;
+  height: 195px;
+}
+.blArrowMove
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 30px;
+
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.amUp
+{
+  background-image: url('../../GUI/other/moveMouseUp.png');
+  background-size: 28px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.amLeft
+{
+  background-image: url('../../GUI/other/moveMouseLeft.png');
+  background-size: 25px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+
+.amRight
+{
+  background-image: url('../../GUI/other/moveMouseRight.png');
+  background-size: 25px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.amDown
+{
+  background-image: url('../../GUI/other/moveMouseDown.png');
+  background-size: 28px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.blMouseImg
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 65px;
+  height: 117px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blMouseImgInternal
+{
+  position: relative;
+  width: 65px;
+  height: 117px;
+}
+.blMouseChL
+{
+  position: absolute;
+  border: 1px solid black;
+  border-top-left-radius: 15px;
+  width: 30.5px;
+  height: 52px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+.blMouseScroll
+{
+  position: absolute;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  width: 8px;
+  height: 18px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blMouseChR
+{
+  position: absolute;
+  border: 1px solid #000000;
+  border-top-right-radius: 15px;
+  width: 30.5px;
+  height: 52px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 0%;
+  transform: translate(-100%, -0%);
+}
+.blMouseChBody
+{
+  position: absolute;
+  border: 1px solid #000000;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 63px;
+  height: 61px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blCircleShowActv
+{
+  position: absolute;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  width: 13px;
+  height: 14px;
+  background-color: #000000;
+
+  /* div в центре другого div */
+  left: 15%;
+  top: 15%;
+  transform: translate(-15%, -15%);
+}
+.blLineShowActv
+{
+  position: absolute;
+  /* border: 1px solid #31d61c; */
+  width: 40px;
+  height: 3px;
+  margin-left: -22.5px;
+  margin-top: 5px;
+  transform: rotate(45deg);
+}
+.blLineShowActvInternal
+{
+  position: relative;
+  width: 40px;
+  height: 3px;
+}
+.blLineWhiteShowActv
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: 18px;
+  height: 1.5px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blLineBlackShowActv
+{
+  position: absolute;
+  border: 1px solid #000000;
+  width: 18.5px;
+  height: 1.5px;
+  background-color: #000000;
+  
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.blTextShowActv
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 8%;
+  transform: translate(-0%, -8%);
+}
+
+.blInterfaceBtnLines
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 100px;
+  height: 120px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blInterfaceBtnLinesInternal
+{
+  position: relative;
+  width: 100px;
+  height: 120px;
+}
+.blBtnSelectedJestikMouse
+{
+  position: absolute;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #262525;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-image: url('../../GUI/mainMenu/ico/apple.png');
+  background-size: 28px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blBtnSelectedJestikMouse:active
+{
+  /* height: 56px; */
+  margin-top: 5px;
+  background-size: 22px;
+  transition: 0.1s;
+}
+.blLineEffectBtnSlcJM
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 85px;
+  height: 93px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+
+.blSelectedWASDJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 140px;
+  height: 148px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 100%;
+  transform: translate(-0%, -100%);
+}
+.blSelectedWASDJestikInternal
+{
+  position: relative;
+  width: 140px;
+  height: 148px;
+}
+.blSelectedArrowsJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 140px;
+  height: 148px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 100%;
+  transform: translate(-100%, -100%);
+}
+.blSelectedArrowsJestikInternal
+{
+  position: relative;
+  width: 140px;
+  height: 148px;
+}
+.blWASDKeyBord
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 135px;
+  height: 88px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blWASDKeyBordInternal
+{
+  position: relative;
+  width: 135px;
+  height: 88px;
+}
+
+.blKey
+{
+  position: absolute;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+}
+.blTKey
+{
+  position: absolute;
+  /* border: 1px solid #000000; */
+  color: #000000;
+  width: 18px;
+  height: 30px;
+  font-size: 28px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blW
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.blA
+{
+  /* div в центре другого div */
+  left: 0%;
+  top: 100%;
+  transform: translate(-0%, -100%);
+}
+
+.blS
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.blD
+{
+  /* div в центре другого div */
+  left: 100%;
+  top: 100%;
+  transform: translate(-100%, -100%);
+}
+
+.blInterfaceBtnLines-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 85px;
+  height: 78px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.blInterfaceBtnLines-2-Internal
+{
+  position: relative;
+  width: 85px;
+  height: 78px;
+}
+.blLineEffectBtnSlcJKey
+{
+  position: absolute;
+  border-top: none;
+  border-radius: 3px;
+  width: 37px;
+  height: 55px;
+}
+.blKey-1
+{
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+.blKey-2
+{
+  /* div в центре другого div */
+  left: 100%;
+  top: 0%;
+  transform: translate(-100%, -0%);
+}
+
+.blTKeyAHTB
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  width: 20px;
+  height: 27px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blTKeyAHLR
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  width: 27px;
+  height: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blArrowHead
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  width: 16px;
+  height: 15px;
+
+  background-size: 14px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.blLineHead
+{
+  position: absolute;
+  border: 1px solid #000000;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #000000;
+}
+.blLineHeadUD
+{
+  width: 2.5px;
+  height: 13px;
+}
+.blLineHeadLR
+{
+  width: 13px;
+  height: 2.5px;
+}
+
+
+.blArrowHeadUp
+{
+  background-image: url('../../GUI/other/arrowHeadUp.png');
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blLineHeadUp
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.blArrowHeadLeft
+{
+  background-image: url('../../GUI/other/arrowHeadLeft.png');
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blLineHeadLeft
+{
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.blArrowHeadDown
+{
+  background-image: url('../../GUI/other/arrowHeadDown.png');
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blLineHeadDown
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.blArrowHeadRight
+{
+  background-image: url('../../GUI/other/arrowHeadRight.png');
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.blLineHeadRight
+{
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+
+
+
+.blNoteWarning
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 615px;
+  height: 35px;
+  color: #FFFFFF;
+  font-size: 13px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -80%);
+}
+.blNoteWarningInternal
+{
+  position: relative;
+  width: 615px;
+  height: 35px;
+}
+.blNoteWarning-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 281px;
+  height: 14.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blNoteWarning-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 565px;
+  height: 14.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+
+
+.blBtnSettingJestik
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+.blBtnSettingJestik:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSettingJestikInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSettingJestik
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

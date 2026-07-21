@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airplane</title>
+    <style>
+      body 
+      {
+        margin: 0;
+        background: linear-gradient(#e4e0ba, #f7d9aa);
+      }
+
+      #gui
+      {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #scene 
+      {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(#e4e0ba, #f7d9aa);
+      }
+
+      .hideLine { visibility: hidden };
+    </style>
+
+    <!-- Language -->
+    <link rel="stylesheet" type="text/css" href="./css/language.css" />
+    <!-- ==== -->
+
+    <!-- Date game -->
+    <link rel="stylesheet" type="text/css" href="./css/dtg.css" />
+    <!-- ========= -->
+
+    <!-- Process game -->
+    <link rel="stylesheet" type="text/css" href="./css/processGame.css" />
+    <!-- ============ -->
+
+    <!-- Puse -->
+    <link rel="stylesheet" type="text/css" href="./css/pause.css" />
+    <!-- ==== -->
+
+    <!-- Game over -->
+    <link rel="stylesheet" type="text/css" href="./css/gameOver.css" />
+    <!-- ========= -->
+
+    <!-- Shop -->
+    <link rel="stylesheet" type="text/css" href="./css/shop.css" />
+    <!-- ==== -->
+
+    <!-- Add coins -->
+    <link rel="stylesheet" type="text/css" href="./css/addCoins.css" />
+    <!-- ========= -->
+
+    <!-- Fonts -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/fonts/fonts.css" /> -->
+    <style>
+      @font-face 
+      {
+        font-family: ttf1; /* Гарнитура шрифта */
+        src: url(./css/fonts/Khand/Khand-Regular.ttf); /* Путь к файлу со шрифтом */
+      }
+      .t-khand-regular
+      {
+        font-family: ttf1;
+      }
+
+
+      @font-face 
+      {
+        font-family: ttf2; /* Гарнитура шрифта */
+        src: url(./css/fonts/Khand/Khand-Bold.ttf); /* Путь к файлу со шрифтом */
+      }
+      .t-khand-bold
+      {
+        font-family: ttf2;
+      }
+
+
+      @font-face 
+      {
+        font-family: ttf3; /* Гарнитура шрифта */
+        src: url(./css/fonts/Khand/Khand-SemiBold.ttf); /* Путь к файлу со шрифтом */
+      }
+      .t-khand-semiblold
+      {
+        font-family: ttf3;
+      }
+    </style>
+    <!-- ===== -->
+
+    <!-- Scroller -->
+    <link rel="stylesheet" type="text/css" href="./css/style_mainScroll.css" />
+    <!-- ==== -->
+
+    <!-- Yandex Games SDK -->
+    <!-- <script type="text/javascript" src="/sdk.js"></script> -->
+    <!-- ================ -->
+
+    <!-- <script type="text/javascript">
+    YaGames.init().then(ysdk => 
+    {
+      console.log("Yandex SDK готов к работе!");
+      window.ysdk = ysdk;
+    });
+    </script> -->
+
+    <script type="text/javascript" src="./Js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./Js/lib/Three.js"></script>
+    <script type="text/javascript" src="./Js/lib/jquery.js"></script>
+  </head>
+  <body>
+    <!-- Scene game -->
+    <div id="scene">
+      <div class="indicators" style="position: absolute; display: block; margin-top: 150px;">
+        <code class="quantityObst"></code><br />
+        <code class="quantityCoins"></code><br />
+        <code class="countScale"></code><br />
+        <code class="SpeedGame"></code>
+      </div>
+    </div>
+    <!-- GUI -->
+    <div id="gui">
+      <!-- Language -->
+      <div class="blLanguage" style="display: block;">
+        <div class="blFlag blFlagRu"></div>
+        <div class="blFlag blFlagEn"></div>
+      </div>
+      <!-- Process game -->
+      <div class="blProcessGame" style="display: none;">
+        <div class="blBtnPause"></div>
+        <div class="blIndicators">
+          <div class="blIndicatorDist">
+            <div class="blImgDist"></div>
+            <span class="blTextDist t-khand-regular"></span>
+          </div>
+          <div class="blIndicatorEnergy">
+            <div class="blImgEnergy"></div>
+            <div class="borderForVolumeEnergy">
+              <div class="volumeEnergy fuel"></div>
+              <div class="constantVolumeEnergy constantFuel"></div>
+            </div>
+          </div>
+          <div class="blIndicatorCoin">
+            <div class="blImgCoin"></div>
+            <span class="currentCoins currentCoinsGame blTextCoin t-khand-regular"></span>
+          </div>
+        </div>
+        <div class="blTutotial">
+          <div class="blLineUpDown">
+            <div class="blFinger"></div>
+          </div>
+          <div class="blTTutorial"></div>
+        </div>
+      </div>
+      <!-- Pause -->
+      <div class="blPause" style="display: none;">
+        <div class="blBtnSetCamera"></div>
+        <div class="blSettingCam">
+          <div class="blSettingCamHeader">
+            <div class="blBtnCloseSettingCam"></div>
+          </div>
+          <div class="blSetZoomCam">
+            <div class="blZoomCamT">
+              <span class="zoomCamT"></span>
+            </div>
+            <input id="sliderZoom" class="sliderZoom" type="range" min="-0.6" max="0.6" step="0.1" value="" />
+          </div>
+        </div>
+        <div class="blPlHmAg">
+          <div class="blHeaderPlHmAg">
+            <div class="PlHmAgTitle">Пауза</div>
+          </div>
+          <div class="blListBtnsPlHmAg">
+            <div class="blPlHmAg_btn blBtnHome"></div>
+            <div class="blPlHmAg_btn blBtnPlay2"></div>
+            <div class="blPlHmAg_btn blBtnAgain"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Game over -->
+      <div class="blGameOver" style="display: none;">
+        <div class="GO_header">
+          <div class="GO_headerTitle"></div>
+        </div>
+        <div class="GO_blResults">
+          <div class="GO_blPassedDist">
+            <div class="GO_blImgPD"></div>
+            <div class="GO_blNumPD t-khand-regular"></div>
+          </div>
+          <div class="GO_blRecordDist">
+            <div class="GO_blImgRD"></div>
+            <div class="GO_blNumRD t-khand-regular"></div>
+          </div>
+          <div class="blHeartPlusOne heartPlusOne">
+            <div class="blImgHeart">
+              <span class="THeartPlusOne t-khand-semiblold">+1</span>
+            </div>
+          </div>
+        </div>
+        <div class="GO_blBtnReturnHome">
+          <div class="GO_blBtnReturnHomeInternal">
+            <div class="GO_blBtnReturnHome_T"></div>
+          </div>
+        </div>
+        <div class="GO_blRelife">
+          <div class="GO_blBack"></div>
+          <div class="GO_blPay">
+            <div class="btnRelifeForCoins">
+              <div class="btnRFCInternal">
+                <div class="relifeImgCoins"></div>
+                <span class="relifeTextCoins t-khand-regular"></span>
+              </div>
+            </div>
+            <div class="btnRelifeForAd">
+              <div class="AnimRelifeForAd"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Shop -->
+      <div class="blBtnSettings" style="display: none;"></div>
+      <div class="blSettingFromShop" style="display: none;">
+        <div class="blSettingHeader">
+          <div class="blBtnCloseSettingFromShop"></div>
+        </div>
+        <div class="blLangSettings">
+          <div class="btnLangRu">
+            <div class="blSelLang blSelLangRu"></div>
+          </div>
+          <div class="btnLangEn">
+            <div class="blSelLang blSelLangEn"></div>
+          </div>
+        </div>
+        <div class="blBtnSound"></div>
+      </div>
+      <div class="blShop" style="display: none;">
+        <div class="blBuyAir">
+          <div id="buyModel" class="blMainbtnBuyForCoins">
+            <div class="BlinkBlBuyForCoins"></div>
+            <div class="btnBuyForCoins">
+              <div class="imgBuyForCoins"></div>
+              <div class="T_PriceAir t-khand-regular">
+                9<span class="hideLine">..</span>999<span class="hideLine">..</span>999
+              </div>
+              <div class="imgBuyCarForCoins"></div>
+            </div>
+          </div>
+          <div class="blBtnPlay">
+            <div class="BlinkBlPlay"></div>
+            <div class="btnPlay">
+              <div class="T_btnPlay"></div>
+            </div>
+          </div>
+          <div class="blColoringAir">
+            <div id="selClr_0" class="blColorAir blColorAir_0" data-selclr="0"></div>
+            <div id="selClr_1" class="blColorAir blColorAir_1" data-selclr="1"></div>
+            <div id="selClr_2" class="blColorAir blColorAir_2" data-selclr="2"></div>
+            <div id="selClr_3" class="blColorAir blColorAir_3" data-selclr="3"></div>
+            <div id="selClr_4" class="blColorAir blColorAir_4" data-selclr="4"></div>
+          </div>
+        </div>
+        <div class="blNextPrevisAirInternal">
+          <div class="btnPrevisAir">
+            <div class="imgPrevisAir"></div>
+          </div>
+          <div id="canvasInShop" class="canvasInShop"></div>
+          <div class="btnNextAir">
+            <div class="imgNextAir"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Add coins for ad -->
+      <div class="btnBackSeeAd"></div>
+      <div class="blAddCoinsForAd">
+        <div class="headerAddCoins">
+          <div class="headerAddCoinsTitle"></div>
+        </div>
+        <div class="blScrollProducts mainScroll">
+          <div class="blAddCoinsFree">
+            <div class="BtnImgAdCoins">
+              <div class="blImgAdCoins"></div>
+            </div>
+            <span class="blTEquals t-khand-bold">=</span>
+            <div class="blResultForAd">
+              <div class="imgCoinResultForAd"></div>
+              <span class="TCoinResultForAd t-khand-bold"></span>
+            </div>
+          </div>
+          <!-- Line-1 -->
+          <div class="blBuyCoinsForMoney_line blBuyCoinsForMoney_line-1">
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_1">
+              <div class="blResultBCM blResBCM_1">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_1"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_0" data-pfm="0">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_1"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_2">
+              <div class="blResultBCM blResBCM_2">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_2"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_1" data-pfm="1">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_2"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_3">
+              <div class="blResultBCM blResBCM_3">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_3"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_2" data-pfm="2">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_3"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Line-2 -->
+          <div class="blBuyCoinsForMoney_line blBuyCoinsForMoney_line-2">
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_1">
+              <div class="blResultBCM blResBCM_4">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_4"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_3" data-pfm="3">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_4"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_2">
+              <div class="blResultBCM blResBCM_5">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_5"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_4" data-pfm="4">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_5"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_3">
+              <div class="blResultBCM blResBCM_6">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_6"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_5" data-pfm="5">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_6"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Line-3 -->
+          <div class="blBuyCoinsForMoney_line blBuyCoinsForMoney_line-3">
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_1">
+              <div class="blResultBCM blResBCM_7">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_7"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_6" data-pfm="6">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_7"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_2">
+              <div class="blResultBCM blResBCM_8">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_8"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_7" data-pfm="7">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_8"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney blBuyCoinsForMoney_3">
+              <div class="blResultBCM blResBCM_9">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_9"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_8" data-pfm="8">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_9"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Line-4 -->
+          <div class="blBuyCoinsForMoney_line_2 blBuyCoinsForMoney_line-4">
+            <div class="blBuyCoinsForMoney2 blBuyCoinsForMoney_1">
+              <div class="blResultBCM blResBCM_10">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_10"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_9" data-pfm="9">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_10"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney2 blBuyCoinsForMoney_3">
+              <div class="blResultBCM blResBCM_11">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_11"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_10" data-pfm="10">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_11"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Line-5 -->
+          <div class="blBuyCoinsForMoney_line_2 blBuyCoinsForMoney_line-5">
+            <div class="blBuyCoinsForMoney2 blBuyCoinsForMoney_1">
+              <div class="blResultBCM blResBCM_12">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_12"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_11" data-pfm="11">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_12"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney2 blBuyCoinsForMoney_3">
+              <div class="blResultBCM blResBCM_13">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_13"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_12" data-pfm="12">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_13"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Line-6 -->
+          <div class="blBuyCoinsForMoney_line_2 blBuyCoinsForMoney_line-6">
+            <div class="blBuyCoinsForMoney2 blBuyCoinsForMoney_1">
+              <div class="blResultBCM blResBCM_14">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_14"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_13" data-pfm="13">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_14"></div>
+              </div>
+            </div>
+            <div class="blBuyCoinsForMoney2 blBuyCoinsForMoney_3">
+              <div class="blResultBCM blResBCM_15">
+                <div class="imgCoinResultForAdBCM"></div>
+                <span class="TCoinResultForAdBCM t-khand-bold buyCFM_15"></span>
+              </div>
+              <div class="blBtnPriceBCM btnBFM_14" data-pfm="14">
+                <div class="blBtnPriceBCMTitle t-khand-bold priceCFM_15"></div>
+              </div>
+            </div>
+          </div>
+          <div class="blBuyBagForMoney blBBFM">
+            <div class="blResShowAirBBFM">
+              <div class="blheaderResultBBFM">
+                <div class="blResultBBFM">
+                  <div class="imgCoinResultForAdBBFM"></div>
+                  <span class="TCoinResultForAdBBFM t-khand-bold buyBagCFM_1"></span>
+                </div>
+              </div>
+              <div id="blShowAirBBFM" class="blShowAirBBFM"></div>
+            </div>
+            <div class="blBtnPriceBBFM btnBFM_15" data-pfm="15">
+              <div class="blBtnPriceBBFMTitle t-khand-bold priceBagCFM_1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blСonfirmBuy">
+        <div class="headerCoinfirmBuy"></div>
+        <div class="blСonfirmQuestionT"></div>
+        <div class="blСonfirmAction">
+          <div class="blConfirmCloseImg"></div>
+          <div class="blConfirmContinueImg"></div>
+        </div>
+      </div>
+      <!-- Current coins -->
+      <div id="blCurrentCoins_plus_add" class="blCurrentCoins">
+        <div class="blAddCoins"></div>
+        <div class="blCurrCoinImg"></div>
+        <span class="currentCoins currTCoins t-khand-regular"></span>
+      </div>
+      <div id="blCurrentCoins" class="blCurrentCoins2">
+        <div class="blCurrCoinImg2"></div>
+        <span class="currentCoins currTCoins2 t-khand-regular"></span>
+      </div>
+    </div>
+    <!-- Game objects -->
+    <script type="text/javascript" src="./Js/DataBases/magicNumbers.js"></script>
+    <script type="text/javascript" src="./Js/DataBases/colors.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/gui.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/language.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/shop.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/addCoins.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/confirm.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/game.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/pause.js"></script>
+    <script type="text/javascript" src="./Js/main/GUI/gameOver.js"></script>
+    <script type="text/javascript" src="./Js/DataBases/hangarModels/model_1.js"></script>
+    <script type="text/javascript" src="./Js/DataBases/hangarModels/model_2.js"></script>
+    <script type="text/javascript" src="./Js/DataBases/hangarModels/model_3.js"></script>
+    <script type="text/javascript" src="./Js/DataBases/dtGame.js"></script>
+    <script type="text/javascript" src="./Js/main/mouse.js"></script>
+    <script type="text/javascript" src="./Js/main/keypad.js"></script>
+    <script type="text/javascript" src="./Js/main/scene.js"></script>
+    <script type="text/javascript" src="./Js/main/sky.js"></script>
+    <script type="text/javascript" src="./Js/main/airplane.js"></script>
+    <script type="text/javascript" src="./Js/main/obst.js"></script>
+    <script type="text/javascript" src="./Js/main/coins.js"></script>
+    <script type="text/javascript" src="./Js/main/particle.js"></script>
+    <script type="text/javascript" src="./Js/main/sea.js"></script>
+    <script type="text/javascript" src="./Js/main/loop.js"></script>
+    <script type="text/javascript" src="./Js/start.js"></script>
+    <!-- ============ -->
+     
+    <!-- Displaying models airplanes -->
+    <script type="text/javascript" src="./Js/shop/showAirplane.js"></script>
+    <!-- =========================== -->
+  </body>
+</html>

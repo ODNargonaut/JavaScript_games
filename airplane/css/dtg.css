@@ -1,0 +1,249 @@
+.blCurrentCoins
+{
+  position: absolute;
+  width: 320px;
+  height: 35px;
+  /* border: 1px solid black; */
+  display: none;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+
+.blAddCoins
+{
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  /* border: 1px solid black; */
+  cursor: pointer;
+
+  background-image: url("../img/addCoins.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.3s;
+
+  margin: 11px 8px;
+}
+
+.blCurrCoinImg
+{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/coin_1.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  margin: 6px 32px;
+}
+
+.currTCoins
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  font-size: 25px;
+  
+  margin: 3.5px 63px;
+}
+
+
+/* ===================== */
+
+.blCurrentCoins2
+{
+  position: absolute;
+  width: 320px;
+  height: 35px;
+  /* border: 1px solid black; */
+  display: none;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+
+.blCurrCoinImg2
+{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/coin_1.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  margin: 6px 6px;
+}
+
+.currTCoins2
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  font-size: 25px;
+
+  margin: 3.5px 36px;
+}
+
+
+@media only screen and (max-width: 1250px)
+{
+  .blCurrentCoins
+  {
+    width: 230px;
+    height: 35px;
+  }
+
+  .blAddCoins
+  {
+    width: 20px;
+    height: 20px;
+    margin: 11px 8px;
+  }
+
+  .blCurrCoinImg
+  {
+    width: 28px;
+    height: 28px;
+    margin: 6px 32px;
+  }
+
+  .currTCoins
+  {
+    font-size: 25px;
+    margin: 3.5px 63px;
+  }
+
+
+  .blCurrentCoins2
+  {
+    width: 230px;
+    height: 35px;
+  }
+
+  .blCurrCoinImg2
+  {
+    width: 28px;
+    height: 28px;
+    margin: 6px 6px;
+  }
+
+  .currTCoins2
+  {
+    font-size: 25px;
+    margin: 3.5px 36px;
+  }
+}
+
+
+@media only screen and (max-width: 1025px)
+{
+  .blCurrentCoins
+  {
+    width: 230px;
+    height: 35px;
+  }
+
+  .blAddCoins
+  {
+    width: 20px;
+    height: 20px;
+    margin: 11px 8px;
+  }
+
+  .blCurrCoinImg
+  {
+    width: 28px;
+    height: 28px;
+    margin: 6px 32px;
+  }
+
+  .currTCoins
+  {
+    font-size: 25px;
+    margin: 3.5px 63px;
+  }
+
+
+  .blCurrentCoins2
+  {
+    width: 230px;
+    height: 35px;
+  }
+
+  .blCurrCoinImg2
+  {
+    width: 28px;
+    height: 28px;
+    margin: 6px 6px;
+  }
+
+  .currTCoins2
+  {
+    font-size: 25px;
+    margin: 3.5px 36px;
+  }
+}
+
+
+@media only screen and (max-width: 270px)
+{
+  .blCurrentCoins
+  {
+    width: 195px;
+    height: 35px;
+  }
+
+  .blAddCoins
+  {
+    width: 20px;
+    height: 20px;
+    margin: 11px 8px;
+  }
+
+  .blCurrCoinImg
+  {
+    width: 28px;
+    height: 28px;
+    margin: 6px 32px;
+  }
+
+  .currTCoins
+  {
+    font-size: 25px;
+    margin: 3.5px 63px;
+  }
+
+
+  .blCurrentCoins2
+  {
+    width: 160px;
+    height: 35px;
+  }
+
+  .blCurrCoinImg2
+  {
+    width: 28px;
+    height: 28px;
+    margin: 6px 6px;
+  }
+
+  .currTCoins2
+  {
+    font-size: 25px;
+    margin: 3.5px 36px;
+  }
+}

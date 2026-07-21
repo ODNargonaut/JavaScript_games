@@ -1,0 +1,703 @@
+/* Параметры режима math */
+.blSettingsModeMath
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blSettingsModeMathInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+
+.blTitleSettingsModeMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -2%);
+}
+.blMainSettingsModeMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  /* height: 540px; */
+  height: 480px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -42%);
+  /* left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%); */
+}
+.blMainSettingsModeMathInternal
+{
+  position: relative;
+  width: 750px;
+  /* height: 540px; */
+  height: 480px;
+}
+
+.blLengthOperand
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  /* width: 357px; */
+  width: 187px;
+  /* height: 175px; */
+  height: 190px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, -3%);
+  /* left: 50%;
+  top: 5%;
+  transform: translate(-50%, -5%); */
+}
+.blLengthOperandInternal
+{
+  position: relative;
+  /* width: 357px; */
+  width: 187px;
+  /* height: 175px; */
+  height: 190px;
+}
+
+.blTitleLength
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+}
+
+.blFirstSettingsOperand
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  /* width: 155px; */
+  width: 75px;
+  height: 105px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 38%;
+  transform: translate(0%, -38%);
+}
+.blFirstSettingsOperandInternal
+{
+  position: relative;
+  /* width: 155px; */
+  width: 75px;
+  height: 105px;
+}
+
+.blSecondSettingsOperand
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  /* width: 155px; */
+  width: 75px;
+  height: 105px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 38%;
+  transform: translate(-100%, -38%);
+}
+.blsecondSettingsOperandInternal
+{
+  position: relative;
+  /* width: 155px; */
+  width: 75px;
+  height: 105px;
+}
+
+.blTextTitle
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 13.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+}
+
+.blInputsMax
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 70px;
+  height: 23px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+.blInputsMaxInternal
+{
+  position: relative;
+  width: 70px;
+  height: 23px;
+}
+
+.blInputsMin
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 70px;
+  height: 23px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blInputsMinInternal
+{
+  position: relative;
+  width: 70px;
+  height: 23px;
+}
+
+.blInputWhole
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3.5px;
+  color: #FFFFFF;
+  width: 68px;
+  height: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blInputWholeInternal
+{
+  position: relative;
+  width: 68px;
+  height: 23px;
+}
+.blNumWhole
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blPoint
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  display: none;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 32%;
+  transform: translate(-50%, -32%);
+}
+
+.blInputFractional
+{
+  position: absolute;
+  border: 1px solid white;
+  display: none;
+  border-radius: 3.5px;
+  color: #FFFFFF;
+  width: 68px;
+  height: 23px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 30%;
+  transform: translate(-100%, -30%);
+}
+.blInputFractionalInternal
+{
+  position: relative;
+  width: 68px;
+  height: 23px;
+}
+.blNumFractional
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blTextWhole
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 63%;
+  transform: translate(-50%, -63%);
+  /* left: 15%;
+  top: 63%;
+  transform: translate(-15%, -63%); */
+}
+
+.blTextFractional
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  display: none;
+  color: #FFFFFF;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 90%;
+  top: 63%;
+  transform: translate(-90%, -63%);
+}
+
+.blTextMinMax
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 25px;
+  height: 105px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 38%;
+  transform: translate(-50%, -38%);
+}
+.blTextMinMaxInternal
+{
+  position: relative;
+  width: 25px;
+  height: 105px;
+}
+.blTMax
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 13px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 31%;
+  transform: translate(-50%, -31%);
+}
+.blTMin
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 13px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+
+.blAdjustmentOperandov
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 75px;
+  height: 30px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.blOperationSign
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 150px;
+  height: 90px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -58%);
+  /* left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+}
+.blOperationSignInternal
+{
+  position: relative;
+  width: 150px;
+  height: 90px;
+}
+
+.blTitleOperationSign
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.blSigns
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 105px;
+  height: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+.blSignsInternal
+{
+  position: relative;
+  width: 105px;
+  height: 25px;
+}
+
+.blSign
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.blSignInternal
+{
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+.blTSign
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blsignMinus
+{
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+
+.blsignDivision
+{
+  /* div в центре другого div */
+  left: 34%;
+  top: 50%;
+  display: none;
+  transform: translate(-34%, -50%);
+}
+
+.blsignMultiply
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* left: 67%;
+  top: 50%;
+  transform: translate(-67%, -50%); */
+}
+
+.blsignPlus
+{
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+
+.blRandomSigns
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 110px;
+  height: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blRandomSignsInternal
+{
+  position: relative;
+  width: 110px;
+  height: 23px;
+}
+.blTRandomSigns
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  font-size: 14px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blNote
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 200px;
+  font-size: 13px;
+
+  /* div в центре другого div */
+  left: 81%;
+  top: 55.25%;
+  transform: translate(-81%, -55.25%);
+  /* left: 84%;
+  top: 48.8%;
+  transform: translate(-84%, -48.8%); */
+}
+
+.blAnswer
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 325px;
+  height: 100px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 77%;
+  transform: translate(-50%, -77%);
+}
+.blAnswerInternal
+{
+  position: relative;
+  width: 325px;
+  height: 100px;
+}
+.blAnswerTitle
+{
+  position: absolute;
+  /* border: 1px solid white; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.blTPNA
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 155px;
+  height: 25px;
+}
+.blTBtmInternal
+{
+  position: relative;
+  width: 155px;
+  height: 25px;
+}
+.blTBtn
+{
+  position: absolute;
+  /* border: 1px solid white; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blTPositive
+{
+  /* div в центре другого div */
+  left: 0%;
+  top: 40%;
+  transform: translate(-0%, -40%);
+}
+
+.blTNegative
+{
+  /* div в центре другого div */
+  left: 100%;
+  top: 40%;
+  transform: translate(-100%, -40%);
+}
+
+.blTAny
+{
+  /* border: 1px solid #32D042; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+
+.blBtnByDefaultSettingsModeMath
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 135px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.5s;
+
+  /* div в центре другого div */
+  left: 84%;
+  top: 87%;
+  transform: translate(-84%, -87%);
+  /* left: 84%;
+  top: 94%;
+  transform: translate(-84%, -94%); */
+}
+.blBtnByDefaultSettingsModeMathInternal
+{
+  position: relative;
+  width: 135px;
+  height: 25px;
+}
+.blTBtnByDefaultModeMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 65px;
+  font-size: 14px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedSettingsModeMath
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 88%;
+  transform: translate(-50%, -88%);
+  /* left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%); */
+}
+.blBtnSelectedSettingsModeMath:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedSettingsModeMathInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedModeMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

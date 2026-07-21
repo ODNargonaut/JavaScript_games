@@ -1,0 +1,564 @@
+/* Показатель для змейки */
+.blValueForSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 1005px;
+  height: 40px;
+
+   /* div в центре другого div */
+   left: 50%;
+   top: 0%;
+   transform: translate(-50%, -0%);
+}
+.blValueForSnakeInternal
+{
+  position: relative;
+  width: 1005px;
+  height: 40px;
+}
+
+/* scoreN Food */
+.blQuantityFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 150px;
+  height: 40px;
+  color: #FFFFFF;
+  /* background-color: #FFFFFF;
+  color: #000000;
+  font-weight: bold; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blQuantityFoodInternal
+{
+  position: relative;
+  width: 150px;
+  height: 40px;
+}
+.imgScoreFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 45px;
+
+  background-size: 30px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.scoreN
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 300px;
+  height: 18px;
+  font-size: 17px;
+
+  /* div в центре другого div */
+  left: 7%;
+  top: 62%;
+  transform: translate(7%, -62%);
+}
+
+/* Mode feedMe */
+.blImgFeedMe
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 32px;
+  height: 32px;
+  
+  background-size: 32px;
+  background-image: url("../../../GUI/mainMenu/ico/apple2.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 14.15%;
+  top: 50%;
+  transform: translate(-14.15%, -50%);
+}
+.blFeedMe
+{
+  position: absolute;
+  border: 2.5px solid #FFFFFF;
+  border-radius: 4px;
+  width: 670px;
+  height: 23px;
+
+  /* div в центре другого div */
+  left: 70%;
+  top: 50%;
+  transform: translate(-70%, -50%);
+}
+.blIndicatorFeedMe
+{
+  position: absolute;
+  border-radius: 2px;
+  height: 12px;
+  margin-left: 4px;
+  margin-top: 5.5px;
+  background-color: #00FE00;
+}
+
+/* Mode words */
+.blMaps
+{
+  position: absolute;
+  /* border: 1px solid rgb(211, 20, 20); */
+  width: 1005px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blRewardApple
+{
+  position: absolute;
+  /* border: 1px solid rgb(31, 196, 70); */
+  width: 175px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blRewardAppleInternal
+{
+  position: relative;
+  width: 175px;
+  height: 35px;
+}
+.blImgReward
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 30px;
+
+  background-size: 32px;
+  background-image: url("../../../GUI/mainMenu/ico/apple2.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blRewardScore
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 135px;
+  height: 17px;
+  font-size: 17px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 82%;
+  top: 58%;
+  transform: translate(-82%, -58%);
+}
+
+.mainBlSymb
+{
+  position: absolute;
+  /* border: 1px solid rgb(200, 228, 15); */
+  width: 825px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.blSymb
+{
+  position: absolute;
+  height: 35px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  color: #000000;
+  background-color: white;
+  font-size: 33px;
+}
+
+.symb-1 { 
+  position: absolute;
+  
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  
+  display: none;
+}
+
+.symb-2 { 
+  position: absolute;
+  
+  left: 3.125%;
+  top: 50%;
+  transform: translate(-3.125%, -50%); 
+  
+  display: none; 
+}
+
+.symb-3 { 
+  position: absolute;
+  
+  left: 6.25%;
+  top: 50%;
+  transform: translate(-6.25%, -50%); 
+  
+  display: none; 
+}
+
+.symb-4 { 
+  position: absolute;
+  
+  left: 9.375%;
+  top: 50%;
+  transform: translate(-9.375%, -50%); 
+  
+  display: none; 
+}
+
+.symb-5 { 
+  position: absolute;
+  
+  left: 12.5%;
+  top: 50%;
+  transform: translate(-12.5%, -50%);
+  
+  display: none; 
+}
+
+.symb-6 { 
+  position: absolute;
+  
+  left: 15.625%;
+  top: 50%;
+  transform: translate(-15.625%, -50%);
+
+  display: none; 
+}
+
+.symb-7 { 
+  position: absolute;
+  
+  left: 18.75%;
+  top: 50%;
+  transform: translate(-18.75%, -50%);
+ 
+  display: none; 
+}
+
+.symb-8 { 
+  position: absolute;
+  
+  left: 21.875%;
+  top: 50%;
+  transform: translate(-21.875%, -50%);
+ 
+  display: none; 
+}
+
+.symb-9 { 
+  position: absolute;
+  
+  left: 25%;
+  top: 50%;
+  transform: translate(-25%, -50%);
+ 
+  display: none; 
+}
+
+.symb-10 { 
+  position: absolute;
+  
+  left: 28.125%;
+  top: 50%;
+  transform: translate(-28.125%, -50%);
+ 
+  display: none; 
+}
+
+.symb-11 { 
+  position: absolute;
+  
+  left: 31.25%;
+  top: 50%;
+  transform: translate(-31.25%, -50%);
+ 
+  display: none; 
+}
+
+.symb-12 { 
+  position: absolute;
+  
+  left: 34.375%;
+  top: 50%;
+  transform: translate(-34.375%, -50%);
+ 
+  display: none; 
+}
+
+.symb-13 { 
+  position: absolute;
+  
+  left: 37.5%;
+  top: 50%;
+  transform: translate(-37.5%, -50%);
+ 
+  display: none; 
+}
+
+.symb-14 { 
+  position: absolute;
+  
+  left: 40.625%;
+  top: 50%;
+  transform: translate(-40.625%, -50%);
+ 
+  display: none; 
+}
+
+.symb-15 { 
+  position: absolute;
+  
+  left: 43.75%;
+  top: 50%;
+  transform: translate(-43.75%, -50%);
+ 
+  display: none; 
+}
+
+.symb-16 { 
+  position: absolute;
+  
+  left: 46.875%;
+  top: 50%;
+  transform: translate(-46.875%, -50%);
+ 
+  display: none; 
+}
+
+.symb-17 { 
+  position: absolute;
+  
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ 
+  display: none; 
+}
+
+.symb-18 { 
+  position: absolute;
+  
+  left: 53.125%;
+  top: 50%;
+  transform: translate(-53.125%, -50%);
+ 
+  display: none; 
+}
+
+.symb-19 { 
+  position: absolute;
+  
+  left: 56.25%;
+  top: 50%;
+  transform: translate(-56.25%, -50%);
+ 
+  display: none; 
+}
+
+.symb-20 { 
+  position: absolute;
+  
+  left: 59.375%;
+  top: 50%;
+  transform: translate(-59.375%, -50%);
+ 
+  display: none; 
+}
+
+.symb-21 { 
+  position: absolute;
+  
+  left: 62.5%;
+  top: 50%;
+  transform: translate(-62.5%, -50%);
+ 
+  display: none; 
+}
+
+.symb-22 { 
+  position: absolute;
+  
+  left: 65.625%;
+  top: 50%;
+  transform: translate(-65.625%, -50%);
+ 
+  display: none; 
+}
+
+.symb-23 { 
+  position: absolute;
+  
+  left: 68.75%;
+  top: 50%;
+  transform: translate(-68.75%, -50%);
+ 
+  display: none; 
+}
+
+.symb-24 { 
+  position: absolute;
+  
+  left: 71.875%;
+  top: 50%;
+  transform: translate(-71.875%, -50%);
+ 
+  display: none; 
+}
+
+.symb-25 { 
+  position: absolute;
+  
+  left: 75%;
+  top: 50%;
+  transform: translate(-75%, -50%);
+ 
+  display: none; 
+}
+
+.symb-26 { 
+  position: absolute;
+  
+  left: 78.125%;
+  top: 50%;
+  transform: translate(-78.125%, -50%);
+ 
+  display: none; 
+}
+
+.symb-27 { 
+  position: absolute;
+  
+  left: 81.25%;
+  top: 50%;
+  transform: translate(-81.25%, -50%);
+ 
+  display: none; 
+}
+
+.symb-28 { 
+  position: absolute;
+  
+  left: 84.375%;
+  top: 50%;
+  transform: translate(-84.375%, -50%);
+ 
+  display: none; 
+}
+
+.symb-29 { 
+  position: absolute;
+  
+  left: 87.5%;
+  top: 50%;
+  transform: translate(-87.5%, -50%);
+ 
+  display: none; 
+}
+
+.symb-30 { 
+  position: absolute;
+  
+  left: 90.625%;
+  top: 50%;
+  transform: translate(-90.625%, -50%);
+ 
+  display: none; 
+}
+
+.symb-31 { 
+  position: absolute;
+  
+  left: 93.75%;
+  top: 50%;
+  transform: translate(-93.75%, -50%);
+ 
+  display: none; 
+}
+
+.symb-32 { 
+  position: absolute;
+  
+  left: 96.875%;
+  top: 50%;
+  transform: translate(-96.875%, -50%);
+ 
+  display: none; 
+}
+
+.symb-33 { 
+  position: absolute;
+  
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+ 
+  display: none; 
+}
+
+/* Block countingDown */
+.blCountingDown
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 23px;
+  height: 20px;
+  font-size: 19px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 95%;
+  top: 50%;
+  transform: translate(-95%, -50%);
+}
+
+.snakePosXY
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 120px;
+  height: 20px;
+  color: white;
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+
+  display: block;
+}
+/* ========== */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Topics</title>
+    <script type="text/javascript" src="./jQuery/jQuery.js"></script>
+    <script type="text/javascript" src="../Js/mylib/shuffle.js"></script>
+  </head>
+  <body id="body">
+    <script type="text/javascript">
+      let list = "";
+      // $("#body").append(list.toLowerCase());
+
+      // function tt()
+      // {
+      //   let arr = shuffle([
+          
+      //   ]);
+
+      //   let NEWLINE = 10;
+      //   let NEXTNEWLINE = NEWLINE-1;
+      //   for (let i = 0, s=""; i < arr.length; i++)
+      //   {
+      //     s = "\""+arr[i]+"\"";
+      //     if (i < arr.length-1) s += ", ";
+      //     if (i == NEXTNEWLINE) { s += "<br />"; NEXTNEWLINE += NEWLINE; }
+      //     $("#body").append(s);
+      //   }
+      // }
+
+      // tt();
+
+
+      // Отсекает одинакове слова
+      function searchClones()
+      {
+        let words = 
+        [
+          
+        ];
+
+        let resWords = [];
+        
+        console.log("До: "+words.length);
+        for (let i = 0; i < words.length; i++)
+        {
+          let clone = false;
+          for (let j = 0; j < resWords.length; j++)
+          {
+            if (words[i] === resWords[j])
+            {
+              clone = true;
+              break;
+            }
+          }
+          if (!clone) 
+          {
+            resWords.push(words[i]);
+            $("#body").append(words[i]+"<br />");
+          }
+        }
+        console.log("После: "+resWords.length);
+      }
+
+      // searchClones();
+    </script>
+  </body>
+</html>

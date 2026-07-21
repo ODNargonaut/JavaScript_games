@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Web-game-fiction</title>
+        <style type="text/css">
+            canvas
+            {
+                /*background-color: rgb(113, 125, 125);*/
+                background-image: url(/biomes/background/bk2.png);
+                background-size: 1760px 880px;
+                border: none;
+                margin-left: -8px;
+                margin-top: -8px;
+            }
+
+            @font-face 
+            {
+                font-family: ttf; /* Гарнитура шрифта */
+                src: url(/css/fonts/K2D-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+            }
+
+            @font-face 
+            {
+                font-family: ttf2; /* Гарнитура шрифта */
+                src: url(/css/fonts/stadium.ttf); /* Путь к файлу со шрифтом */
+            }
+
+            .text-fonts
+            {
+                font-family: ttf;
+            }
+
+            .text-fonts2
+            {
+                font-family: ttf2;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="./css/style01.css" />
+    </head>
+    <body id="body">
+        <div class="blBonus">
+            <img id="bimg" src="/biomes/interface/bonus/bonus.png" />
+        </div>
+        <div class="blLife">
+            <img src="/biomes/interface/life/life.png" />
+            <img class="avatar" src="/biomes/interface/avatar/avatar.png" />
+            <span id="lifeColor" class="lifeColor"></span>
+        </div>
+        <div id="blInfo" class="blInfo">
+            <img src="/biomes/interface/info/info.png" />
+            <spna class="nameHero text-fonts">Name Hero1</spna>
+            <spna id="atk" class="atk text-fonts">100</spna>
+            <spna id="money" class="money text-fonts">200</spna>
+        </div>
+        <div id="victory" class="blVictory">
+            <img src="/biomes/interface/victory/victory.png" />
+        </div>
+        <div id="loss" class="blLoss">
+            <img src="/biomes/interface/loss/loss.png" />
+        </div>
+        <div id="pausa" class="blPausa">
+            <img src="/biomes/interface/pausa/pausa.png" />
+        </div>
+        <div id="blPlay" class="blPlay">
+            <img id="blimg" width="1760" height="880" src="/biomes/interface/play/backgorund.png" />
+            <div id="topic" class="topic">
+                <span class="topic1 text-fonts2">HERO</span>
+                <span class="topic2 text-fonts2">vs</span>
+                <span class="topic3 text-fonts2">GOBLINS</span>
+            </div>
+            <img id="btnPlay" class="btnPlay" src="/biomes/interface/play/btnPlay.png"/>
+            <img id="btnOpt" class="btnOpt" src="/biomes/interface/play/btnOpt.png" onclick="btnOptions()" />
+            <!-- sign up - зарегистрироваться; log in - авторизоваться. -->
+            <div id="Opt" class="Opt">
+                
+            </div>
+        </div>
+        <canvas id='canvas' width='1760' height='880'></canvas>
+        <script type='text/javascript'>
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+
+            let bkAudio = new Audio();
+            bkAudio.src = './biomes/background/audio/01.mp3';
+
+
+            // +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+                document.getElementById('blPlay').style.top = '0px';
+            // +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+
+            // Изменение стиля курсора
+            document.getElementById("body").style.cursor = "url('/biomes/interface/cursor/cursor.png'), auto";
+        </script>
+        <script type='text/javascript' src='./v1.0/Js/DataBases/Characters.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/DataBases/Enemys.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/DataBases/Biomes.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/DataBases/Music.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/adaptation.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/traitFunction/traitFunction1.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/traitFunction/traitFunction2.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/traitFunction/traitFunction3.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/CharacterMove.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/Hero.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/Enemys.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/treatment.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/MapGeneration.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/HeroAndCameraOffset.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/EnemysOffset.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/web-game.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/menu.js'></script>
+        <script type='text/javascript' src='./v1.0/Js/SwitchingMusic.js'></script>
+        <script type="text/javascript">
+            h.src = player.skin[player.Nskin].default.idleR;
+            player.skin[player.Nskin].default.direction = 'R';
+        </script>
+    </body>
+</html>

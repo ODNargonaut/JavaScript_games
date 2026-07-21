@@ -1,0 +1,269 @@
+/* GameOver для режима maze */
+.blGameOverForMaze
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blGameOverForMazeInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blGameOverResultForModeMaze
+{
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  width: 450px;
+  height: 335px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blGameOverResultForModeMazeInternal
+{
+  position: relative;
+  width: 450px;
+  height: 335px;
+}
+
+.blElexirHealthForModeMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 210px;
+  height: 50px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 18%;
+  transform: translate(-50%, -18%);
+}
+.blElexirHealthForModeMazeInternal
+{
+  position: relative;
+  width: 210px;
+  height: 50px;
+}
+.imgElexirHealth
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 50px;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/elixir.png");
+  background-size: 33px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 41.5%;
+  top: 50%;
+  transform: translate(-41.5%, -50%);
+}
+.NQuantityElexirHealth
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 80px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+
+  /* div в центре другого div */
+  left: 85%;
+  top: 65%;
+  transform: translate(-85%, -65%);
+}
+
+/* Block для btn get more элексирова жизни */
+.blBtnGameOverForMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 240px;
+  height: 60px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+}
+
+.blBtnGameOverForMazeInternal
+{
+  position: relative;
+  width: 240px;
+  height: 60px;
+}
+
+/* Btn получить еще элексиров жизни */
+.btnGOGetMore
+{
+  position: absolute;
+  border: 3px solid #FFFFFF;
+  border-radius: 4px;
+  width: 230px;
+  height: 38px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.btnGOGetMore:active
+{
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.btnGOGetMoreInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.textGOGetMore
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 123px;
+  height: 22px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blMiniTAdvertisementWarningModeMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 135px;
+  height: 15px;
+  color: #FFFFFF;
+  font-size: 10.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 99%;
+  transform: translate(-50%, -99%);
+}
+
+.blBtnsForLvlForMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 400px;
+  height: 70px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -90%);
+}
+.blBtnsForLvlForMazeInternal
+{
+  position: relative;
+  width: 400px;
+  height: 70px;
+}
+.blBtnBackGOForMaze
+{
+  position: absolute;
+  border: 3px solid #FFFFFF;
+  border-radius: 4px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/back.png");
+  background-size: 46px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+
+.blBtnResumeGOForMaze
+{
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 4px;
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/mainMenu/ico/apple.png");
+  background-size: 46px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blBtnShowLvlsGOForMaze
+{
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 4px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/menu.png");
+  background-size: 46px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+
+
+/* .blBtnBackGOForMaze:active, .blBtnResumeGOForMaze:active,
+.blBtnShowLvlsGOForMaze:active
+{
+  background-size: 40px;
+  transition: 0.1s;
+} */
+
+/* ========== */

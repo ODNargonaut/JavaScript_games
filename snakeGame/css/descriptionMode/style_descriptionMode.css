@@ -1,0 +1,204 @@
+/* Описание режима */
+.blDescription
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blDescriptionInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1006px;
+  height: 607px;
+}
+.blBtnCloseDescript
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 4px;
+  width: 60px;
+  height: 48px;
+  background-color: #262525;
+  background-image: url("../../GUI/mainMenu/ico/x-mark.png");
+  background-size: 35px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.1s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 6.5%;
+  transform: translate(-50%, -6.5%);
+}
+.blBtnCloseDescript:active
+{
+  width: 55px;
+  height: 42px;
+  background-size: 31px;
+  margin-top: 3px;
+  transition: 0.1s;
+}
+.blTitleDescript
+{
+  position: absolute;
+  border-radius: 4px 4px 0px 0px;
+  border-top: 2px solid #C1C1C1;
+  border-right: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  height: 29px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 17.12%;
+  transform: translate(-50%, -17.12%);
+}
+.blTitleDescriptInternal
+{
+  position: relative;
+  height: 29px;
+}
+.t-TitleDescrip
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 19px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blDescripMode
+{
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  width: 325px;
+  height: 350px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blDescripModeInternal
+{
+  position: relative;
+  width: 325px;
+  height: 350px;
+}
+.blTDescriptMode
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  width: 260px;
+  height: 220px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blTDescriptModeInternal
+{
+  position: relative;
+  width: 260px;
+  height: 220px;
+}
+.blTDescripModeScroll
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 3px;
+  width: 235px;
+  height: 190px;
+  color: #FFFFFF;
+  font-size: 14px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnSelected
+{
+  position: absolute;
+  border-radius: 0px 0px 4px 4px;
+  border-right: 2px solid #C1C1C1;
+  border-bottom: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  width: 180px;
+  height: 29px;
+  transition: 0.1s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 88%;
+  transform: translate(-50%, -88%);
+}
+.blBtnSelected:active 
+{ 
+  margin-top: 7px;
+  transition: 0.1s;
+}
+@-webkit-keyframes pulsate 
+{
+  50% 
+  { 
+    color: #fff; 
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  }
+}
+@keyframes pulsate 
+{
+  50% 
+  {
+    color: #fff; 
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  }
+}
+.blink
+{
+  color: rgb(245,245,245);
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  -webkit-animation: pulsate 1.9s linear infinite;
+  animation: pulsate 1.9s linear infinite;
+}
+.blBtnSelectedInternal
+{
+  /* border: 1px solid white; */
+  position: relative;
+  width: 180px;
+  height: 29px;
+}
+.blBtnTextSelected
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 17px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

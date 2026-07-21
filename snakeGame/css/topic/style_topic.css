@@ -1,0 +1,395 @@
+/* Параметры темы */
+.blTopics
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blTopicsInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+
+.blTitleTopics
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -2%);
+}
+.blMainTopics
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 480px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+.blMainTopicsInternal
+{
+  position: relative;
+  width: 750px;
+  height: 480px;
+}
+
+.blSelectedColor
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 308px;
+  height: 280px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blSelectedColorInternal
+{
+  position: relative;
+  width: 308px;
+  height: 280px;
+}
+
+.blNotification
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 308px;
+  height: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 1.5%;
+  transform: translate(-50%, -1.5%);
+}
+.blNotificationInternal
+{
+  position: relative;
+  width: 308px;
+  height: 20px;
+}
+.blTNotification
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  width: 245px;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blSelectedChapter
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 308px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blSelectedChapterInternal
+{
+  position: relative;
+  width: 308px;
+  height: 35px;
+}
+
+.blBtnObstacles
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  width: 135px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blBtnObstaclesInternal
+{
+  position: relative;
+  width: 135px;
+  height: 30px;
+}
+.blTBtnObst
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blSelectedShowColor
+{
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  border-radius: 3px;
+  display: none;
+  width: 32px;
+  height: 30px;
+
+  background-size: 32px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 55.8%;
+  top: 50%;
+  transform: translate(-55.8%, -50%);
+}
+.blPadlock
+{
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  display: none;
+  border-radius: 3px;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+  
+  background-image: url("../../GUI/modes/maze/padlock2.png");
+  background-size: 15px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blBtnFont
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  width: 105px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.blBtnFontInternal
+{
+  position: relative;
+  width: 105px;
+  height: 30px;
+}
+.blTBtnFont
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blNoteClr
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #c5c5c5;
+  font-size: 13px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blListColors
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  width: 308px;
+  height: 236px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blListColorsInternal
+{
+  position: relative;
+  width: 308px;
+  height: 236px;
+}
+
+.blMainListColors
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 203.5px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blClr
+{
+  position: absolute;
+  border: 1px solid #6AD744;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #6AD744;
+  cursor: pointer;
+}
+
+.blMainListImgs
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 203.5px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSpr
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  background-size: 20px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.blBtnRandomTopics
+{
+  position: absolute;
+  border: 1px solid #32D042;
+  width: 135px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.5s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+}
+.blBtnRandomTopicsInternal
+{
+  position: relative;
+  width: 135px;
+  height: 25px;
+}
+.blTBtnRandomTopics
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  font-size: 14px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.blBtnSelectedTopics
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+.blBtnSelectedTopics:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedTopicsInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedTopics
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

@@ -1,0 +1,409 @@
+/* GameOver для режима word and math */
+.blGameOverForModeWordMath
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blGameOverForModeWordMathInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blGameOverResultForModeWordMath
+{
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  width: 380px;
+  height: 480px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blGameOverResultForModeWordMathInternal
+{
+  position: relative;
+  width: 380px;
+  height: 480px;
+}
+.blTitleGameOverModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 150px;
+  height: 25px;
+  color: #FF0000;
+  font-size: 19px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, -3%);
+}
+.blARecordModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 210px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -12%);
+}
+.blARecordModeWordMathInternal
+{
+  position: relative;
+  width: 210px;
+  height: 40px;
+}
+.imgARecordModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 30px;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/victory.png");
+  background-size: 33px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 35%;
+  top: 50%;
+  transform: translate(-35%, -50%);
+}
+.NARecordModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 106px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+
+  /* div в центре другого div */
+  left: 90%;
+  top: 50.5%;
+  transform: translate(-90%, -50.5%);
+}
+.blCurrentScoreModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 210px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, -22%);
+}
+.blCurrentScoreModeWordMathInternal
+{
+  position: relative;
+  width: 210px;
+  height: 40px;
+}
+.imgCurrentScoreModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 30px;
+
+  background-color: #262525;
+  background-size: 33px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 35%;
+  top: 50%;
+  transform: translate(-35%, -50%);
+}
+.NCurrentScoreModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 106px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+
+  /* div в центре другого div */
+  left: 92%;
+  top: 55%;
+  transform: translate(-92%, -55%);
+}
+.blGuessedWordsMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 190px;
+  height: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 34.5%;
+  transform: translate(-50%, -34.5%);
+}
+.blGuessedWordsMathInternal
+{
+  position: relative;
+  width: 190px;
+  height: 20px;
+}
+.textGuessedWordsMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 250px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blHintWordsMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 312px;
+  height: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 41.8%;
+  transform: translate(-50%, -41.8%);
+}
+.blHintWordsMathInternal
+{
+  position: relative;
+  width: 312px;
+  height: 20px;
+}
+.textHintWordsMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 312px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blGuessedExamplesMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 312px;
+  height: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 37%;
+  transform: translate(-50%, -37%);
+}
+.blGuessedExamplesMathInternal
+{
+  position: relative;
+  width: 312px;
+  height: 20px;
+}
+.textGuessedExamplesMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 225px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Все кнопки */
+.blBtnsGameOverForWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 178px;
+  height: 195px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 83%;
+  transform: translate(-50%, -83%);
+}
+
+.blBtnsGameOverForWordMathInternal
+{
+  position: relative;
+  width: 178px;
+  height: 180px;
+}
+
+/* Btn воскреснуть */
+.btnGOResurrected
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 7px;
+  width: 178px;
+  height: 38px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.btnGOResurrectedInternal
+{
+  position: relative;
+  width: 178px;
+  height: 38px;
+}
+.textGOResurrected
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 110px;
+  height: 22px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blMiniTAdvertisementWarningModeWordMath
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 135px;
+  height: 15px;
+  color: #FFFFFF;
+  font-size: 10.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+}
+
+/* Btn еще раз */
+.btnGOOneMoreTime
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 7px;
+  width: 178px;
+  height: 38px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -65%);
+}
+.btnGOOneMoreTimeInternal
+{
+  position: relative;
+  width: 178px;
+  height: 38px;
+}
+.textGOOneMoreTime
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 70px;
+  height: 22px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Btn вернуться к режимам */
+.btnGOModes
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 7px;
+  width: 178px;
+  height: 38px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 110%;
+  transform: translate(-50%, -110%);
+}
+.btnGOModesInternal
+{
+  position: relative;
+  width: 178px;
+  height: 38px;
+}
+.textGOModes
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 22px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .btnGOResurrected:active, .btnGOOneMoreTime:active,
+.btnGOModes:active
+{
+  margin-top: 5px;
+  transition: 0.2s;
+} */
+
+/* ========== */

@@ -1,0 +1,103 @@
+/* Выбор языка */
+.blLanguage
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blLanguageInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.selectedLanguare
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 200px;
+  height: 159px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectedLanguareRu
+{
+  position: relative;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 200px;
+  height: 65px;
+  font-size: 28px;
+  background-color: #262525;
+  transition: 0.25s;
+  cursor: pointer;
+}
+/* .blSelectedLanguareRu:active
+{
+  width: 173px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  transition: 0.25s;
+} */
+.blSelectedLanguareRuInternal
+{
+  position: absolute;
+  /* border: 1px solid white; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectedLanguareEn
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 200px;
+  height: 65px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+
+  background-color: #262525;
+  font-size: 28px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+/* .blSelectedLanguareEn:active
+{
+  width: 166px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 30px;
+  font-size: 25px;
+  transition: 0.25s;
+} */
+.blSelectedLanguareEnInternal
+{
+  position: absolute;
+  /* border: 1px solid white; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

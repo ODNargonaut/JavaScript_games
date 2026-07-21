@@ -1,0 +1,298 @@
+/* Настройки еды */
+.blSettingsFood
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blSettingsFoodInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleSettingsFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 30px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 3.5%;
+  transform: translate(-50%, -3.5%);
+}
+.blSettingsFoodMain
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 470px;
+  border-radius: 8px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+}
+.blSettingsFoodMainInternal
+{
+  position: relative;
+  width: 750px;
+  height: 470px;
+}
+.blSetDesingFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 350px;
+  height: 250px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 9%;
+  transform: translate(-50%, -9%);
+}
+.blSetDesingFoodInternal
+{
+  position: relative;
+  width: 350px;
+  height: 250px;
+}
+.blTitleDesingFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 20px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: -0.1%;
+  transform: translate(-50%, 0.1%);
+}
+.blSetDesingFoodScroll
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 350px;
+  height: 200px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -54%);
+}
+.blSetDesingFoodScrollMain
+{
+  position: absolute;
+  /* border: 1px solid #FFFFFF; */
+  border-radius: 3px;
+  width: 350px;
+  height: 166px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -54%);
+}
+.blBtnSelectedDesignFood
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+.blBtnSelectedDesignFoodInternal
+{
+  position: relative;
+  width: 70px;
+  height: 60px;
+}
+.blBtnSelectedDesignFood:hover
+{
+  background-color: #494949;
+  transition: 0.5s;
+}
+
+.selfDesignFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 24px;
+
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#counterBlInScrllFood
+{
+  display: none;
+}
+
+/* Блок random для food*/
+.imgRandomFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 40px;
+  height: 40px;
+
+  background-size: 40px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.blSetFoodQuantity
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 85px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 71%;
+  transform: translate(-50%, -71%);
+}
+.blSetFoodQuantityInternal
+{
+  position: relative;
+  width: 280px;
+  height: 85px;
+}
+.blTitleSetFoodQuantity
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blShowSnakeFood
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 2px;
+  width: 115px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -65%);
+}
+.blShowSnakeFoodInternal
+{
+  position: relative;
+  width: 115px;
+  height: 40px;
+}
+.blSetQuantityFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 15px;
+  height: 25px;
+  color: #FFFFFF;
+  font-size: 22px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnMinusFood
+{
+  /* div в центре другого div */
+  left: 17.7%;
+  top: 63%;
+  transform: translate(-17.7%, -63%);
+}
+.blBtnPlusFood
+{
+  /* div в центре другого div */
+  left: 82.7%;
+  top: 63%;
+  transform: translate(-82.7%, -63%);
+}
+
+
+
+.blBtnSelectedSettingFood
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 88%;
+  transform: translate(-50%, -88%);
+}
+.blBtnSelectedSettingFood:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedSettingFoodInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedSettingFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

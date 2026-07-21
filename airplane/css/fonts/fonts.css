@@ -1,0 +1,31 @@
+@font-face 
+{
+  font-family: ttf1; /* Гарнитура шрифта */
+  src: url(./Khand/Khand-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+.t-khand-regular
+{
+  font-family: ttf1;
+}
+
+
+@font-face 
+{
+  font-family: ttf2; /* Гарнитура шрифта */
+  src: url(./Khand/Khand-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+.t-khand-bold
+{
+  font-family: ttf2;
+}
+
+
+@font-face 
+{
+  font-family: ttf3; /* Гарнитура шрифта */
+  src: url(./Khand/Khand-SemiBold.ttf); /* Путь к файлу со шрифтом */
+}
+.t-khand-semiblold
+{
+  font-family: ttf3;
+}

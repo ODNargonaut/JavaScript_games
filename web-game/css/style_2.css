@@ -1,0 +1,334 @@
+/* Блок Дуэль */
+.Bl_Duel
+{
+    position: absolute;
+    margin-top: -1780px;
+    margin-left: 0px;
+    width: 1760px;
+    height: 880px;
+    background: #000000;
+    border-radius: 3px;
+}
+
+/* Блок со временем */
+.bl_time
+{
+    position: absolute;
+    border: none;
+    width: 103px;
+    height: 40px;
+    margin-left: 804px;
+    margin-top: 9px;
+}
+
+/* Время */
+time
+{
+    position: absolute;
+    font-family: 'Londrina Solid';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+
+/*==========================================*/
+
+/* Блок с глав. орудиями */
+.BLmg_2
+{
+    position: absolute;
+    width: 94px;
+    height: 604px;
+    margin-top: 148px;
+    margin-left: 83px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Главное орудие */
+.MGT1_2
+{
+    color: white;
+    position: absolute;
+    margin-top: 113px;
+    margin-left: 64px;
+    letter-spacing: .1px;
+}
+
+/* Ячейки для главных орудий */
+.mainGun_2
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 94px;
+    height: 604px;
+    overflow   : auto; /* Добавляем полосы прокрутки */
+    overflow-x : hidden;
+}
+
+/* ширина прокрутки для блока с глав. орудиями */
+.mainGun_2::-webkit-scrollbar 
+{
+    width: 0px;
+    height: 0px;
+}
+ 
+
+/* цвет заднего фона прокрутки для блока с глав. орудиями */ 
+.mainGun_2::-webkit-scrollbar-track
+{
+  border-radius: 50px;
+}
+ 
+
+/* цвет бегунка в поле для блока с глав. орудиями */ 
+.mainGun_2::-webkit-scrollbar-thumb 
+{
+    background-color: #0000;
+}
+
+/* Ячейка */
+.cellv2
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    width: 94px;
+    height: 94px;
+    /* cursor: pointer; */
+}
+
+/*==================================*/
+
+.MGcell_1_2
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.MGcell_2_2
+{
+    /* background-image: url(/img/padlock.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 102px;
+}
+
+.MGcell_3_2
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 204px;
+}
+
+.MGcell_4_2
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 306px;
+}
+
+.MGcell_5_2
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 408px;
+}
+
+.MGcell_6_2
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 510px;
+}
+
+.MGcell_7_2
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 612px;
+}
+
+.MGcell_8_2
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 714px;
+}
+
+/*==================================*/
+
+/* Блок аватара персонажа */
+.bl_avatar_Hero
+{
+    position: absolute;
+    border: 1px solid white;
+    width: 188px;
+    height: 188px;
+    margin-top: 410px;
+    margin-left: 312px;
+}
+
+/* Аватар персонажа */
+.avatar_hero
+{
+    position: absolute;
+    background-image: url(/characters/h1/h1AvatarDuel.png);
+    border: none;
+    width: 186px;
+    height: 186px;
+}
+
+/* Блок с выбранным оружием */
+.bl_sw
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 94px;
+    height: 94px;
+    margin-left: 359px;
+    margin-top: 658;
+    background-color: #FFFFFF;
+}
+
+/* Выбранное оружие */
+.sw
+{
+    position: absolute;
+    width: 92px;
+    height: 92px;
+    margin-left: 1px;
+    margin-top: 1px;
+    border-radius: 3px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-image: url(/biomes/inventory/items/sword.png); */
+}
+
+/* Блок VS */
+.bl_vs
+{
+    position: absolute;
+    width: 700px;
+    height: 684px;
+    margin-left: 500px;
+    margin-top: 68px;
+    border: none;
+}
+
+/* VS */
+.vs
+{
+    position: absolute;
+    width: 700px;
+    height: 684px;
+    background-image: url(/biomes/vs/vs.png);
+}
+
+/* Кнопка Go */
+.btn_go
+{
+    position: absolute;
+    width: 152px;
+    height: 42px;
+    margin-left: 790px;
+    margin-top: 767px;
+    border: 1px solid white;
+    border-radius: 7px;
+}
+
+/* Текст Go */
+.T_Go
+{
+    position: absolute;
+    margin-left: 55px;
+    margin-top: 0px;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+/* Блок аватара соперника */
+.bl_avatar_rival
+{
+    position: absolute;
+    border: 1px solid white;
+    width: 188px;
+    height: 188px;
+    margin-top: 410px;
+    margin-left: 1200px;
+}
+
+/* Аватар соперника */
+.avatar_rival
+{
+    position: absolute;
+    background-image: url(/characters/h2/h2AvatarDuel.png);
+    border: none;
+    width: 186px;
+    height: 186px;
+}
+
+/* Блок с выбранным оружием соперника */
+.bl_sw_rival
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 94px;
+    height: 94px;
+    margin-left: 1247px;
+    margin-top: 658;
+    background-color: #FFFFFF;
+}
+
+/* Выбранное оружие соперника */
+/* .sw_rival
+{
+    position: absolute;
+    width: 38px;
+    height: 94px;
+    margin-left: 28.2px;
+    background-image: url(/biomes/inventory/items/sword.png);
+} */
+
+/* Блок Неизвестное выбранное оружие соперника */
+.bl_unknown_sw
+{
+    position: absolute;
+    width: 92px;
+    height: 92px;
+    margin-left: 1px;
+    margin-top: 1px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+/* Неизвестное выбранное оружие */
+.unknown
+{
+    position: absolute;
+    color: white;
+    font-size: 64px;
+    margin-left: 25px;
+    margin-top: 8px;
+}

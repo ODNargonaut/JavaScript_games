@@ -1,0 +1,903 @@
+.blProcessGame
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blBtnPause
+{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  /* border: 1px solid black; */
+  cursor: pointer;
+  z-index: 100;
+
+  background-image: url("../img/pause.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.3s;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 0%;
+  transform: translate(-100%, -0%);
+}
+
+.blIndicators
+{
+  position: absolute;
+  width: 320px;
+  height: 120px;
+  /* border: 1px solid black; */
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0.5%;
+  transform: translate(-0%, -0.5%);
+}
+
+.blIndicatorDist
+{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid #e32828; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blImgDist
+{
+  position: absolute;
+  width: 26px;
+  height: 40px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/flag_dist.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 1%;
+  top: 50%;
+  transform: translate(-1%, -50%);
+}
+.blTextDist
+{
+  position: relative;
+  height: 40px;
+  /* border: 1px solid black; */
+  font-size: 200%;
+  margin-left: 30px;
+}
+
+
+.blIndicatorEnergy
+{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid #2c96a0; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blImgEnergy
+{
+  position: absolute;
+  width: 26px;
+  height: 46px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/energy.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 1%;
+  top: 50%;
+  transform: translate(-1%, -50%);
+}
+.borderForVolumeEnergy
+{
+  position: absolute;
+  width: 140px;
+  height: 23px;
+  border: 2px solid black;
+  border-radius: 3px;
+
+  margin: 7px 35px;
+}
+.volumeEnergy
+{
+  position: absolute;
+  width: 140px;
+  height: 23px;
+  background-color: #3EDAE8;
+  border-radius: 2px;
+}
+.constantVolumeEnergy
+{
+  position: absolute;
+  width: 140px;
+  height: 23px;
+}
+
+
+.blIndicatorCoin
+{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid #11a20c; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blImgCoin
+{
+  position: absolute;
+  width: 26px;
+  height: 40px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/coin_1.svg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 1%;
+  top: 50%;
+  transform: translate(-1%, -50%);
+}
+.blTextCoin
+{
+  position: relative;
+  height: 40px;
+  /* border: 1px solid black; */
+  font-size: 180%;
+  margin-left: 35px;
+}
+.blTextCoinLvlBonus
+{
+  color: #FEDA2C;
+  -webkit-text-stroke: 1px black;
+  -moz-text-stroke: 1px black;
+  -ms-text-stroke: 1px black;
+}
+
+
+.blTutotial
+{
+  position: absolute;
+  width: 280px;
+  height: 260px;
+  /* border: 1px solid black; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blLineUpDown
+{
+  position: absolute;
+  width: 40px;
+  height: 200px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/lineTutorial.png");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.blFinger
+{
+  position: absolute;
+  width: 40px;
+  height: 65px;
+  /* border: 1px solid black; */
+
+  background-image: url("../img/finger.png");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  animation: pulsa3s 3s ease-in-out infinite;
+
+  /* div в центре другого div */
+  left: 75%;
+  top: 0%;
+  transform: translate(-50%, -75%);
+  transform: rotate(-45deg);
+}
+@keyframes pulsa3s 
+{
+  from { margin-top: 15px; }
+  50% { margin-top: 150px; }
+  to { margin-top: 15px; }
+}
+.blTTutorial
+{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  color: #fff;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  letter-spacing: 1.5px;
+
+  /* border: 1px solid black; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+
+@media only screen and (max-width: 1025px)
+{
+  .blBtnPause
+  {
+    width: 50px;
+    height: 50px;
+  }
+
+  .blIndicators
+  {
+    width: 320px;
+    height: 120px;
+  }
+
+  .blIndicatorDist
+  {
+    height: 40px;
+  }
+  .blImgDist
+  {
+    width: 26px;
+    height: 40px;
+  }
+  .blTextDist
+  {
+    font-size: 200%;
+    margin-left: 30px;
+  }
+
+  .blIndicatorEnergy
+  {
+    height: 40px;
+  }
+  .blImgEnergy
+  {
+    width: 26px;
+    height: 46px;
+  }
+  .borderForVolumeEnergy
+  {
+    width: 140px;
+    height: 23px;
+    border-radius: 3px;
+    border: 2px solid #000;
+
+    margin: 7px 35px;
+  }
+  .volumeEnergy, .constantVolumeEnergy
+  {
+    width: 140px;
+    height: 23px;
+    border-radius: 2px;
+  }
+
+  .blIndicatorCoin
+  {
+    height: 40px;
+  }
+  .blImgCoin
+  {
+    width: 26px;
+    height: 40px;
+  }
+  .blTextCoin
+  {
+    font-size: 180%;
+    margin-left: 35px;
+  }
+  
+
+  .blTutotial
+  {
+    width: 280px;
+    height: 260px;
+  }
+  .blLineUpDown
+  {
+    width: 40px;
+    height: 200px;
+  }
+  .blFinger
+  {
+    width: 35px;
+    height: 60px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 15px; }
+    50% { margin-top: 150px; }
+    to { margin-top: 15px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.5px;
+    font-size: 200%;
+
+    text-shadow: 2px 0 #000,   -2px  0 #000,    0   2px #000,  0  -2px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-width: 600px)
+{
+  .blBtnPause
+  {
+    width: 50px;
+    height: 50px;
+  }
+
+  .blIndicators
+  {
+    width: 320px;
+    height: 120px;
+  }
+
+  .blIndicatorDist
+  {
+    height: 40px;
+  }
+  .blImgDist
+  {
+    width: 26px;
+    height: 40px;
+  }
+  .blTextDist
+  {
+    font-size: 200%;
+    margin-left: 30px;
+  }
+
+  .blIndicatorEnergy
+  {
+    height: 40px;
+  }
+  .blImgEnergy
+  {
+    width: 26px;
+    height: 46px;
+  }
+  .borderForVolumeEnergy
+  {
+    width: 140px;
+    height: 23px;
+    border-radius: 3px;
+    border: 2px solid #000;
+
+    margin: 7px 35px;
+  }
+  .volumeEnergy, .constantVolumeEnergy
+  {
+    width: 140px;
+    height: 23px;
+    border-radius: 2px;
+  }
+
+  .blIndicatorCoin
+  {
+    height: 40px;
+  }
+  .blImgCoin
+  {
+    width: 26px;
+    height: 40px;
+  }
+  .blTextCoin
+  {
+    font-size: 180%;
+    margin-left: 35px;
+  }
+  
+
+  .blTutotial
+  {
+    width: 280px;
+    height: 260px;
+  }
+  .blLineUpDown
+  {
+    width: 40px;
+    height: 200px;
+  }
+  .blFinger
+  {
+    width: 35px;
+    height: 60px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 15px; }
+    50% { margin-top: 150px; }
+    to { margin-top: 15px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.5px;
+    font-size: 200%;
+
+    text-shadow: 2px 0 #000,   -2px  0 #000,    0   2px #000,  0  -2px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-width: 480px)
+{
+  .blBtnPause
+  {
+    width: 43px;
+    height: 43px;
+  }
+
+  .blIndicators
+  {
+    width: 250px;
+    height: 120px;
+  }
+
+  .blIndicatorDist
+  {
+    height: 40px;
+  }
+  .blImgDist
+  {
+    width: 26px;
+    height: 40px;
+  }
+  .blTextDist
+  {
+    font-size: 200%;
+    margin-left: 30px;
+  }
+
+  .blIndicatorEnergy
+  {
+    height: 40px;
+  }
+  .blImgEnergy
+  {
+    width: 26px;
+    height: 46px;
+  }
+  .borderForVolumeEnergy
+  {
+    width: 140px;
+    height: 23px;
+    border-radius: 3px;
+    border: 2px solid #000;
+
+    margin: 7px 35px;
+  }
+  .volumeEnergy, .constantVolumeEnergy
+  {
+    width: 140px;
+    height: 23px;
+    border-radius: 2px;
+  }
+
+  .blIndicatorCoin
+  {
+    height: 40px;
+  }
+  .blImgCoin
+  {
+    width: 26px;
+    height: 40px;
+  }
+  .blTextCoin
+  {
+    font-size: 180%;
+    margin-left: 35px;
+  }
+  
+
+  .blTutotial
+  {
+    width: 280px;
+    height: 260px;
+  }
+  .blLineUpDown
+  {
+    width: 40px;
+    height: 200px;
+  }
+  .blFinger
+  {
+    width: 35px;
+    height: 60px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 15px; }
+    50% { margin-top: 150px; }
+    to { margin-top: 15px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.5px;
+    font-size: 200%;
+
+    text-shadow: 2px 0 #000,   -2px  0 #000,    0   2px #000,  0  -2px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-width: 350px)
+{
+  .blBtnPause
+  {
+    width: 38px;
+    height: 38px;
+  }
+
+  .blIndicators
+  {
+    width: 250px;
+    height: 100px;
+  }
+
+  .blIndicatorDist
+  {
+    height: 30px;
+  }
+  .blImgDist
+  {
+    width: 20px;
+    height: 30px;
+  }
+  .blTextDist
+  {
+    font-size: 170%;
+    margin-left: 25px;
+  }
+
+  .blIndicatorEnergy
+  {
+    height: 30px;
+  }
+  .blImgEnergy
+  {
+    width: 20px;
+    height: 40px;
+  }
+  .borderForVolumeEnergy
+  {
+    width: 120px;
+    height: 19px;
+    border-radius: 3px;
+    border: 2px solid #000;
+
+    margin: 7px 29px;
+  }
+  .volumeEnergy, .constantVolumeEnergy
+  {
+    width: 120px;
+    height: 19px;
+    border-radius: 2px;
+  }
+
+  .blIndicatorCoin
+  {
+    height: 30px;
+  }
+  .blImgCoin
+  {
+    width: 25px;
+    height: 25px;
+  }
+  .blTextCoin
+  {
+    font-size: 160%;
+    margin-left: 30px;
+  }
+  
+
+  .blTutotial
+  {
+    width: 280px;
+    height: 260px;
+  }
+  .blLineUpDown
+  {
+    width: 40px;
+    height: 200px;
+  }
+  .blFinger
+  {
+    width: 35px;
+    height: 60px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 15px; }
+    50% { margin-top: 150px; }
+    to { margin-top: 15px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.5px;
+    font-size: 200%;
+
+    text-shadow: 2px 0 #000,   -2px  0 #000,    0   2px #000,  0  -2px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-width: 300px)
+{
+  .blBtnPause
+  {
+    width: 38px;
+    height: 38px;
+  }
+
+  .blIndicators
+  {
+    width: 200px;
+    height: 100px;
+  }
+
+  .blIndicatorDist
+  {
+    height: 30px;
+  }
+  .blImgDist
+  {
+    width: 20px;
+    height: 30px;
+  }
+  .blTextDist
+  {
+    font-size: 170%;
+    margin-left: 25px;
+  }
+
+  .blIndicatorEnergy
+  {
+    height: 30px;
+  }
+  .blImgEnergy
+  {
+    width: 20px;
+    height: 40px;
+  }
+  .borderForVolumeEnergy
+  {
+    width: 120px;
+    height: 19px;
+    border-radius: 3px;
+    border: 2px solid #000;
+
+    margin: 7px 29px;
+  }
+  .volumeEnergy, .constantVolumeEnergy
+  {
+    width: 120px;
+    height: 19px;
+    border-radius: 2px;
+  }
+
+  .blIndicatorCoin
+  {
+    height: 30px;
+  }
+  .blImgCoin
+  {
+    width: 25px;
+    height: 25px;
+  }
+  .blTextCoin
+  {
+    font-size: 160%;
+    margin-left: 30px;
+  }
+  
+
+  .blTutotial
+  {
+    width: 190px;
+    height: 260px;
+  }
+  .blLineUpDown
+  {
+    width: 40px;
+    height: 180px;
+  }
+  .blFinger
+  {
+    width: 35px;
+    height: 60px;
+    animation: pulsa3s 3.5s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 7px; }
+    50% { margin-top: 140px; }
+    to { margin-top: 7px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.5px;
+    font-size: 135%;
+
+    text-shadow: 1.5px 0 #000,   -1.5px  0 #000,    0   1.5px #000,  0  -1.5px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-height: 480px)
+{
+  .blTutotial
+  {
+    width: 160px;
+    height: 200px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .blLineUpDown
+  {
+    width: 35px;
+    height: 155px;
+  }
+  .blFinger
+  {
+    width: 32px;
+    height: 55px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 2px; }
+    50% { margin-top: 122px; }
+    to { margin-top: 2px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.5px;
+    font-size: 160%;
+
+    text-shadow: 1.5px 0 #000,   -1.5px  0 #000,    0   1.5px #000,  0  -1.5px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-height: 335px)
+{
+  .blTutotial
+  {
+    width: 132px;
+    height: 145px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+  }
+  .blLineUpDown
+  {
+    width: 25px;
+    height: 110px;
+  }
+  .blFinger
+  {
+    width: 23px;
+    height: 38px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 3px; }
+    50% { margin-top: 87px; }
+    to { margin-top: 3px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.2px;
+    font-size: 125%;
+
+    text-shadow: 1px 0 #000,   -1px  0 #000,    0   1px #000,  0  -1px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}
+
+
+@media only screen and (max-height: 285px)
+{
+  .blTutotial
+  {
+    width: 132px;
+    height: 115px;
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+  }
+  .blLineUpDown
+  {
+    width: 20px;
+    height: 90px;
+  }
+  .blFinger
+  {
+    width: 20px;
+    height: 35px;
+    animation: pulsa3s 3.3s ease-in-out infinite;
+  }
+  @keyframes pulsa3s 
+  {
+    from { margin-top: 3px; }
+    50% { margin-top: 70px; }
+    to { margin-top: 3px; }
+  }
+  .blTTutorial
+  {
+    letter-spacing: 1.2px;
+    font-size: 115%;
+
+    text-shadow: 1px 0 #000,   -1px  0 #000,    0   1px #000,  0  -1px #000,
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+}

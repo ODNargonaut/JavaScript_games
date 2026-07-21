@@ -1,0 +1,223 @@
+/* Предупреждение перед началом игры */
+.blWarning
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blWarningInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleWarning
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #d21717;
+  width: 144px;
+  height: 29;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -2%);
+}
+.blMainBlWarning
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 540px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+}
+.blMainBlWarningInternal
+{
+  position: relative;
+  width: 750px;
+  height: 540px;
+}
+
+.blMainWarning
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 650px;
+  height: 430px;
+  border-radius: 5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blMainWarningInternal
+{
+  position: relative;
+  width: 650px;
+  height: 430px;
+}
+
+/*  */
+.blWarningText
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 625px;
+  height: 405px;
+  overflow: auto;
+  overflow-x: hidden;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.devSpan2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+}
+
+.codeTWarning-1
+{
+  width: 71px;
+  height: 15px;
+  font-weight: 600;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2.5%;
+  transform: translate(-50%, -2.5%);
+}
+.codeTWarning-2
+{
+  width: 580px;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+}
+.codeTWarning-3
+{
+  width: 550px;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 17%;
+  transform: translate(-50%, -17%);
+}
+.codeTWarning-4
+{
+  width: 230px;
+  font-size: 13px;
+  font-weight: 600;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+.codeTWarning-5
+{
+  width: 300px;
+  font-size: 12px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+}
+
+
+
+
+.blBtnSelectedWarning
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+.blBtnSelectedWarning:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedWarningInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedWarning
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  /* width: 140px; */
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+
+@-webkit-keyframes pulsate2
+{
+  50% 
+  { 
+    color: #e20e0e; 
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  }
+}
+@keyframes pulsate2
+{
+  50% 
+  {
+    color: #e20e0e; 
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  }
+}
+#blink2
+{
+    color: rgb(201, 33, 33);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    -webkit-animation: pulsate2 1.9s linear infinite;
+    animation: pulsate2 1.9s linear infinite;
+}

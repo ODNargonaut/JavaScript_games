@@ -1,0 +1,63 @@
+/* GameOver для остальных режимов */
+.blGameOverForOther
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blGameOverForModeOtherInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blGameOverResultForModeOther
+{
+  position: absolute;
+  border: 2px solid white;
+  width: 380px;
+  height: 380px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blGameOverResultForModeOtherInternal
+{
+  position: relative;
+  width: 380px;
+  height: 380px;
+}
+
+
+/* Все кнопки */
+.blBtnsGameOverForOther
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 178px;
+  height: 195px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 82%;
+  transform: translate(-50%, -82%);
+}
+
+.blBtnsGameOverForOtherInternal
+{
+  position: relative;
+  width: 178px;
+  height: 180px;
+}

@@ -1,0 +1,191 @@
+/* Под меню */
+.blUnderMenu
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blUnderMenuInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blSelectionsUnderMenu
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 775px;
+  height: 500px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectionsUnderMenuInternal
+{
+  position: relative;
+  width: 775px;
+  height: 500px;
+}
+.btnSelection
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 230px;
+  height: 40px;
+  background-color: #262525;
+  font-size: 19px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.btnSelection:hover
+{
+  background-color: #2e2d2d;
+  transition: 0.3s;
+}
+.btnSelection:active
+{
+  margin-top: 5px;
+  transition: 0.25s;
+}
+.btnSelectionInternal
+{
+  position: relative;
+  width: 230px;
+  height: 40px;
+}
+.blTBtnSelection
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 25px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnSelection-1
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+
+.btnSelection-2
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -12%);
+}
+
+
+.btnSelection-3
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 24%;
+  transform: translate(-50%, -24%);
+}
+
+
+.btnSelection-4
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 36%;
+  transform: translate(-50%, -36%);
+}
+
+
+.btnSelection-5
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 95.5%;
+  transform: translate(-50%, -95.5%);
+}
+.blTBtnSelection-5
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-6
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 59.8%;
+  transform: translate(-50%, -59.8%);
+}
+
+
+.btnSelection-7
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 47.9%;
+  transform: translate(-50%, -47.9%);
+}
+.blTBtnSelection-7
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-8
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 71.7%;
+  transform: translate(-50%, -71.7%);
+}
+.blTBtnSelection-8
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-9
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 83.6%;
+  transform: translate(-50%, -83.6%);
+}
+.blTBtnSelection-9
+{
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+
+

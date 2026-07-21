@@ -1,0 +1,187 @@
+body 
+{
+  background-color: rgb(30, 29, 29); 
+  color: white;
+}
+
+canvas
+{
+  position: absolute;
+  /* margin-left: 250px;
+  margin-top: 50px; */
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(173, 169, 169);
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* !!!!!! */
+
+.mainBody
+{
+  position: absolute;
+  border: 1px solid white;
+  width: 99%;
+  height: 98%;
+}
+.mainBodyInternal
+{
+  position: relative;
+  width: 99%;
+  height: 98%;
+}
+
+
+
+.flipc 
+{
+  border: 1px solid white;
+  perspective: 1000;
+  display: inline-block;
+  margin-left: 14px;
+  margin-top: 8px;
+}
+
+.rotate { transform: rotateY(180deg); }
+
+.flipc, .front, .back 
+{
+  width: 40px;
+  height: 40px;
+}
+
+.flipper 
+{
+  position: relative;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front, .back 
+{
+  position: absolute;
+  border: 1px solid white;
+  backface-visibility: hidden;
+}
+
+.back 
+{
+  border: 1px solid white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+.blSetDesingFoodScrollMain
+{
+  position: absolute;
+  /* border: 1px solid #C1C1C1; */
+  border-radius: 3px;
+  width: 350px;
+  height: 166px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -54%);
+}
+.blBtnSelectedDesignFood
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+.blBtnSelectedDesignFoodInternal
+{
+  position: relative;
+  width: 70px;
+  height: 60px;
+}
+.blBtnSelectedDesignFood:hover
+{
+  background-color: #494949;
+  transition: 0.5s;
+}
+
+.selfDesignFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 24px;
+
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@font-face 
+{
+  font-family: ttf2; /* Гарнитура шрифта */
+  src: url(../css/fonts/roboto/bold/roboto-bold.ttf); /* Путь к файлу со шрифтом */
+}
+.t-roboto-black
+{
+  font-family: ttf2;
+}
+
+
+/* ========== */
+
+
+
+.rect {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: block;
+  opacity: 1;
+}
+
+#rect.is-visible {
+  display: block;
+  animation: fadeInFromNone 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#rect.is-hidden {
+  animation: fadeOutFromBlock 0.5s ease-in-out;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutFromBlock {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

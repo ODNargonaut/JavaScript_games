@@ -1,0 +1,169 @@
+/* Выбор поля */
+.blDecorationField
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blDecorationFieldInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 33px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+}
+.blSelectedDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 450px;
+  border-radius: 8px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 68%;
+  transform: translate(-50%, -68%);
+}
+.blSelectedDecorFieldInternalMain
+{
+  position: relative;
+  width: 750px;
+  height: 450px;
+}
+.blImgDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 520px;
+  height: 318px;
+  border-radius: 5px;
+  background-color: #262525;
+  background-size: 520px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 29.5%;
+  transform: translate(-50%, -29.5%);
+}
+
+
+.blBtnPNDF
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  display: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #262525;
+
+  background-size: 48px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.blBtnPrevisDecorField
+{
+  background-image: url("../../GUI/mainMenu/ico/previs.png");
+
+  /* div в центре другого div */
+  left: 5%;
+  top: 44%;
+  transform: translate(-5%, -44%);
+}
+.blBtnPrevisDecorField:active
+{
+  width: 43px;
+  height: 43px;
+  background-size: 43px;
+  margin-left: 5px;
+  margin-top: 2px;
+  transition: 0.15s;
+}
+.blBtnNextDecorField
+{
+  background-image: url("../../GUI/mainMenu/ico/next.png");
+
+  /* div в центре другого div */
+  left: 95%;
+  top: 44%;
+  transform: translate(-95%, -44%);
+}
+.blBtnNextDecorField:active
+{
+  width: 43px;
+  height: 43px;
+  background-size: 43px;
+  margin-left: -3.5px;
+  margin-top: 2px;
+  transition: 0.15s;
+}
+
+
+.blBtnSelectedDecorField
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+.blBtnSelectedDecorField:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedDecorFieldInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

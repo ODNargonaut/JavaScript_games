@@ -1,0 +1,247 @@
+/* Параметры режима words */
+.blMainDocument
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blMainDocumentInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleblMainDocument
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -2%);
+}
+
+.blBtnCloseDocument
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  /* width: 105px; */
+  height: 30px;
+
+  /* div в центре другого div */
+  left: 5%;
+  top: 1.5%;
+  transform: translate(-5%, -1.5%);
+}
+.blBtnCloseDocumentInternal
+{
+  position: relative;
+  /* width: 105px; */
+  height: 30px;
+}
+
+.blBtnCloseKey
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blBtnCloseKeyInternal
+{
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.BlKeyH
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  height: 18px;
+  color: #000000;
+  font-size: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blTCloseD
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 15px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.blMainDocumentAllPage
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 950px;
+  height: 540px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+}
+.blMainDocumentAllPageInternal
+{
+  position: relative;
+  width: 950px;
+  height: 540px;
+}
+
+.blMainListDocumentAllPage
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 920px;
+  height: 510px;
+  border-radius: 5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blMainListDocumentAllPageInternal
+{
+  position: relative;
+  width: 920px;
+  height: 510px;
+}
+
+.imgShowHideListChapters
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  background-image: url('../../GUI/documentationForGame/clone_hide.png');
+  background-size: 23px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 1%;
+  transform: translate(-50%, -1%);
+}
+
+.blShowHideListChapters
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 920px;
+  height: 0px;
+  color: #FFFFFF;
+  /* background-color: #262525; */
+  background-color: #3b3939;
+  overflow: auto;
+  transition: 0.8s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blShowHideListChaptersInter
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 920px;
+  height: 0px;
+  color: #FFFFFF;
+  /* background-color: #262525; */
+  background-color: #3b3939;
+  overflow: auto;
+  transition: 0.8s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.devBl
+{
+  position: absolute;
+  /* border: 1px solid white; */
+}
+
+.codeText
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.codeText:hover
+{
+  background-color: #34893e;
+  transition: 0.30s;
+}
+
+.codeTPosAbsolute
+{
+  position: absolute;
+}
+.codeImg
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.blListDocumentAllPage
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 905px;
+  height: 490px;
+  color: #FFFFFF;
+  background-color: #262525;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

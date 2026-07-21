@@ -1,0 +1,182 @@
+/* Режимы */
+.blModes
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blModesInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleModes
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 35px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+}
+.blSelectedMode
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 68%;
+  transform: translate(-50%, -68%);
+}
+.blSelectedModeInternalMain
+{
+  position: relative;
+  width: 732px;
+  height: 420px;
+}
+.blSelectedModeInternal
+{
+  position: absolute;
+  /* border: 1px solid #FFFFFF; */
+  width: 565px;
+  height: 380px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode
+{
+  position: absolute;
+  border: 2px solid white;
+  width: 175px;
+  height: 120px;
+}
+.blModeInternal
+{
+  /* border: 1px solid red; */
+  position: relative;
+  width: 175px;
+  height: 120px;
+}
+.blBtnInfo
+{
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  border-radius: 11px;
+  width: 50px;
+  height: 48px;
+  cursor: pointer;
+  transition: 0.25s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnInfo:active
+{
+  background-color: #b7b7b7;
+  transition: 0.25s;
+}
+.blInfoPartInternal
+{
+  position: relative;
+  width: 50px;
+  height: 48px;
+}
+.blInfoPart
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 9px;
+  height: 33px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.Info-part-1
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 9px;
+  height: 9px;
+  background-color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.Info-part-2
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 9px;
+  height: 19px;
+  background-color: #FFFFFF;
+  
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.blNameMode
+{
+  position: absolute;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid #C1C1C1;
+  border-right: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  background-color: #262525;
+  width: 135px;
+  height: 22px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 102.25%;
+  transform: translate(-50%, -102.25%);
+}
+.blNameModeInternal
+{
+  position: relative;
+  width: 135px;
+  height: 22px;
+}
+.nameMode
+{
+  position: absolute;
+  /* border: 1px solid white; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ========== */

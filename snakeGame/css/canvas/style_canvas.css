@@ -1,0 +1,318 @@
+body
+{
+  background-color: black;
+}
+
+canvas
+{
+  position: absolute;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(173, 169, 169);
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+
+.blForOtherSides
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 1008px; 
+  height: 608px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+
+.blForOtherSidesInternal
+{
+  /* border: 1px solid white; */
+  position: relative;
+  width: 1008px;
+  height: 6008px;
+}
+
+
+.indicator
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 50px; 
+  width: 21px; 
+  height: 21px;
+  background-color: rgb(255, 21, 0);
+
+  /* div в центре другого div */
+  left: 1%;
+  top: 99%;
+  transform: translate(-1%, -99%);
+}
+
+.lowerBlock
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 380px; 
+  height: 53px; 
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+
+/* Messge Collieion Text */
+.blMsgCollision
+{
+  position: absolute; 
+  /* border: 1px solid white; */
+  color:white; 
+  width: 380px; 
+  height: 25px; 
+  display: block;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.posMoveMouse
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  display: block;
+  width: 320px; 
+  height: 25px; 
+  color: white;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+/* ========== */
+
+/* Показать подсказку */
+#tooltipCurrentTime 
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 3px;
+  display: none;
+  /* width: 56px; */
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  background-color: #2e2d2d;
+  padding: 5px 10px 5px 10px;
+  color: #FFFFFF;
+  z-index: 9999;
+}
+
+#tooltipNecessaryTime 
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 3px;
+  display: none;
+  /* width: 81px; */
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  background-color: #2e2d2d;
+  padding: 5px 10px 5px 10px;
+  color: #FFFFFF;
+  z-index: 9999;
+}
+
+#tooltipDesign
+{
+  position: absolute;
+  border: 1px solid rgb(67, 249, 6);
+  border-radius: 3px;
+  display: none;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  background-color: #2d2e2d;
+  padding: 5px 10px 5px 10px;
+  color: #FFFFFF;
+  z-index: 9999;
+}
+
+#tooltipSZW
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 3px;
+  display: none;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  background-color: #2e2d2d;
+  padding: 5px 10px 5px 10px;
+  color: #FFFFFF;
+  z-index: 9999;
+}
+.TtooltipSZW
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Счетчик блоков в обоих скроллах */
+.counterBlInScrll
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: white;
+  /* font-size: 10px; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+/* три точки, пока подгружает контент */
+.blSending
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  display: none;
+  color: white;
+  font-size: 10px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 88%;
+  transform: translate(-50%, -88%);
+}
+
+.blAnanimusUser
+{
+  display: none;
+  position: absolute;
+  /* border: 1px solid white; */
+}
+.TAnanimusUser-1
+{
+  color:rgb(255, 39, 39);
+}
+.TAnanimusUser-2
+{
+  /* border: 1px solid white; */
+  color:rgb(255, 251, 39); 
+  cursor: pointer;
+  transition: 0.5s;
+}
+.TAnanimusUser-2:hover
+{
+  /* border-radius: 2px; */
+  color: #000000;
+  background-color:rgb(255, 251, 39);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.blPrevisChapter
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  background-image: url('../../GUI/mainMenu/ico/previsChapter.png');
+  background-size: 38px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 2%;
+  top: 3%;
+  transform: translate(-2%, -3%);
+}
+.blPrevisChapter:active
+{
+  transition: 0.2s;
+  background-size: 29px;
+}
+
+
+
+.blShowKeyHDocument
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 70px;
+  height: 30px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95.5%;
+  transform: translate(-50%, -95.5%);
+}
+.blShowKeyHDocumentInternal
+{
+  position: relative;
+  width: 70px;
+  height: 30px;
+}
+
+.blBtnOpenKey
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blBtnOpenKeyInternal
+{
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.BlKeyH
+{
+  position: absolute;
+  /* border: 1px solid black; */
+  height: 18px;
+  color: #000000;
+  font-size: 20px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blTOpenD
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 15px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 70%;
+  transform: translate(-100%, -70%);
+}

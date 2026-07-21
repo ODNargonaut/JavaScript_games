@@ -1,0 +1,44 @@
+/* === MainScroll === */
+/* ширина прокрутки */
+.mainScroll::-webkit-scrollbar 
+{
+  width: 0px;
+  height: 10px;
+}
+ 
+/* цвет заднего фона прокрутки */ 
+.mainScroll::-webkit-scrollbar-track
+{
+  background-color: rgb(220, 220, 220);
+}
+ 
+/* цвет бегунка в поле */ 
+.mainScroll::-webkit-scrollbar-thumb 
+{
+  width: 0px;
+  background-color: rgb(133, 129, 129);
+}
+/* =============== */
+
+
+/* === MainScroll2 === */
+/* ширина прокрутки */
+.mainScroll2::-webkit-scrollbar 
+{
+  width: 3px;
+  height: 10px;
+}
+ 
+/* цвет заднего фона прокрутки */ 
+.mainScroll2::-webkit-scrollbar-track
+{
+  background-color: rgb(255, 255, 255);
+}
+ 
+/* цвет бегунка в поле */ 
+.mainScroll2::-webkit-scrollbar-thumb 
+{
+  width: 0px;
+  background-color: rgb(0, 0, 0);
+}
+/* =============== */

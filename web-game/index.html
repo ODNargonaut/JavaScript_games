@@ -1,0 +1,401 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Web-game</title>
+        <link rel="stylesheet" type="text/css" href="./css/style_1.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style_2.css" />
+        <style type="text/css">
+            canvas
+            {
+                background-color: rgb(50, 40, 28);
+                border: none;
+            }
+
+            @font-face 
+            {
+                font-family: ttf; /* Гарнитура шрифта */
+                src: url(css/fonts/01.ttf); /* Путь к файлу со шрифтом */
+            }
+
+            @font-face 
+            {
+                font-family: ttf2; /* Гарнитура шрифта */
+                src: url(css/fonts/Roboto_regular.ttf); /* Путь к файлу со шрифтом */
+            }
+
+            .text-fonts
+            {
+                font-family: ttf;
+            }
+
+            .text-fonts2
+            {
+                font-family: ttf2;
+            }
+
+            body
+            {
+                -webkit-user-select: none;
+            }
+        </style>
+    </head>
+    <body id="body" oncontextmenu="return false">
+        <canvas id='canvas'  width='1760' height='880'></canvas>
+        <div id="inventory" class="inventory">
+            <div class="backpack">
+                <div id="BCcell1" oncontextmenu="movingItemsInABackpack('1', 'BCcell'); return false" onclick="movingItemsInABackpack('1', 'BCcell')" class="cell cell_1"></div>
+                <div id="BCcell2" oncontextmenu="movingItemsInABackpack('2', 'BCcell'); return false" onclick="movingItemsInABackpack('2', 'BCcell')" class="cell cell_2"></div>
+                <div id="BCcell3" oncontextmenu="movingItemsInABackpack('3', 'BCcell'); return false" onclick="movingItemsInABackpack('3', 'BCcell')" class="cell cell_3"></div>
+                <div id="BCcell4" oncontextmenu="movingItemsInABackpack('4', 'BCcell'); return false" onclick="movingItemsInABackpack('4', 'BCcell')" class="cell cell_4"></div>
+                <div id="BCcell5" oncontextmenu="movingItemsInABackpack('5', 'BCcell'); return false" onclick="movingItemsInABackpack('5', 'BCcell')" class="cell cell_5"></div>
+                <div id="BCcell6" oncontextmenu="movingItemsInABackpack('6', 'BCcell'); return false" onclick="movingItemsInABackpack('6', 'BCcell')" class="cell cell_6"></div>
+                <div id="BCcell7" oncontextmenu="movingItemsInABackpack('7', 'BCcell'); return false" onclick="movingItemsInABackpack('7', 'BCcell')" class="cell cell_7"></div>
+                <div id="BCcell8" oncontextmenu="movingItemsInABackpack('8', 'BCcell'); return false" onclick="movingItemsInABackpack('8', 'BCcell')" class="cell cell_8"></div>
+                <div id="BCcell9" oncontextmenu="movingItemsInABackpack('9', 'BCcell'); return false" onclick="movingItemsInABackpack('9', 'BCcell')" class="cell cell_9"></div>
+                <div id="BCcell10" oncontextmenu="movingItemsInABackpack('10', 'BCcell'); return false" onclick="movingItemsInABackpack('10', 'BCcell')" class="cell cell_10"></div>
+                <div id="BCcell11" oncontextmenu="movingItemsInABackpack('11', 'BCcell'); return false" onclick="movingItemsInABackpack('11', 'BCcell')" class="cell cell_11"></div>
+                <div id="BCcell12" oncontextmenu="movingItemsInABackpack('12', 'BCcell'); return false" onclick="movingItemsInABackpack('12', 'BCcell')" class="cell cell_12"></div>
+                <div id="BCcell13" oncontextmenu="movingItemsInABackpack('13', 'BCcell'); return false" onclick="movingItemsInABackpack('13', 'BCcell')" class="cell cell_13"></div>
+                <div id="BCcell14" oncontextmenu="movingItemsInABackpack('14', 'BCcell'); return false" onclick="movingItemsInABackpack('14', 'BCcell')" class="cell cell_14"></div>
+                <div id="BCcell15" oncontextmenu="movingItemsInABackpack('15', 'BCcell'); return false" onclick="movingItemsInABackpack('15', 'BCcell')" class="cell cell_15"></div>
+                <div id="BCcell16" oncontextmenu="movingItemsInABackpack('16', 'BCcell'); return false" onclick="movingItemsInABackpack('16', 'BCcell')" class="cell cell_16"></div>
+                <div id="BCcell17" oncontextmenu="movingItemsInABackpack('17', 'BCcell'); return false" onclick="movingItemsInABackpack('17', 'BCcell')" class="cell cell_17"></div>
+                <div id="BCcell18" oncontextmenu="movingItemsInABackpack('18', 'BCcell'); return false" onclick="movingItemsInABackpack('18', 'BCcell')" class="cell cell_18"></div>
+                <div id="BCcell19" oncontextmenu="movingItemsInABackpack('19', 'BCcell'); return false" onclick="movingItemsInABackpack('19', 'BCcell')" class="cell cell_19"></div>
+                <div id="BCcell20" oncontextmenu="movingItemsInABackpack('20', 'BCcell'); return false" onclick="movingItemsInABackpack('20', 'BCcell')" class="cell cell_20"></div>
+                <div id="BCcell21" oncontextmenu="movingItemsInABackpack('21', 'BCcell'); return false" onclick="movingItemsInABackpack('21', 'BCcell')" class="cell cell_21"></div>
+                <div id="BCcell22" oncontextmenu="movingItemsInABackpack('22', 'BCcell'); return false" onclick="movingItemsInABackpack('22', 'BCcell')" class="cell cell_22"></div>
+                <div id="BCcell23" oncontextmenu="movingItemsInABackpack('23', 'BCcell'); return false" onclick="movingItemsInABackpack('23', 'BCcell')" class="cell cell_23"></div>
+                <div id="BCcell24" oncontextmenu="movingItemsInABackpack('24', 'BCcell'); return false" onclick="movingItemsInABackpack('24', 'BCcell')" class="cell cell_24"></div>
+                <div id="BCcell25" oncontextmenu="movingItemsInABackpack('25', 'BCcell'); return false" onclick="movingItemsInABackpack('25', 'BCcell')" class="cell cell_25"></div>
+                <div id="BCcell26" oncontextmenu="movingItemsInABackpack('26', 'BCcell'); return false" onclick="movingItemsInABackpack('26', 'BCcell')" class="cell cell_26"></div>
+                <div id="BCcell27" oncontextmenu="movingItemsInABackpack('27', 'BCcell'); return false" onclick="movingItemsInABackpack('27', 'BCcell')" class="cell cell_27"></div>
+                <div id="BCcell28" oncontextmenu="movingItemsInABackpack('28', 'BCcell'); return false" onclick="movingItemsInABackpack('28', 'BCcell')" class="cell cell_28"></div>
+                <div id="BCcell29" oncontextmenu="movingItemsInABackpack('29', 'BCcell'); return false" onclick="movingItemsInABackpack('29', 'BCcell')" class="cell cell_29"></div>
+                <div id="BCcell30" oncontextmenu="movingItemsInABackpack('30', 'BCcell'); return false" onclick="movingItemsInABackpack('30', 'BCcell')" class="cell cell_30"></div>
+                <div id="BCcell31" oncontextmenu="movingItemsInABackpack('31', 'BCcell'); return false" onclick="movingItemsInABackpack('31', 'BCcell')" class="cell cell_31"></div>
+                <div id="BCcell32" oncontextmenu="movingItemsInABackpack('32', 'BCcell'); return false" onclick="movingItemsInABackpack('32', 'BCcell')" class="cell cell_32"></div>
+                <div id="BCcell33" oncontextmenu="movingItemsInABackpack('33', 'BCcell'); return false" onclick="movingItemsInABackpack('33', 'BCcell')" class="cell cell_33"></div>
+                <div id="BCcell34" oncontextmenu="movingItemsInABackpack('34', 'BCcell'); return false" onclick="movingItemsInABackpack('34', 'BCcell')" class="cell cell_34"></div>
+                <div id="BCcell35" oncontextmenu="movingItemsInABackpack('35', 'BCcell'); return false" onclick="movingItemsInABackpack('35', 'BCcell')" class="cell cell_35"></div>
+            </div>
+            <div class="BLmg">
+                <h4 class="MGT1 text-fonts">Главное орудие</h4>
+                <div onclick="MGscrollL()" class="MGbtnLeft"></div>
+                <div id="mg" class="mainGun">
+                    <div id="MGcell1" oncontextmenu="movingItemsInABackpack('1', 'MGcell'); return false" class="cell MGcell_1"></div>
+                    <div id="MGcell2" oncontextmenu="movingItemsInABackpack('2', 'MGcell'); return false" class="cell MGcell_2"></div>
+                    <div id="MGcell3" oncontextmenu="movingItemsInABackpack('3', 'MGcell'); return false" class="cell MGcell_3"></div>
+                    <div id="MGcell4" oncontextmenu="movingItemsInABackpack('4', 'MGcell'); return false" class="cell MGcell_4"></div>
+                    <div id="MGcell5" oncontextmenu="movingItemsInABackpack('5', 'MGcell'); return false" class="cell MGcell_5"></div>
+                    <div id="MGcell6" oncontextmenu="movingItemsInABackpack('6', 'MGcell'); return false" class="cell MGcell_6"></div>
+                    <div id="MGcell7" oncontextmenu="movingItemsInABackpack('7', 'MGcell'); return false" class="cell MGcell_7"></div>
+                    <div id="MGcell8" oncontextmenu="movingItemsInABackpack('8', 'MGcell'); return false" class="cell MGcell_8"></div>
+                </div>
+                <div onclick="MGscrollR()" class="MGbtnRight"></div>
+            </div>
+            <div class="BLmdc">
+                <h4 class="T2 text-fonts">Более подробная характеристика</h4>
+                <div class="MoreDetailedCharacteristic">
+                    <div id="elemImg" class="elemImg"></div>
+                    <span class="line"></span>
+                    <div class="table">
+                        <table cellpadding="1">
+                            <tr>
+                                <td class="property1 text-fonts2">Прочность</td>
+                                <td id="num1" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Урон</td>
+                                <td id="num2" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Меткость</td>
+                                <td id="num3" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Физ. атака</td>
+                                <td id="num4" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Атака/сек</td>
+                                <td id="num5" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Маг. атака</td>
+                                <td id="num6" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Скорость</td>
+                                <td id="num7" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Шанс крит. удара</td>
+                                <td id="num8" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Сила крит. удара</td>
+                                <td id="num9" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Уклонение</td>
+                                <td id="num10" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Поглощение защиты</td>
+                                <td id="num11" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Поглощение урона</td>
+                                <td id="num12" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Реакция</td>
+                                <td id="num13" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Удача</td>
+                                <td id="num14" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Мудрость</td>
+                                <td id="num15" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Интелект</td>
+                                <td id="num16" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Вера</td>
+                                <td id="num17" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Сложение</td>
+                                <td id="num18" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Сопротивление от урона</td>
+                                <td id="num19" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Броня</td>
+                                <td id="num20" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Обнаружение</td>
+                                <td id="num21" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Сопротивление от яда</td>
+                                <td id="num22" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Ярость</td>
+                                <td id="num23" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Мана</td>
+                                <td id="num24" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Устойчивость к магии</td>
+                                <td id="num25" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Пробой брони</td>
+                                <td id="num26" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Ловкость</td>
+                                <td id="num27" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Магия</td>
+                                <td id="num28" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Бонус к силе заклинаний</td>
+                                <td id="num29" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Сила заклинаний</td>
+                                <td id="num30" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Жизненные силы</td>
+                                <td id="num31" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Магическая энергия</td>
+                                <td id="num32" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Макс. физ. атака</td>
+                                <td id="num33" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Мин. физ. атака</td>
+                                <td id="num34" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Макс. маг. атака</td>
+                                <td id="num35" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Мин. маг. атака</td>
+                                <td id="num36" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Магическая защита</td>
+                                <td id="num37" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Физическая защита</td>
+                                <td id="num38" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Уменьш. крит. удара</td>
+                                <td id="num39" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Критический урон</td>
+                                <td id="num40" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Показатель атаки</td>
+                                <td id="num41" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Время активации</td>
+                                <td id="num42" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Боевой дух</td>
+                                <td id="num43" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Показатель защиты</td>
+                                <td id="num44" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Уровень обнаружения</td>
+                                <td id="num45" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Сила духа</td>
+                                <td id="num46" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Физ. пробивание</td>
+                                <td id="num47" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Уровень скрытности</td>
+                                <td id="num48" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Уменьшение физ. урона</td>
+                                <td id="num49" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Маг. пробивание</td>
+                                <td id="num50" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Показатель урона</td>
+                                <td id="num51" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Уменьшение маг. урона</td>
+                                <td id="num52" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Защита от монстров</td>
+                                <td id="num53" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Урон монстрам</td>
+                                <td id="num54" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Решимость</td>
+                                <td id="num55" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Показатель ЖС</td>
+                                <td id="num56" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Блок</td>
+                                <td id="num57" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Здоровье</td>
+                                <td id="num58" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Класс</td>
+                                <td id="num59" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Мобильность</td>
+                                <td id="num60" class="num2 text-fonts2">0</td>
+                            </tr>
+                            <tr>
+                                <td class="property1 text-fonts2">Мастерство</td>
+                                <td id="num61" class="num1 text-fonts2">0</td>
+                                <td class="property2 text-fonts2">Смекалка</td>
+                                <td id="num62" class="num2 text-fonts2">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="BLcs">
+                <h4 class="CST1 text-fonts">Скины персонажа</h4>
+                <div onclick="CSscrollL()" class="CSbtnLeft"></div>
+                <div id="cs" class="characterSkin">
+                    <div id="CScell1" oncontextmenu="movingItemsInABackpack('1', 'CScell'); return false" class="cell CScell_1"></div>
+                    <div id="CScell2" oncontextmenu="movingItemsInABackpack('2', 'CScell'); return false" class="cell CScell_2"></div>
+                    <div id="CScell3" oncontextmenu="movingItemsInABackpack('3', 'CScell'); return false" class="cell CScell_3"></div>
+                    <div id="CScell4" oncontextmenu="movingItemsInABackpack('4', 'CScell'); return false" class="cell CScell_4"></div>
+                    <div id="CScell5" oncontextmenu="movingItemsInABackpack('5', 'CScell'); return false" class="cell CScell_5"></div>
+                    <div id="CScell6" oncontextmenu="movingItemsInABackpack('6', 'CScell'); return false" class="cell CScell_6"></div>
+                    <div id="CScell7" oncontextmenu="movingItemsInABackpack('7', 'CScell'); return false" class="cell CScell_7"></div>
+                    <div id="CScell8" oncontextmenu="movingItemsInABackpack('8', 'CScell'); return false" class="cell CScell_8"></div>
+                </div>
+                <div onclick="CSscrollR()" class="CSbtnRight"></div>
+            </div>
+            <div class="Workbench">
+                <div id="WCcell1" onclick="movingItemsInABackpack('1', 'WCcell'); return false" class="cell WCcell_1"></div>
+                <div id="WCcell2" onclick="movingItemsInABackpack('2', 'WCcell'); return false" class="cell WCcell_2"></div>
+                <div id="WCcell3" onclick="movingItemsInABackpack('3', 'WCcell'); return false" class="cell WCcell_3"></div>
+                <div id="WCcell4" onclick="movingItemsInABackpack('4', 'WCcell'); return false" class="cell WCcell_4"></div>
+                <div id="WCcell5" onclick="movingItemsInABackpack('5', 'WCcell'); return false" class="cell WCcell_5"></div>
+                <div id="WCcell6" onclick="movingItemsInABackpack('6', 'WCcell'); return false" class="cell WCcell_6"></div>
+                <div id="WCcell7" onclick="movingItemsInABackpack('7', 'WCcell'); return false" class="cell WCcell_7"></div>
+                <div id="WCcell8" onclick="movingItemsInABackpack('8', 'WCcell'); return false" class="cell WCcell_8"></div>
+                <div id="WCcell9" onclick="movingItemsInABackpack('9', 'WCcell'); return false" class="cell WCcell_9"></div>
+                <div id="WCcell10" onclick="movingItemsInABackpack('10', 'WCcell'); return false" class="cell WCcell_10"></div>
+                <div id="WCcell11" onclick="movingItemsInABackpack('11', 'WCcell'); return false" class="cell WCcell_11"></div>
+                <div id="WCcell12" onclick="movingItemsInABackpack('12', 'WCcell'); return false" class="cell WCcell_12"></div>
+                <div id="WCcell13" onclick="movingItemsInABackpack('13', 'WCREScell'); return false" class="cell WCcell_13"></div>
+                <div id="WCcell14" onclick="movingItemsInABackpack('14', 'WCREScell'); return false" class="cell WCcell_14"></div>
+                <div id="WCcell15" onclick="movingItemsInABackpack('15', 'WCREScell'); return false" class="cell WCcell_15"></div>
+            </div>
+        </div>
+        <div id="duel" class="Bl_Duel">
+            <div class="bl_time">
+                <time class="text-fonts">00:27</time>
+            </div>
+            <h4 class="MGT1_2 text-fonts">Главные орудия</h4>
+            <div class="BLmg_2">
+                <div id="mg_2" class="mainGun_2">
+                    <div id="MGcell21" onclick="movingItemsInABackpackDuel('1', 'MGcell2'); return false" class="cellv2 MGcell_1_2"></div>
+                    <div id="MGcell22" onclick="movingItemsInABackpackDuel('2', 'MGcell2'); return false" class="cellv2 MGcell_2_2"></div>
+                    <div id="MGcell23" onclick="movingItemsInABackpackDuel('3', 'MGcell2'); return false" class="cellv2 MGcell_3_2"></div>
+                    <div id="MGcell24" onclick="movingItemsInABackpackDuel('4', 'MGcell2'); return false" class="cellv2 MGcell_4_2"></div>
+                    <div id="MGcell25" onclick="movingItemsInABackpackDuel('5', 'MGcell2'); return false" class="cellv2 MGcell_5_2"></div>
+                    <div id="MGcell26" onclick="movingItemsInABackpackDuel('6', 'MGcell2'); return false" class="cellv2 MGcell_6_2"></div>
+                    <div id="MGcell27" onclick="movingItemsInABackpackDuel('7', 'MGcell2'); return false" class="cellv2 MGcell_7_2"></div>
+                    <div id="MGcell28" onclick="movingItemsInABackpackDuel('8', 'MGcell2'); return false" class="cellv2 MGcell_8_2"></div>
+                </div>
+            </div>
+            <div class="bl_avatar_Hero">
+                <div class="avatar_hero"></div>
+            </div>
+            <div class="bl_sw">
+                <div id="sw1" onclick="movingItemsInABackpackDuel('1', 'sw'); return false" class="sw"></div>
+            </div>
+            <div class="bl_vs">
+                <div class="vs"></div>
+            </div>
+            <div class="btn_go">
+                <span class="T_Go text-fonts">Go</span>
+            </div>
+            <div class="bl_avatar_rival">
+                <div class="avatar_rival"></div>
+            </div>
+            <div class="bl_sw_rival">
+                <div class="bl_unknown_sw">
+                    <span class="sw_rival text-fonts unknown">?</span>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            let Blmg = document.getElementById('mg');
+            let Blcs = document.getElementById('cs');
+            function MGscrollL() { Blmg.scrollLeft -= 47; }
+            function MGscrollR() { Blmg.scrollLeft += 47; }
+            function CSscrollL() { Blcs.scrollLeft -= 47; }
+            function CSscrollR() { Blcs.scrollLeft += 47; }
+            
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+
+            // Изменение стиля курсора
+            document.getElementById("body").style.cursor = "url('/img/cursor/cursor'), auto";
+        </script>
+        <script type='text/javascript' src='./Js/DataBases/Characters.js'></script>
+        <script type='text/javascript' src='./Js/DataBases/Map.js'></script>
+        <script type='text/javascript' src='./Js/DataBases/Homes.js'></script>
+        <script type='text/javascript' src='./Js/DataBases/Biomes.js'></script>
+        <script type='text/javascript' src='./Js/DataBases/CharacterCamera.js'></script>
+        <script type='text/javascript' src='./Js/DataBases/Crafting.js'></script>
+        <script type='text/javascript' src='./Js/traitFunction/traitFunction.js'></script>
+        <script type='text/javascript' src='./Js/traitFunction/traitFunction2.js'></script>
+        <script type='text/javascript' src='./Js/traitFunction/traitFunction3.js'></script>
+        <script type='text/javascript' src='./Js/traitFunction/traitFunction4.js'></script>
+        <script type='text/javascript' src='./Js/traitFunction/traitFunction5.js'></script>
+        <script type='text/javascript' src='./Js/InventoryUSER.js'></script>
+        <script type='text/javascript' src='./Js/vs.js'></script>
+        <script type='text/javascript' src='./Js/CharacterMove.js'></script>
+        <script type='text/javascript' src='./Js/MapGeneration.js'></script>
+        <script type='text/javascript' src='./Js/Hero.js'></script>
+        <script type='text/javascript' src='./Js/HeroAndCameraOffset.js'></script>
+        <script type='text/javascript' src='./Js/web-game.js'></script>
+        <script type="text/javascript">
+            h.src = player.skin[player.Nskin].default.B;
+        </script>
+    </body>
+</html>

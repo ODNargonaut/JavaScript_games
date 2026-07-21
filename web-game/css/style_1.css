@@ -1,0 +1,1013 @@
+/* Инвентарь */
+.inventory
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    background-color: #E4DADA;
+    width: 0px;
+    height: 820px;
+    top: 0px;
+    margin-left: 30px;
+    margin-top: -800px;
+}
+
+/* Рюкзак */
+.backpack
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 508px;
+    height: 604px;
+    margin-left: 3px;
+    margin-top: 3px;
+    overflow   : auto; /* Добавляем полосы прокрутки */
+    overflow-x : hidden;
+}
+
+/* ширина прокрутки для рюгзака user */
+.backpack::-webkit-scrollbar 
+{
+    width: 3px;
+}
+ 
+
+/* цвет заднего фона прокрутки для рюгзака user */ 
+.backpack::-webkit-scrollbar-track
+{
+  border-radius: 50px;
+}
+ 
+
+/* цвет бегунка в поле для рюгзака user */ 
+.backpack::-webkit-scrollbar-thumb 
+{
+    background-color: #0000;
+}
+
+/* Ячейка */
+.cell
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B0B0B0;
+    width: 94px;
+    height: 94px;
+    /* cursor: pointer; */
+}
+
+/*==========================================*/
+
+/* cell 1 */
+.cell_1
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+/* cell 2 */
+.cell_2
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 0px;
+}
+
+/* cell 3 */
+.cell_3
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 0px;
+}
+
+/* cell 4 */
+.cell_4
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 0px;
+}
+
+/* cell 5 */
+.cell_5
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 0px;
+}
+
+/* cell 6 */
+.cell_6
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 102px;
+}
+
+/* cell 7 */
+.cell_7
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 102px;
+}
+
+/* cell 8 */
+.cell_8
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 102px;
+}
+
+/* cell 9 */
+.cell_9
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 102px;
+}
+
+/* cell 10 */
+.cell_10
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 102px;
+}
+
+/* cell 11 */
+.cell_11
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 204px;
+}
+
+/* cell 12 */
+.cell_12
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 204px;
+}
+
+/* cell 13 */
+.cell_13
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 204px;
+}
+
+/* cell 14 */
+.cell_14
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 204px;
+}
+
+/* cell 15 */
+.cell_15
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 204px;
+}
+
+/* cell 16 */
+.cell_16
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 306px;
+}
+
+/* cell 17 */
+.cell_17
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 306px;
+}
+
+/* cell 18 */
+.cell_18
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 306px;
+}
+
+/* cell 19 */
+.cell_19
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 306px;
+}
+
+/* cell 20 */
+.cell_20
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 306px;
+}
+
+/* cell 21 */
+.cell_21
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 408px;
+}
+
+/* cell 22 */
+.cell_22
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 408px;
+}
+
+/* cell 23 */
+.cell_23
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 408px;
+}
+
+/* cell 24 */
+.cell_24
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 408px;
+}
+
+/* cell 25 */
+.cell_25
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 408px;
+}
+
+/* cell 26 */
+.cell_26
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 510px;
+}
+
+/* cell 27 */
+.cell_27
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 510px;
+}
+
+/* cell 28 */
+.cell_28
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 510px;
+}
+
+/* cell 29 */
+.cell_29
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 510px;
+}
+
+/* cell 30 */
+.cell_30
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 510px;
+}
+
+/* cell 31 */
+.cell_31
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 612px;
+}
+
+/* cell 32 */
+.cell_32
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 612px;
+}
+
+/* cell 33 */
+.cell_33
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 612px;
+}
+
+/* cell 34 */
+.cell_34
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 612px;
+}
+
+/* cell 35 */
+.cell_35
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 612px;
+}
+
+/*==========================================*/
+
+/* Блок с глав. орудиями */
+.BLmg
+{
+    position: absolute;
+    border: none;
+    width: 372px;
+    height: 130px;
+    margin-top: 640px;
+    margin-left: 68px;
+}
+
+/* Главное орудие */
+.MGT1
+{
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 110px;
+    letter-spacing: .1px;
+}
+
+/* Предыдущие орудие */
+.MGbtnLeft
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B0B0B0;
+    width: 22px;
+    height: 47px;
+    background-image: url(/img/play_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    /* cursor: pointer; */
+}
+
+/* Следующее орудие */
+.MGbtnRight
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B0B0B0;
+    width: 22px;
+    height: 47px;
+    background-image: url(/img/play_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-left: 349px;
+    /* cursor: pointer; */
+}
+
+/* Ячейки для главных орудий */
+.mainGun
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    height: 96px;
+    margin-left: 37px;
+    margin-top: 36px;
+    overflow   : auto; /* Добавляем полосы прокрутки */
+    overflow-y : hidden;
+}
+
+/* ширина прокрутки для блока с глав. орудиями */
+.mainGun::-webkit-scrollbar 
+{
+    width: 3px;
+    height: 0px;
+}
+ 
+
+/* цвет заднего фона прокрутки для блока с глав. орудиями */ 
+.mainGun::-webkit-scrollbar-track
+{
+  border-radius: 50px;
+}
+ 
+
+/* цвет бегунка в поле для блока с глав. орудиями */ 
+.mainGun::-webkit-scrollbar-thumb 
+{
+    background-color: #0000;
+}
+
+/*==================================*/
+
+.MGcell_1
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.MGcell_2
+{
+    /* background-image: url(/img/padlock.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 0px;
+}
+
+.MGcell_3
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 0px;
+}
+
+.MGcell_4
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 306px;
+    margin-top: 0px;
+}
+
+.MGcell_5
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 408px;
+    margin-top: 0px;
+}
+
+.MGcell_6
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 510px;
+    margin-top: 0px;
+}
+
+.MGcell_7
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 612px;
+    margin-top: 0px;
+}
+
+.MGcell_8
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 714px;
+    margin-top: 0px;
+}
+
+/*==================================*/
+
+/* Внешний блок с характеристиками */
+.BLmdc
+{
+    position: absolute;
+    border: none;
+    width: 580px;
+    height: 537px;
+    margin-top: 70px;
+    margin-left: 617px;
+}
+
+/* Более подробная характеристика: */
+.T2
+{
+    background-color: white;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 120px;
+    letter-spacing: .1px;
+}
+
+/* Внутренний блок с характеристиками */
+.MoreDetailedCharacteristic
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B0B0B0;
+    width: 580px;
+    height: 502px;
+    margin-top: 30px;
+}
+
+/* Сам элемент */
+.elemImg
+{
+    position: absolute;
+    border: none;
+    background-image: url(/characters/h2/h2Avatar.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 94px;
+    height: 94px;
+    margin-left: 243px;
+    margin-top: 3px;
+}
+
+/* Разделительная черта */
+.line
+{
+    position: absolute;
+    border: none;
+    background-color: black;
+    width: 356px;
+    height: 1px;
+    margin-top: 102px;
+    margin-left: 112px;
+}
+
+/* Сами характеристики */
+
+.table
+{
+    position: absolute;
+    border: none;
+    width: 580px;
+    height: 385px;
+    margin-top: 115px;
+    overflow   : auto; /* Добавляем полосы прокрутки */
+    overflow-x : hidden;
+}
+
+/* ширина прокрутки для рюгзака user */
+.table::-webkit-scrollbar 
+{
+    width: 3px;
+}
+ 
+
+/* цвет заднего фона прокрутки для рюгзака user */ 
+.table::-webkit-scrollbar-track
+{
+  border-radius: 50px;
+}
+ 
+
+/* цвет бегунка в поле для рюгзака user */ 
+.table::-webkit-scrollbar-thumb 
+{
+    background-color: #0000;
+}
+
+table
+{
+    position: absolute;
+    border: none;
+    margin-left: 10px;
+}
+
+td
+{
+    border: none;
+}
+
+/* Свойство 1 */
+.property1
+{
+    margin-left: 0px;
+}
+
+/* Кол-во 1 */
+.num1
+{
+    position: absolute;
+    margin-left: 10px;
+}
+
+/* Свойство 2 */
+.property2
+{
+    position: absolute;
+    width: 180px;
+    margin-left: 130px;
+}
+
+/* Кол-во 2 */
+.num2
+{
+    position: absolute;
+    margin-left: 330px;
+}
+
+/* Блок со скинами */
+.BLcs
+{
+    position: absolute;
+    border: none;
+    width: 611px;
+    height: 130px;
+    margin-top: 640px;
+    margin-left: 589px;
+}
+
+/* Скины персонажа */
+.CST1
+{
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 230px;
+    letter-spacing: .1px;
+}
+
+/* Предыдущие орудие */
+.CSbtnLeft
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B0B0B0;
+    width: 22px;
+    height: 47px;
+    background-image: url(/img/play_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    /* cursor: pointer; */
+}
+
+/* Следующее орудие */
+.CSbtnRight
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B0B0B0;
+    width: 22px;
+    height: 47px;
+    background-image: url(/img/play_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-left: 587px;
+    /* cursor: pointer; */
+}
+
+/* Ячейки для главных орудий */
+.characterSkin
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 536px;
+    height: 96px;
+    margin-left: 37px;
+    margin-top: 36px;
+    overflow   : auto; /* Добавляем полосы прокрутки */
+    overflow-y : hidden;
+}
+
+/* ширина прокрутки для блока с глав. орудиями */
+.characterSkin::-webkit-scrollbar 
+{
+    width: 3px;
+    height: 0px;
+}
+ 
+
+/* цвет заднего фона прокрутки для блока с глав. орудиями */ 
+.characterSkin::-webkit-scrollbar-track
+{
+  border-radius: 50px;
+}
+ 
+
+/* цвет бегунка в поле для блока с глав. орудиями */ 
+.characterSkin::-webkit-scrollbar-thumb 
+{
+    background-color: #0000;
+}
+
+/*==================================*/
+
+.CScell_1
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.CScell_2
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 110px;
+    margin-top: 0px;
+}
+
+.CScell_3
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 220px;
+    margin-top: 0px;
+}
+
+.CScell_4
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 330px;
+    margin-top: 0px;
+}
+
+.CScell_5
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 440px;
+    margin-top: 0px;
+}
+
+.CScell_6
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 550px;
+    margin-top: 0px;
+}
+
+.CScell_7
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 660px;
+    margin-top: 0px;
+}
+
+.CScell_8
+{
+    background-image: url(/img/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 770px;
+    margin-top: 0px;
+}
+
+/*==================================*/
+
+/* Верстак */
+.Workbench
+{
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    height: 558px;
+    margin-left: 1297px;
+    margin-top: 3px;
+}
+
+/*====================================*/
+
+/* WCcell 1 */
+.WCcell_1
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+/* WCcell 2 */
+.WCcell_2
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 0px;
+}
+
+/* WCcell 3 */
+.WCcell_3
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 0px;
+}
+
+/* WCcell 4 */
+.WCcell_4
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 102px;
+}
+
+/* WCcell 5 */
+.WCcell_5
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 102px;
+}
+
+/* WCcell 6 */
+.WCcell_6
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 102px;
+}
+
+/* WCcell 7 */
+.WCcell_7
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 204px;
+}
+
+/* WCcell 8 */
+.WCcell_8
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 204px;
+}
+
+/* WCcell 9 */
+.WCcell_9
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 204px;
+}
+
+/* WCcell 10 */
+.WCcell_10
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 306px;
+}
+
+/* WCcell 11 */
+.WCcell_11
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 306px;
+}
+
+/* WCcell 12 */
+.WCcell_12
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 306px;
+}
+
+/* WCcell 13 */
+.WCcell_13
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 464px;
+}
+
+/* WCcell 14 */
+.WCcell_14
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 102px;
+    margin-top: 464px;
+}
+
+/* WCcell 15 */
+.WCcell_15
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 204px;
+    margin-top: 464px;
+}
+
+/*====================================*/

@@ -1,0 +1,92 @@
+/* Гланое меню */
+.blMainMenu
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blMainMenuInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blLogo
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  width: 480px;
+  height: 80px;
+  background-color: #262525;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, -22%);
+}
+.blLogoInternal
+{
+  position: relative;
+  width: 480px;
+  height: 80px;
+}
+.t-logoMain
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 440px;
+  font-size: 65px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnPlayImgApple
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 60px;
+  height: 66px;
+  background-size: 66px;
+  background-image: url("../../GUI/mainMenu/ico/apple.png");
+  cursor: pointer;
+  transition: 0.1s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 44.5%;
+  transform: translate(-50%, -44.5%);
+}
+/* .blBtnPlayImgApple:active
+{
+  width: 60px;
+  height: 56px;
+  margin-left: 5px;
+  background-size: 56px;
+  transition: 0.1s;
+} */
+.blDrawSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 86px;
+  height: 205px;
+
+  /* div в центре другого div */
+  left: 46.25%;
+  top: 87%;
+  transform: translate(-46.25%, -87%);
+}
+/* ========== */

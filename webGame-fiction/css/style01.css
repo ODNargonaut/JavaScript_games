@@ -1,0 +1,203 @@
+/* Здоровье врага */
+.enemy_health
+{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 50px;
+    border: 1px solid black;
+    width: 100px;
+    height: 10px;
+    background-color: red;
+}
+
+/* Бонус */
+.blBonus
+{
+    position: absolute;
+    border: none;
+    margin-left: 700px;
+}
+
+#bimg
+{
+    position: relative;
+    margin-top: -150;
+    /* transition: top 1s cubic-bezier(0, 0, 1, 1); */
+}
+
+/* Пр. показатели */
+.blLife
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Аватар */
+.avatar
+{
+    position: absolute;
+    left: 0;
+    margin-left: 22px;
+    margin-top: 27px;
+}
+
+/* Информационный блок */
+.blInfo
+{
+    position: absolute;
+    right: 0;
+    margin-left: 1390px;
+}
+
+/* Имя персонажа */
+.nameHero
+{
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 230%;
+    margin-left: 80px;
+    margin-top: 28px;
+}
+
+/* Урон от атаки */
+.atk
+{
+    position: absolute;
+    left: 0;
+    color: #d04648;
+    font-size: 215%;
+    margin-left: 125px;
+    margin-top: 140px;
+}
+
+/* Деньги */
+.money
+{
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+    font-size: 215%;
+    margin-left: 175px;
+    margin-top: 187px;
+}
+
+/* Блок победа */
+.blVictory
+{
+    position: absolute;
+    margin-left: 660px;
+    margin-top: -150px;
+}
+
+/* Блок проигрыш */
+.blLoss
+{
+    position: absolute;
+    margin-left: 660px;
+    margin-top: -150px;
+}
+
+/* Блок пауза */
+.blPausa
+{
+    position: absolute;
+    margin-left: 660px;
+    margin-top: -150px;
+}
+
+/* Интерфейс начала игры */
+.blPlay
+{
+    position: absolute;
+    width: 1760px;
+    height: 880px;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+/* Название игры */
+.topic
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.topic1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 1000%;
+    font-weight: 100;
+    margin-left: 950px;
+    margin-top: 200px;
+}
+
+.topic2
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 300%;
+    font-weight: 100;
+    margin-left: 1135px;
+    margin-top: 345px;
+}
+
+.topic3
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 800%;
+    font-weight: 100;
+    margin-left: 890px;
+    margin-top: 400px;
+}
+
+/* btn Play */
+.btnPlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+.btnPlay:hover
+{
+    width: 360px;
+    transition: 2s;
+}
+
+/* btn Options */
+.btnOpt
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 200px;
+    margin-top: 325px;
+}
+
+.btnOpt:hover
+{
+    width: 360px;
+    transition: 2s;
+}
+
+/* Опции */
+.Opt
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}

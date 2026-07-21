@@ -1,0 +1,129 @@
+.blLanguage
+{
+  position: absolute;
+  width: 320px;
+  height: 84px;
+  /* border: 1px solid black; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blFlag
+{
+  position: absolute;
+  width: 128px;
+  height: 84px;
+  /* border: 1px solid black; */
+  cursor: pointer;
+
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.4s;
+}
+
+.blFlagRu
+{
+  background-image: url("../img/flag_russia.png");
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+
+.blFlagEn
+{
+  background-image: url("../img/flag_english.png");
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+
+@media only screen and (max-width: 425px)
+{
+  .blLanguage
+  {
+    width: 250px;
+    height: 84px;
+  }
+
+  .blFlag
+  {
+    width: 100px;
+    height: 84px;
+  }
+}
+
+@media only screen and (max-height: 550px)
+{
+  .blLanguage
+  {
+    width: 250px;
+    height: 65px;
+  }
+
+  .blFlag
+  {
+    width: 100px;
+    height: 65px;
+  }
+}
+
+@media only screen and (max-height: 350px)
+{
+  .blLanguage
+  {
+    width: 200px;
+    height: 50px;
+  }
+
+  .blFlag
+  {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 320px)
+{
+  .blLanguage
+  {
+    width: 90px;
+    height: 150px;
+  }
+
+  .blFlag
+  {
+    width: 90px;
+    height: 55px;
+  }
+
+  .blFlagRu
+  {
+    background-image: url("../img/flag_russia.png");
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -0%);
+  }
+
+  .blFlagEn
+  {
+    background-image: url("../img/flag_english.png");
+
+    /* div в центре другого div */
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+  }
+}

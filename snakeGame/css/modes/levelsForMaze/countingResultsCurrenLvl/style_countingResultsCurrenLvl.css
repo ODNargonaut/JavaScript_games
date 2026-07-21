@@ -1,0 +1,414 @@
+/* Подсчет результатов за пройденный уравень */
+.blContingResultsCurrenLvlForMaze
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blCountingResultsCurrenLvlForMazeInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blCountingResultsForModeMaze
+{
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  width: 450px;
+  height: 355px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blCountingResultsForModeMazeInternal
+{
+  position: relative;
+  width: 450px;
+  height: 355px;
+}
+
+
+/* Block stars behind level */
+.blStarsBehindLvl-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 55px;
+  height: 50px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 4%;
+  transform: translate(-50%, -4%);
+}
+.blStarsBehindLvlInterval-1
+{
+  position: relative;
+  width: 55px;
+  height: 50px;
+}
+
+.blStarsBehindLvl-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 190px;
+  height: 50px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 13%;
+  transform: translate(-50%, -13%);
+}
+.blStarsBehindLvlInterval-2
+{
+  position: relative;
+  width: 190px;
+  height: 50px;
+}
+
+.blStarsBehindLvl-3
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 310px;
+  height: 50px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 23%;
+  transform: translate(-50%, -23%);
+}
+.blStarsBehindLvlInterval-3
+{
+  position: relative;
+  width: 310px;
+  height: 50px;
+}
+.blImgStarOne
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 55px;
+  height: 50px;
+
+  background-color: #262525;
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+.blImgStarTwo
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 55px;
+  height: 50px;
+
+  background-color: #262525;
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 0%;
+  transform: translate(-100%, -0%);
+}
+
+
+/* Block current and total time */
+.blCurrentAndTotalTime
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 100px;
+  height: 66px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -35%);
+}
+.blCurrentAndTotalTimeInternal
+{
+  position: relative;
+  width: 100px;
+  height: 66px;
+}
+.blTextYourTime
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 100px;
+  height: 20px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blTextCurrentTime
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 105px;
+  height: 20px;
+  color: #D61919;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -52%);
+}
+.blTextTotalTime
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 105px;
+  height: 20px;
+  color: #15C932;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+
+/* Block Подарок */
+.blRewardForPassingForModeMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 150px;
+  height: 50px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 64%;
+  transform: translate(-50%, -64%);
+}
+.blRewardForPassingForModeMazeInternal
+{
+  position: relative;
+  width: 150px;
+  height: 50px;
+}
+
+.blImgAndNFoodRewardForPassing
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 35px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.imgFoodRewardForPassing
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/shopping.png");
+  background-size: 38px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  animation: pulse 2s ease-in-out infinite;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 0%;
+  transform: translate(-0%, -0%);
+}
+@keyframes pulse 
+{
+  from {
+    transform: scale(.90);
+  }
+  50% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.90);
+  }
+}
+
+.blReceivedGift
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 48px;
+  height: 40px;
+
+  /* div в центре другого div */  
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blReceivedGiftInternal
+{
+  position: relative;
+  width: 48px;
+  height: 40px;
+}
+.imgReceivedGiftElexirHealth
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 40px;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/elixir.png");
+  background-size: 28px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.NQuantityFoodRewardForPassing
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 16px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 85%;
+  transform: translate(-100%, -85%);
+}
+
+.blBtnsForLvlForMaze
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 400px;
+  height: 70px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -90%);
+}
+.blBtnsForLvlForMazeInternal
+{
+  position: relative;
+  width: 400px;
+  height: 70px;
+}
+.blBtnBackRewardForMaze
+{
+  position: absolute;
+  border: 3px solid #FFFFFF;
+  border-radius: 4px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/back.png");
+  background-size: 46px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+
+.blBtnShowLvlsForMaze
+{
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 4px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/menu.png");
+  background-size: 46px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blBtnNextLvlForMaze
+{
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 4px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  background-color: #262525;
+  background-image: url("../../../../GUI/modes/maze/next-button.png");
+  background-size: 46px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+
+
+/* .blBtnBackRewardForMaze:active, .blBtnShowLvlsForMaze:active,
+.blBtnNextLvlForMaze:active
+{
+  background-size: 40px;
+  transition: 0.1s;
+} */
+
+/* ========== */

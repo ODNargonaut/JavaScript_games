@@ -1,0 +1,2636 @@
+body
+{
+  background-color: black;
+}
+
+canvas
+{
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(173, 169, 169);
+}
+
+.indicator
+{
+  position: absolute;
+  border-radius: 50%; 
+  width: 21px; 
+  height: 21px;
+  margin-left: 215px;
+  margin-top: 635px;
+  background-color: rgb(255, 21, 0);
+}
+
+
+/* Показатель для змейки */
+.blValueForSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  margin-left: 250px;
+  margin-top: 5px;
+  width: 1005px;
+  height: 40px;
+}
+.blValueForSnakeInternal
+{
+  position: relative;
+  width: 1005px;
+  height: 40px;
+}
+
+/* scoreN Food */
+.blQuantityFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 90px;
+  height: 40px;
+  color: #FFFFFF;
+  /* background-color: #FFFFFF;
+  color: #000000;
+  font-weight: bold; */
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blQuantityFoodInternal
+{
+  position: relative;
+  width: 150px;
+  height: 40px;
+}
+.imgScoreFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 30px;
+  height: 30px;
+
+  background-size: 30px;
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.scoreN
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 300px;
+  height: 18px;
+  font-size: 17px;
+
+  /* div в центре другого div */
+  left: 7%;
+  top: 62%;
+  transform: translate(7%, -62%);
+}
+
+/* Mode feedMe */
+.blImgFeedMe
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 32px;
+  height: 32px;
+  
+  background-size: 32px;
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 20%;
+  top: 50%;
+  transform: translate(-20%, -50%);
+}
+.blFeedMe
+{
+  position: absolute;
+  border: 2.5px solid white;
+  border-radius: 4px;
+  width: 670px;
+  height: 23px;
+
+  /* div в центре другого div */
+  left: 70%;
+  top: 50%;
+  transform: translate(-70%, -50%);
+}
+.blIndicatorFeedMe
+{
+  position: absolute;
+  border-radius: 2px;
+  height: 12px;
+  margin-left: 4px;
+  margin-top: 5.5px;
+  background-color: #00FE00;
+}
+
+/* Mode words */
+.blWords
+{
+  position: absolute;
+  /* border: 1px solid rgb(196, 31, 31); */
+  width: 1005px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blRewardApple
+{
+  position: absolute;
+  /* border: 1px solid rgb(31, 196, 70); */
+  width: 175px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blRewardAppleInternal
+{
+  position: relative;
+  width: 175px;
+  height: 35px;
+}
+.blImgReward
+{
+  position: absolute;
+  /* border: 1px solid rgb(253, 253, 253); */
+  width: 30px;
+  height: 30px;
+
+  background-size: 32px;
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 0%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+}
+.blRewardScore
+{
+  position: absolute;
+  /* border: 1px solid rgb(255, 255, 255); */
+  width: 135px;
+  height: 17px;
+  font-size: 17px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 82%;
+  top: 58%;
+  transform: translate(-82%, -58%);
+}
+.blSymb
+{
+  position: absolute;  
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 2px;
+  color: #000000;
+  background-color: white;
+  font-size: 33px;
+}
+
+.symb-1 { margin-left: 180px; display: none; }
+
+.symb-2 { margin-left: 205px; display: none; }
+
+.symb-3 { margin-left: 230px; display: none; }
+
+.symb-4 { margin-left: 255px; display: none; }
+
+.symb-5 { margin-left: 280px; display: none; }
+
+.symb-6 { margin-left: 305px; display: none; }
+
+.symb-7 { margin-left: 330px; display: none; }
+
+.symb-8 { margin-left: 355px; display: none; }
+
+.symb-9 { margin-left: 380px; display: none; }
+
+.symb-10 { margin-left: 405px; display: none; }
+
+.symb-11 { margin-left: 430px; display: none; }
+
+.symb-12 { margin-left: 455px; display: none; }
+
+.symb-13 { margin-left: 480px; display: none; }
+
+.symb-14 { margin-left: 505px; display: none; }
+
+.symb-15 { margin-left: 530px; display: none; }
+
+.symb-16 { margin-left: 555px; display: none; }
+
+.symb-17 { margin-left: 580px; display: none; }
+
+.symb-18 { margin-left: 605px; display: none; }
+
+.symb-19 { margin-left: 630px; display: none; }
+
+.symb-20 { margin-left: 655px; display: none; }
+
+.symb-21 { margin-left: 680px; display: none; }
+
+.symb-22 { margin-left: 705px; display: none; }
+
+.symb-23 { margin-left: 730px; display: none; }
+
+.symb-24 { margin-left: 755px; display: none; }
+
+.symb-25 { margin-left: 780px; display: none; }
+
+.symb-26 { margin-left: 805px; display: none; }
+
+.symb-27 { margin-left: 830px; display: none; }
+
+.symb-28 { margin-left: 855px; display: none; }
+
+.symb-29 { margin-left: 880px; display: none; }
+
+.symb-30 { margin-left: 905px; display: none; }
+
+.symb-31 { margin-left: 930px; display: none; }
+
+.symb-32 { margin-left: 955px; display: none; }
+
+.symb-33 { margin-left: 980px; display: none; }
+
+/* Block countingDown */
+.blCountingDown
+{
+  position: absolute;
+  /* border: 1px solid #FFFFFF; */
+  width: 23px;
+  height: 20px;
+  font-size: 19px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 95%;
+  top: 50%;
+  transform: translate(-95%, -50%);
+}
+/* ========== */
+
+
+/* Messge Collieion Text */
+.blMsgCollision
+{
+  position: absolute; 
+  border: none;
+  color:white; 
+  width: 290px; 
+  height: 25px; 
+  margin-top: 670px; 
+  margin-left: 640px; 
+  display: block;
+}
+/* ========== */
+
+
+/* Гланое меню */
+.blMainMenu
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blMainMenuInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1006px;
+  height: 607px;
+}
+.blLogo
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  width: 480px;
+  height: 80px;
+  background-color: #262525;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, -22%);
+}
+.blLogoInternal
+{
+  position: relative;
+  border-radius: 10px;
+  width: 480px;
+  height: 80px;
+}
+.t-logoMain
+{
+  position: absolute;
+  width: 438px;
+  height: 55px;
+  border: none;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.t-logo
+{
+  position: absolute;
+  font-size: 65px;
+  width: 506px;
+  margin-top: -10px;
+}
+.blBtnPlayImgApple
+{
+  position: absolute;
+  border: none;
+  width: 60px;
+  height: 66px;
+  background-size: 66px;
+  background-image: url("../GUI/mainMenu/ico/apple.png");
+  cursor: pointer;
+  transition: 0.1s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 44.5%;
+  transform: translate(-50%, -44.5%);
+}
+.blBtnPlayImgApple:active
+{
+  height: 56px;
+  margin-left: 5px;
+  background-size: 56px;
+  transition: 0.1s;
+}
+.blDrawSnake
+{
+  position: absolute;
+  border: none;
+  width: 86px;
+  height: 205px;
+
+  /* div в центре другого div */
+  left: 46.25%;
+  top: 87%;
+  transform: translate(-46.25%, -87%);
+}
+/* ========== */
+
+
+/* Выбор языка */
+.blLanguage
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blLanguageInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1006px;
+  height: 607px;
+}
+.selectedLanguare
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  width: 200px;
+  height: 159px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectedLanguareRu
+{
+  position: relative;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 200px;
+  height: 65px;
+  font-size: 28px;
+  background-color: #262525;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.blSelectedLanguareRu:active
+{
+  width: 173px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 25px;
+  transition: 0.25s;
+}
+.blSelectedLanguareRuInternal
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 110px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectedLanguareEn
+{
+  position: relative;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 200px;
+  height: 65px;
+  margin-top: 27px;
+  background-color: #262525;
+  font-size: 28px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.blSelectedLanguareEn:active
+{
+  width: 166px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding-left: 15px;
+  font-size: 25px;
+  transition: 0.25s;
+}
+.blSelectedLanguareEnInternal
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 93px;
+  height: 35px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+/* Режимы */
+.blModes
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blModesInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1006px;
+  height: 607px;
+}
+.blTitleModes
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 105px;
+  height: 35px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+}
+.blSelectedMode
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 68%;
+  transform: translate(-50%, -68%);
+}
+.blSelectedModeInternalMain
+{
+  position: relative;
+  width: 732px;
+  height: 420px;
+}
+.blSelectedModeInternal
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 565px;
+  height: 380px;
+  margin-top: 15px;
+  margin-left: 8px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blMode
+{
+  position: absolute;
+  border: 2px solid white;
+  width: 175px;
+  height: 120px;
+}
+.blModeInternal
+{
+  position: relative;
+  width: 175px;
+  height: 120px;
+}
+.blBtnInfo
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 11px;
+  width: 50px;
+  height: 48px;
+  cursor: pointer;
+  transition: 0.25s;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnInfo:active
+{
+  background-color: #b7b7b7;
+  transition: 0.25s;
+}
+.blInfoPartInternal
+{
+  position: relative;
+  width: 50px;
+  height: 47px;
+}
+.blInfoPart
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 9px;
+  height: 33px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.Info-part-1
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 9px;
+  height: 9px;
+  background-color: #FFFFFF;
+}
+.Info-part-2
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 9px;
+  height: 19px;
+  background-color: #FFFFFF;
+  margin-top: 14px;
+}
+.blNameMode
+{
+  position: absolute;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid #C1C1C1;
+  border-right: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  background-color: #262525;
+  width: 135px;
+  height: 22px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 102.25%;
+  transform: translate(-50%, -102.25%);
+}
+.blNameModeInternal
+{
+  position: relative;
+  width: 135px;
+  height: 22px;
+}
+.nameMode-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 72px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blMode-1
+{
+  border-top-left-radius: 5px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.blMode-2
+{
+  margin-top: 0px;
+  margin-left: 193px;
+}
+.nameMode-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 103px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-3
+{
+  border-top-right-radius: 5px;
+  margin-top: 0px;
+  margin-left: 386px;
+}
+.nameMode-3
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 110px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-4
+{
+  border-top-right-radius: 5px;
+  margin-top: 138px;
+  margin-left: 0px;
+}
+.nameMode-4
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 111px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-5
+{
+  border-top-right-radius: 5px;
+  margin-top: 138px;
+  margin-left: 193px;
+}
+.nameMode-5
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 46px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-6
+{
+  border-top-right-radius: 5px;
+  margin-top: 138px;
+  margin-left: 386px;
+}
+.nameMode-6
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 43px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-7
+{
+  border-top-right-radius: 5px;
+  margin-top: 276px;
+  margin-left: 0px;
+}
+.nameMode-7
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 10px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-8
+{
+  border-top-right-radius: 5px;
+  margin-top: 276px;
+  margin-left: 193px;
+}
+.nameMode-8
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 10px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-9
+{
+  border-top-right-radius: 5px;
+  margin-top: 276px;
+  margin-left: 386px;
+}
+.nameMode-9
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 10px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-10
+{
+  border-top-right-radius: 5px;
+  margin-top: 414px;
+  margin-left: 0px;
+}
+.nameMode-10
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 10px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-11
+{
+  border-top-right-radius: 5px;
+  margin-top: 414px;
+  margin-left: 193px;
+}
+.nameMode-11
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 10px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blMode-12
+{
+  border-top-right-radius: 5px;
+  margin-top: 414px;
+  margin-left: 386px;
+}
+.nameMode-12
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 10px;
+  height: 15px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+/* Описание режима */
+.blDescription
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blDescriptionInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1006px;
+  height: 607px;
+}
+.blBtnCloseDescript
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 4px;
+  width: 60px;
+  height: 48px;
+  background-color: #262525;
+  background-image: url("../GUI/mainMenu/ico/x-mark.png");
+  background-size: 35px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.1s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 6.5%;
+  transform: translate(-50%, -6.5%);
+}
+.blBtnCloseDescript:active
+{
+  width: 55px;
+  height: 42px;
+  background-size: 31px;
+  margin-top: 3px;
+  transition: 0.1s;
+}
+.blTitleDescript
+{
+  position: absolute;
+  border-radius: 4px 4px 0px 0px;
+  border-top: 2px solid #C1C1C1;
+  border-right: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  width: 135px;
+  height: 29px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 17.12%;
+  transform: translate(-50%, -17.12%);
+}
+.blTitleDescriptInternal
+{
+  position: relative;
+  width: 150px;
+  height: 29px;
+}
+.t-TitleDescrip
+{
+  position: absolute;
+  /* border: 2px solid white; */
+  width: 80px;
+  height: 19px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blDescripMode
+{
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 325px;
+  height: 350px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blDescripModeInternal
+{
+  position: relative;
+  width: 325px;
+  height: 350px;
+}
+.blTDescriptMode
+{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 260px;
+  height: 220px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blTDescriptModeInternal
+{
+  position: relative;
+  width: 260px;
+  height: 220px;
+}
+.blTDescripModeScroll
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 3px;
+  width: 235px;
+  height: 190px;
+  color: #FFFFFF;
+  font-size: 14px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnSelected
+{
+  position: absolute;
+  border-radius: 0px 0px 4px 4px;
+  border-right: 2px solid #C1C1C1;
+  border-bottom: 2px solid #C1C1C1;
+  border-left: 2px solid #C1C1C1;
+  width: 180px;
+  height: 29px;
+  transition: 0.1s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 88%;
+  transform: translate(-50%, -88%);
+}
+.blBtnSelected:active 
+{ 
+  margin-top: 7px;
+  border-right: 2px solid #a7a6a6;
+  border-bottom: 2px solid #a7a6a6;
+  border-left: 2px solid #a7a6a6;
+
+  transition: 0.1s;
+}
+@-webkit-keyframes pulsate 
+{
+  50% 
+  { 
+    color: #fff; 
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  }
+}
+@keyframes pulsate 
+{
+  50% 
+  {
+    color: #fff; 
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  }
+}
+#blink
+{
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    -webkit-animation: pulsate 1.9s linear infinite;
+    animation: pulsate 1.9s linear infinite;
+}
+.blBtnSelectedInternal
+{
+  position: relative;
+  width: 180px;
+  height: 29px;
+}
+.blBtnTextSelected
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 71px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 17px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+/* Выбор поля */
+.blDecorationField
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blDecorationFieldInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 217px;
+  height: 33px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+}
+.blSelectedDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 450px;
+  border-radius: 8px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 68%;
+  transform: translate(-50%, -68%);
+}
+.blSelectedDecorFieldInternalMain
+{
+  position: relative;
+  width: 750px;
+  height: 450px;
+}
+.blImgDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 520px;
+  height: 318px;
+  border-radius: 5px;
+  background-color: #262525;
+  background-image: url("../GUI/mainMenu/field-1.png");
+  background-size: 520px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 29.5%;
+  transform: translate(-50%, -29.5%);
+}
+.blBtnPrevisDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #262525;
+  background-image: url("../GUI/mainMenu/ico/previs.png");
+  background-size: 48px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 5%;
+  top: 44%;
+  transform: translate(-5%, -44%);
+}
+.blBtnPrevisDecorField:active
+{
+  width: 43px;
+  height: 43px;
+  background-size: 43px;
+  margin-left: 5px;
+  margin-top: 2px;
+  transition: 0.15s;
+}
+.blBtnNextDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #262525;
+  background-image: url("../GUI/mainMenu/ico/next.png");
+  background-size: 48px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 95%;
+  top: 44%;
+  transform: translate(-95%, -44%);
+}
+.blBtnNextDecorField:active
+{
+  width: 43px;
+  height: 43px;
+  background-size: 43px;
+  margin-left: -3.5px;
+  margin-top: 2px;
+  transition: 0.15s;
+}
+.blBtnSelectedDecorField
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+.blBtnSelectedDecorField:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedDecorFieldInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedDecorField
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 102px;
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+/* Настройки змейки */
+.blSettingsSnake
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blSettingsSnakeInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleSettingsSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 235px;
+  height: 30px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 3.5%;
+  transform: translate(-50%, -3.5%);
+}
+.blSettingsSnakeMain
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 530px;
+  border-radius: 8px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 72%;
+  transform: translate(-50%, -72%);
+}
+.blSettingsSnakeMainInternal
+{
+  position: relative;
+  width: 750px;
+  height: 530px;
+}
+.blSetSnakeSize
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 100px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -2%);
+}
+.blSetSnakeSizeInternal
+{
+  position: relative;
+  width: 280px;
+  height: 100px;
+}
+.blShowSnakeSize
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 2px;
+  width: 180px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -65%);
+}
+.blTitleSetSnakeSize
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 48px;
+  height: 19px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blBtnMinus
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+  background-image: url("../GUI/mainMenu/ico/minus.png");
+  background-size: 24px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 5%;
+  top: 63%;
+  transform: translate(-5%, -63%);
+}
+.blBtnMinus:active
+{
+  width: 22px;
+  height: 22px;
+  background-size: 22px;
+  margin-left: 2px;
+  transition: 0.15s;
+}
+.blBtnPlus
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+  background-image: url("../GUI/mainMenu/ico/plus.png");
+  background-size: 24px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 95%;
+  top: 63%;
+  transform: translate(-95%, -63%);
+}
+.blBtnPlus:active
+{
+  width: 22px;
+  height: 22px;
+  background-size: 22px;
+  margin-left: -2px;
+  transition: 0.15s;
+}
+.blSetDesingSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 300px;
+  height: 250px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+.blSetDesingSnakeInternal
+{
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+.blTitleDesingSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 58px;
+  height: 20px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: -0.1%;
+  transform: translate(-50%, 0.1%);
+}
+.blSetDesingSnakeScroll
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 300px;
+  height: 200px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -54%);
+}
+.blSetDesingSnakeScrollMain
+{
+  position: absolute;
+  /* border: 1px solid #C1C1C1; */
+  border-radius: 3px;
+  width: 300px;
+  height: 166px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blBtnSelectedDesignSnake-1
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 13px;
+  margin-top: 0px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.blBtnSelectedDesignSnake:hover
+{
+  background-color: #494949;
+  transition: 0.5s;
+}
+.blBtnSelectedDesignSnakeInternal
+{
+  position: relative;
+  width: 50px;
+  height: 145px;
+}
+.selfDesignSnake-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-2
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 85px;
+  margin-top: 0px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-3
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 160px;
+  margin-top: 0px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-3
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-4
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 234px;
+  margin-top: 0px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-4
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-5
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 13px;
+  margin-top: 167px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-5
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-6
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 85px;
+  margin-top: 167px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-6
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-7
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 160px;
+  margin-top: 167px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-7
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignSnake-8
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 50px;
+  height: 145px;
+  margin-left: 234px;
+  margin-top: 167px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selfDesignSnake-8
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blSetSnakeSpeed
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 85px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 81%;
+  transform: translate(-50%, -81%);
+}
+.blSetSnakeSpeedInternal
+{
+  position: relative;
+  width: 280px;
+  height: 85px;
+}
+.blTitleSetSnakeSpeed
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 72px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blShowSnakeSpeed
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 2px;
+  width: 115px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -65%);
+}
+.blBtnMinusSpeed
+{
+  /* div в центре другого div */
+  left: 17.7%;
+  top: 63%;
+  transform: translate(-17.7%, -63%);
+}
+.blBtnPlusSpeed
+{
+  /* div в центре другого div */
+  left: 82.7%;
+  top: 63%;
+  transform: translate(-82.7%, -63%);
+}
+
+.blBtnSelectedSettingSnake
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 94%;
+  transform: translate(-50%, -94%);
+}
+.blBtnSelectedSettingSnake:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedSettingSnakeInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedSettingSnake
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 102px;
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+/* Настройки еды */
+.blSettingsFood
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blSettingsFoodInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleSettingsFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 197px;
+  height: 30px;
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 3.5%;
+  transform: translate(-50%, -3.5%);
+}
+.blSettingsFoodMain
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 470px;
+  border-radius: 8px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+}
+.blSettingsFoodMainInternal
+{
+  position: relative;
+  width: 750px;
+  height: 470px;
+}
+.blSetDesingFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 350px;
+  height: 250px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 9%;
+  transform: translate(-50%, -9%);
+}
+.blSetDesingFoodInternal
+{
+  position: relative;
+  width: 350px;
+  height: 250px;
+}
+.blTitleDesingFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 202px;
+  height: 20px;
+  color: #FFFFFF;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: -0.1%;
+  transform: translate(-50%, 0.1%);
+}
+.blSetDesingFoodScroll
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 350px;
+  height: 200px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -54%);
+}
+.blSetDesingFoodScrollMain
+{
+  position: absolute;
+  /* border: 1px solid #C1C1C1; */
+  border-radius: 3px;
+  width: 350px;
+  height: 166px;
+  overflow: auto;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -54%);
+}
+.blBtnSelectedDesignFood-1
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 11px;
+  margin-top: 0px;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+.blBtnSelectedDesignFood:hover
+{
+  background-color: #494949;
+  transition: 0.5s;
+}
+.blBtnSelectedDesignFoodInternal
+{
+  position: relative;
+  width: 70px;
+  height: 55px;
+}
+.selfDesignFood-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 12px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.blBtnSelectedDesignFood-2
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 97px;
+  margin-top: 0px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-3
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 182px;
+  margin-top: 0px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-4
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 267px;
+  margin-top: 0px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-5
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 11px;
+  margin-top: 77px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-6
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 97px;
+  margin-top: 77px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-7
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 182px;
+  margin-top: 77px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-8
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 267px;
+  margin-top: 77px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-9
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 11px;
+  margin-top: 154px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-10
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 97px;
+  margin-top: 154px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-11
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 182px;
+  margin-top: 154px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.blBtnSelectedDesignFood-12
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  width: 70px;
+  height: 60px;
+  margin-left: 267px;
+  margin-top: 154px;
+
+  background-image: url("../GUI/mainMenu/ico/Apple.png");
+  background-size: 55px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.blSetFoodQuantity
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 85px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 71%;
+  transform: translate(-50%, -71%);
+}
+.blSetFoodQuantityInternal
+{
+  position: relative;
+  width: 280px;
+  height: 85px;
+}
+.blTitleSetFoodQuantity
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 150px;
+  height: 20px;
+  color: #FFFFFF;
+  font-size: 15.5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.blShowSnakeFood
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  border-radius: 2px;
+  width: 115px;
+  height: 40px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -65%);
+}
+.blBtnMinusFood
+{
+  /* div в центре другого div */
+  left: 17.7%;
+  top: 63%;
+  transform: translate(-17.7%, -63%);
+}
+.blBtnPlusFood
+{
+  /* div в центре другого div */
+  left: 82.7%;
+  top: 63%;
+  transform: translate(-82.7%, -63%);
+}
+.blBtnSelectedSettingFood
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 88%;
+  transform: translate(-50%, -88%);
+}
+.blBtnSelectedSettingFood:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedSettingFoodInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedSettingFood
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 102px;
+  height: 28px;
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+/* Под меню */
+.blUnderMenu
+{
+  position: absolute;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: #121212;
+}
+.blUnderMenuInternal
+{
+  position: relative;
+  width: 1008px;
+  height: 608px;
+}
+.blSelectionsUnderMenu
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 300px;
+  height: 460px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.blSelectionsUnderMenuInternal
+{
+  position: relative;
+  width: 300px;
+  height: 460px;
+}
+.btnSelection
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.btnSelection:hover
+{
+  background-color: #2e2d2d;
+  transition: 0.3s;
+}
+.btnSelection:active
+{
+  margin-top: 5px;
+  transition: 0.25s;
+}
+.btnSelectionInternal
+{
+  position: relative;
+  width: 250px;
+  height: 50px;
+}
+.blTBtnSelection-1
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 86px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 16.5%;
+  transform: translate(-50%, -16.5%);
+}
+.blTBtnSelection-2
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 60px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-3
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 33%;
+  transform: translate(-50%, -33%);
+}
+.blTBtnSelection-3
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 95px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-4
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 49.5%;
+  transform: translate(-50%, -49.5%);
+}
+.blTBtnSelection-4
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 200px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-5
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 66%;
+  transform: translate(-50%, -66%);
+}
+.blTBtnSelection-5
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 216px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-6
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 82.5%;
+  transform: translate(-50%, -82.5%);
+}
+.blTBtnSelection-6
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 181px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.btnSelection-7
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #262525;
+  font-size: 23px;
+  transition: 0.25s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 99%;
+  transform: translate(-50%, -99%);
+}
+.blTBtnSelection-7
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 188px;
+  height: 25px;
+  color: #FFFFFF;
+
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */
+
+
+
+/* === MainScroll === */
+/* ширина прокрутки */
+.mainScroll::-webkit-scrollbar 
+{
+  width: 0px;
+  height: 10px;
+}
+ 
+/* цвет заднего фона прокрутки */ 
+.mainScroll::-webkit-scrollbar-track
+{
+  background-color: rgb(220, 220, 220);
+}
+ 
+/* цвет бегунка в поле */ 
+.mainScroll::-webkit-scrollbar-thumb 
+{
+  width: 0px;
+  background-color: rgb(133, 129, 129);
+}
+/* =============== */

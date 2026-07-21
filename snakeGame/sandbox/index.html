@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sandbox</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./style01.css"> -->
+    <script type="text/javascript" src="./jQuery/jQuery.js"></script>
+    <!-- Yandex Games SDK -->
+    <!-- <script type="text/javascript" src="https://yandex.ru/games/sdk/v2"></script> -->
+    <style>
+      .bl_1
+      {
+        position: absolute;
+        width: 1000px; 
+        height: 600px;
+        background-color: rgb(34, 33, 33);
+
+        /* div в центре другого div */
+        left: 50%;
+        top: 36.5%;
+        transform: translate(-50%, -36.5%);
+      }
+    </style>
+  </head>
+  <body style="background-color: black;">
+    <div class="bl_1"><span style="color: white">afda</span></div>
+    <!-- Js -->
+    <script type="text/javascript">
+
+      function p1(a, p) { return (a * p) / 100; }
+      function p2(b, p) { return (b * 100) / p; }
+      function p3(b, a) { return b / a * 100; }
+
+      let getW = (id) => { return $(id).width(); };
+      let getH = (id) => { return $(id).height(); };
+
+      let setW = (id, v) => { $(id).css("width", v); };
+      let setH = (id, v) => { $(id).css("height", v); };
+
+      let fixWin = {w: 1536, h: 748};
+      let blsz = {w: 1000, h: 600};
+
+      let idBl = ".bl_1";
+      let bl = 
+      {
+        pw: p3(blsz.w, fixWin.w), 
+        ph: p3(blsz.h, fixWin.h),
+        diff: p3(blsz.w - blsz.h, getH(idBl))
+      };
+
+      let changeSZ = () => 
+      {
+        let h = p1(getH(window), bl.ph);
+        let w = h + p1(h, bl.diff);
+
+        if (getW(window) < w)
+        {
+          let n = w - getW(window) + 10;
+          h -= n / 1.6;
+          w -= n;
+        }
+        
+        setW(idBl, w);
+        setH(idBl, h);
+      };
+
+      changeSZ();
+
+
+      $(window).resize(function() { changeSZ(); });
+
+    </script>
+  </body>
+</html>

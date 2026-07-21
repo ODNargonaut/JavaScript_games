@@ -1,0 +1,140 @@
+/* Параметры режима words */
+.blSettingsRulesOfGame
+{
+  position: absolute;
+  border-radius: 2px;
+  width: 1008px;
+  height: 608px;
+  background-color: #121212;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 36.5%;
+  transform: translate(-50%, -36.5%);
+}
+.blSettingsRulesOfGameInternal
+{
+  position: relative;
+  border-radius: 3px;
+  width: 1008px;
+  height: 608px;
+}
+.blTitleSettingsRulesOfGame
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-size: 25px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -2%);
+}
+.blMainSettingsRulesOfGame
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 750px;
+  height: 540px;
+  border-radius: 10px;
+  background-color: #262525;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+}
+.blMainSettingsRulesOfGameInternal
+{
+  position: relative;
+  width: 750px;
+  height: 540px;
+}
+
+.blMainRulesOfGame
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 650px;
+  height: 430px;
+  border-radius: 5px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+}
+.blMainRulesOfGameInternal
+{
+  position: relative;
+  width: 650px;
+  height: 430px;
+}
+
+/*  */
+.blRulesOfGameText
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 625px;
+  height: 405px;
+  overflow: auto;
+  overflow-x: hidden;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.devSpan
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+
+.blBtnSelectedRulesOfGame
+{
+  position: absolute;
+  border: 1px solid #C1C1C1;
+  width: 230px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #262525;
+  color: #FFFFFF;
+  transition: 0.15s;
+  cursor: pointer;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+}
+.blBtnSelectedRulesOfGame:active
+{
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.blBtnSelectedRulesOfGameInternal
+{
+  position: relative;
+  width: 230px;
+  height: 38px;
+}
+.blTBtnSelectedRulesOfGame
+{
+  position: absolute;
+  /* border: 1px solid white; */
+  height: 28px;
+  /* width: 140px; */
+  font-size: 24px;
+
+  /* div в центре другого div */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ========== */

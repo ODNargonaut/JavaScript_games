@@ -1,0 +1,97 @@
+@font-face 
+{
+  font-family: ttf1; /* Гарнитура шрифта */
+  src: url(./zenDots/regular/zen-dots-regular.ttf); /* Путь к файлу со шрифтом */
+}
+.t-zen-dots-regular
+{
+  font-family: ttf1;
+}
+
+
+@font-face 
+{
+  font-family: ttf2; /* Гарнитура шрифта */
+  src: url(./roboto/black/roboto-black.ttf); /* Путь к файлу со шрифтом */
+}
+.t-roboto-black
+{
+  font-family: ttf2;
+}
+
+
+@font-face 
+{
+  font-family: ttf3; /* Гарнитура шрифта */
+  src: url(./roboto/medium/roboto-medium.ttf); /* Путь к файлу со шрифтом */
+}
+.t-roboto-medium
+{
+  font-family: ttf3;
+}
+
+
+@font-face 
+{
+  font-family: ttf3; /* Гарнитура шрифта */
+  src: url(./roboto/medium/roboto-medium.ttf); /* Путь к файлу со шрифтом */
+}
+.t-roboto-medium
+{
+  font-family: ttf3;
+}
+
+
+@font-face 
+{
+  font-family: ttf4; /* Гарнитура шрифта */
+  src: url(./roboto/bold/roboto-bold.ttf); /* Путь к файлу со шрифтом */
+}
+.t-roboto-bold
+{
+  font-family: ttf4;
+}
+
+
+@font-face 
+{
+  font-family: ttf5; /* Гарнитура шрифта */
+  src: url(./inter/bold/inter-bold.otf); /* Путь к файлу со шрифтом */
+}
+.t-inter-bold
+{
+  font-family: ttf5;
+}
+
+
+@font-face 
+{
+  font-family: ttf6; /* Гарнитура шрифта */
+  src: url(./roboto/regular/robot-regular.ttf); /* Путь к файлу со шрифтом */
+}
+.t-roboto-regular
+{
+  font-family: ttf6;
+}
+
+
+@font-face 
+{
+  font-family: ttf7; /* Гарнитура шрифта */
+  src: url(./strong/regular/strong.ttf); /* Путь к файлу со шрифтом */
+}
+.t-strong-regular
+{
+  font-family: ttf7;
+}
+
+
+@font-face 
+{
+  font-family: ttf8; /* Гарнитура шрифта */
+  src: url(./inter/black/inter-black.otf); /* Путь к файлу со шрифтом */
+}
+.t-inter-black
+{
+  font-family: ttf8;
+}

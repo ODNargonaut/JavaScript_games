@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="blMain interface_1">
+      <div class="blTitle">
+        <code class="T_Title" style="color: #fff;">Interface<span class="hideLine">_</span>#1</code>
+      </div>
+      <div class="blNum">
+        <code>
+          <b style="color: #fff; font-size: 150%;" class="countNum">0</b>
+        </code>
+      </div>
+      <div class="blBtnCount">
+        <code>
+          <b style="color: #fff;">+1</b>
+        </code>
+      </div>
+      <!-- <div class="blCheckEvent btnAddEvent">
+        <code style="color: #fff;">add</code>
+      </div>
+      <div class="blCheckEvent btnRemoveEvent">
+        <code style="color: #fff;">remove</code>
+      </div> -->
+      <div class="blBtnDisplay btnNext">
+        <code>
+          <b style="color: #fff;">next</b>
+        </code>
+      </div>
+    </div>
+    <div class="blMain interface_2">
+      <div class="blTitle">
+        <code class="T_Title" style="color: #fff;">Interface<span class="hideLine">_</span>#2</code>
+      </div>
+      <div class="blBtnDisplay btnPrev">
+        <code>
+          <b style="color: #fff;">prev</b>
+        </code>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+let test = null;
+
+
+class Test
+{
+  isWatchingEventUI = 
+  {
+    "interface_1": 
+    {
+      "blBtnCount": false,
+      "btnNext": false,
+    },
+    "interface_2": 
+    {
+      "btnPrev": false,
+    },
+  }
+  count = 0;
+  constructor() { }
+  start()
+  {
+    this.Interface_1(true);
+  }
+  display(id, b) { $(id).css("display", b?"block":"none"); }
+  getValueListener(GUI, s) { return this.isWatchingEventUI[GUI][s]; }
+  setValueListener(GUI, s, v) { this.isWatchingEventUI[GUI][s] = v; }
+  showHideWin(hideBl, showBl, fun)
+  {
+    for (let i = 0; i < 2; ++i)
+    {
+      let s = (i?showBl:hideBl);
+      let b = i;
+      
+      switch(s)
+      {
+        case "interface_1": this.Interface_1(b); break;
+        case "interface_2": this.Interface_2(b); break;
+      }
+    }
+
+    fun();
+  }
+  clickFun(o)
+  {
+    let funX = function(e) 
+    {
+      o.fun();
+    };
+
+    let id = null;
+
+    if (o.btnID.c == '#')
+      id = document.getElementById(o.btnID.s);
+    else if (o.btnID.c == '.')
+      id = document.getElementsByClassName(o.btnID.s)[0];
+
+    if (o.eventListener && !this.getValueListener(o.GUI, o.btnID.s))
+    {
+      console.log("add btnID: "+o.btnID.s);
+      id.addEventListener("click", funX, {passive: false});
+      id.addEventListener("touchstart", funX, {passive: false});
+
+      this.setValueListener(o.GUI, o.btnID.s, true);
+    }
+    else if (!o.eventListener && this.getValueListener(o.GUI, o.btnID.s))
+    {
+      console.log("remove btnID: "+o.btnID.s);
+      id.removeEventListener("click", funX, {passive: false});
+      id.removeEventListener("touchstart", funX, {passive: false});
+
+      this.setValueListener(o.GUI, o.btnID.s, false);
+    }
+  }
+  Interface_1(v)
+  {
+    this.display(".interface_1", v);
+
+    this.clickFun(
+    {
+      GUI: "interface_1",
+      eventListener: v,
+      btnID: {c: '.', s: "blBtnCount"},
+      fun: () => 
+      {
+        let id = document.getElementsByClassName("countNum")[0].innerHTML = ++this.count;
+      }
+    });
+
+    this.clickFun(
+    {
+      GUI: "interface_1",
+      eventListener: v,
+      btnID: {c: '.', s: "btnNext"},
+      fun: () => 
+      {
+        this.showHideWin("interface_1", "interface_2", () => { });
+      }
+    });
+  }
+  Interface_2(v)
+  {
+    this.display(".interface_2", v);
+
+    this.clickFun(
+    {
+      GUI: "interface_2",
+      eventListener: v,
+      btnID: {c: '.', s: "btnPrev"},
+      fun: () => 
+      {
+        this.showHideWin("interface_2", "interface_1", () => { });
+      }
+    });
+  }
+}
+function start()
+{
+  test = new Test();
+  test.start();
+}
+
+window.addEventListener("load", start, false);
+
+    </script>
+  </body>
+</html>
